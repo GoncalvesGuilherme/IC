@@ -1,0 +1,560 @@
+Se 	[se] <clb> <clb-fs> <*> KS @SUB  #1->4
+a 	[o] <artd> DET F S @>N  #2->3
+eleição 	[eleição] <occ> N F S @SUBJ>  #3->4
+fosse 	[ser] <mv> V IMPF 3S SUBJ VFIN @FS-ADVL>  #4->16
+hoje 	[hoje] ADV @<ADVL  #5->4
+$, #6->0
+o 	[o] <artd> DET M S @>N  #7->8
+presidente 	[presidente] <Hprof> <np-close> N M S @APP  #8->3
+Luiz=Inácio=Lula=da=Silva 	[Luiz=Inácio=Lula=da=Silva] <hum> <*> <np-close> PROP M S @N<  #9->8
+$, #10->0
+candidato 	[candidato] <Hprof> <np-close> N M S @N<PRED  #11->9
+a 	[a] <sam-> <np-close> PRP @N<  #12->11
+a 	[o] <-sam> <artd> DET F S @>N  #13->14
+reeleição 	[reeleição] <act> N F S @P<  #14->12
+$, #15->0
+teria 	[ter] <fmc> <mv> V COND 3S VFIN @FS-STA  #16->0
+44 	[44] <card> NUM M P @>N  #17->18
+$% 	[%] <cjt-head> N M P @<ACC  #18->16
+de 	[de] <sam-> <np-close> PRP @N<  #19->18
+as 	[o] <-sam> <artd> DET F P @>N  #20->21
+intenções 	[intenção] <sem-c> N F P @P<  #21->19
+de 	[de] <np-long> PRP @N<  #22->18
+voto 	[voto] <act-s> N M S @P<  #23->22
+$, #24->0
+contra 	[contra] PRP @<ADVL  #25->16
+25 	[25] <card> NUM M P @>N  #26->27
+$% 	[%] N M P @P<  #27->25
+de 	[de] <sam-> <np-close> PRP @N<  #28->27
+o 	[o] <-sam> <artd> DET M S @>N  #29->30
+tucano 	[tucano] <Aorn> <Hattr> N M S @P<  #30->28
+Geraldo=Alckmin 	[Geraldo=Alckmin] <hum> <*> <foreign> <np-close> PROP M S @N<  #31->30
+$, #32->0
+de=acordo 	[de=acordo] <pp> ADV @<ADVL  #33->16
+com 	[com] PRP @A<  #34->33
+a 	[o] <artd> DET F S @>N  #35->36
+pesquisa 	[pesquisa] <occ> <act-d> N F S @P<  #36->34
+CNI 	[CNI] <occ> <*> <np-close> PROP F S @N<  #37->36
+$/ 	[$/] <co-acc> KC @CO  #38->18
+Ibope 	[ibope] <cjt> <prop> <*> <act-d> N M S @<ACC  #39->18
+divulgada 	[divulgar] <vH> <mv> <np-close> V PCP F S @ICL-N<  #40->39
+em 	[em] <sam-> PRP @<ADVL  #41->40
+esta 	[este] <-sam> <dem> DET F S @>N  #42->43
+sexta-feira 	[sexta-feira] <temp> N F S @P<  #43->41
+$. #44->0
+</s>
+Heloísa=Helena 	[Heloísa=Helena] <hum> <*> PROP F S @SUBJ>  #1->11
+$, #2->0
+candidata 	[candidata] <Hprof> <np-close> N F S @APP  #3->1
+a 	[a] <sam-> <np-close> PRP @N<  #4->3
+a 	[o] <-sam> <artd> DET F S @>N  #5->6
+Presidência 	[presidência] <prop> <*> <pos-soc> N F S @P<  #6->4
+por 	[por] <sam-> PRP @ADVL>  #7->11
+o 	[o] <-sam> <artd> DET M S @>N  #8->9
+PSOL 	[PSOL] <party> <*> PROP M S @P<  #9->7
+$, #10->0
+aparece 	[aparecer] <fmc> <mv> V PR 3S IND VFIN @FS-STA  #11->0
+em 	[em] PRP @<ADVL  #12->11
+terceiro 	[terceiro] <NUM-ord> <jh> ADJ M S @P<  #13->12
+$, #14->0
+com 	[com] <np-close> PRP @<ADVL @N<PRED  #15->11
+11 	[11] <card> NUM M P @>N  #16->17
+$% 	[%] N M P @P<  #17->15
+de 	[de] <sam-> <np-close> PRP @N<  #18->17
+as 	[o] <-sam> <artd> DET F P @>N  #19->20
+intenções 	[intenção] <sem-c> N F P @P<  #20->18
+de 	[de] <np-long> PRP @N<  #21->17
+voto 	[voto] <act-s> N M S @P<  #22->21
+$, #23->0
+seguida 	[seguir] <jh> <mv> V PCP F S @ICL-N<PRED  #24->22
+por 	[por] PRP @<PASS  #25->24
+Cristovam=Buarque 	[Cristovam=Buarque] <cjt-head> <hum> <*> <heur> PROP M/F S @P<  #26->25
+$( #27->0
+PDT 	[PDT] <party> <*> <np-close> PROP M S @APP  #28->26
+$) #29->0
+e 	[e] KC @CO  #30->26
+Luciano=Bivar 	[Luciano=Bivar] <cjt> <hum> <*> PROP M S @P<  #31->26
+$( #32->0
+PSL 	[PSL] <party> <*> <np-close> PROP M S @APP  #33->31
+$) #34->0
+$, #35->0
+ambos 	[ambos] <cjt> <quant> DET M P @P<  #36->26
+com 	[com] PRP @<ADVL @<PRED  #37->24
+1 	[1] <card> NUM M S @>N  #38->39
+$% 	[%] N M P @P<  #39->37
+$. #40->0
+</s>
+José=Maria=Eymael 	[José=Maria=Eymael] <hum> <*> <foreign> PROP M S @SUBJ>  #1->15
+$, #2->0
+de 	[de] <sam-> <np-close> PRP @N<PRED  #3->1
+o 	[o] <-sam> <artd> DET M S @>N  #4->5
+PSDC 	[PSDC] <party> <*> PROP M S @P<  #5->3
+$, #6->0
+e 	[e] <co-pred> KC @CO  #7->8
+Rui=Pimenta 	[Rui=Pimenta] <cjt-head> <hum> <*> <np-close> PROP M S @APP  #8->5
+$, #9->0
+de 	[de] <cjt> <sam-> <np-close> PRP @N<PRED  #10->8
+o 	[o] <-sam> <artd> DET M S @>N  #11->12
+PCO 	[PCO] <party> <*> PROP M S @P<  #12->10
+$, #13->0
+não 	[não] ADV @ADVL>  #14->17
+chegaram 	[chegar] <fmc> <aux> V PS/MQP 3P IND VFIN @FS-STA  #15->0
+a 	[a] PRP @PRT-AUX<  #16->15
+obter 	[obter] <vH> <mv> V INF @ICL-AUX<  #17->15
+1 	[1] <card> NUM M S @>N  #18->19
+$% 	[%] N M P @<ACC  #19->17
+de 	[de] <sam-> <np-close> PRP @N<  #20->19
+as 	[o] <-sam> <artd> DET F P @>N  #21->22
+intenções 	[intenção] <sem-c> N F P @P<  #22->20
+de 	[de] <np-long> PRP @N<  #23->19
+voto 	[voto] <act-s> N M S @P<  #24->23
+$. #25->0
+</s>
+Considerando 	[considerar] <clb> <*> <vH> <mv> V GER @ICL-ADVL>  #1->8
+apenas 	[apenas] ADV @>N  #2->4
+os 	[o] <artd> DET M P @>N  #3->4
+votos 	[voto] <act-s> N M P @<ACC  #4->1
+válidos 	[válido] <nh> <np-close> ADJ M P @N<  #5->4
+$, #6->0
+Lula 	[Lula] <hum> <newlex> <*> PROP M S @SUBJ> 	[Lula] <*> PROP M S @SUBJ>  #7->8
+venceria 	[vencer] <fmc> <vH> <mv> V COND 3S VFIN @FS-STA  #8->0
+as 	[o] <artd> DET F P @>N  #9->10
+eleições 	[eleição] <occ> N F P @<ACC  #10->8
+de 	[de] <np-close> PRP @N<  #11->10
+outubro 	[outubro] N M S @P<  #12->11
+ainda 	[ainda] ADV @>P  #13->14
+em 	[em] <sam-> PRP @<ADVL  #14->8
+o 	[o] <-sam> <artd> DET M S @>N  #15->17
+primeiro 	[primeiro] <NUM-ord> <jh> ADJ M S @>N  #16->17
+turno 	[turno] <HH> <event> N M S @P<  #17->14
+$. #18->0
+</s>
+Não 	[não] <*> ADV @ADVL>  #1->2
+é 	[ser] <fmc> <vK> <mv> V PR 3S IND VFIN @FS-STA  #2->0
+possível 	[possível] <nh> ADJ M S @<SC  #3->2
+fazer 	[fazer] <mv> V INF @ICL-<SUBJ  #4->2
+uma 	[um] <arti> DET F S @>N  #5->6
+comparação 	[comparação] <act> N F S @<ACC  #6->4
+entre 	[entre] <np-close> PRP @<ADVL @N<  #7->4
+a 	[o] <artd> DET F S @>N  #8->9
+pesquisa 	[pesquisa] <cjt-head> <occ> <act-d> N F S @P<  #9->7
+divulgada 	[divulgar] <vH> <mv> <np-close> V PCP F S @ICL-N<  #10->9
+hoje 	[hoje] ADV @<ADVL  #11->10
+e 	[e] <co-prparg> KC @CO  #12->9
+a 	[o] <artd> DET F S @>N  #13->14
+anterior 	[anterior] <cjt> <n> <nh> ADJ F S @P<  #14->9
+$, #15->0
+porque 	[porque] <clb> <clb-fs> KS @SUB  #16->18
+esta 	[este] <dem> DET F S @SUBJ>  #17->18
+é 	[ser] <vK> <mv> V PR 3S IND VFIN @FS-<ADVL  #18->10
+a 	[o] <artd> DET F S @>N  #19->21
+primeira 	[primeiro] <NUM-ord> ADJ F S @>N  #20->21
+CNI 	[cNI] <cjt-head> <prop> <*> N F S @<SC  #21->18
+$/ 	[$/] <co-sc> KC @CO  #22->21
+Ibope 	[Ibope] <cjt> <hum> <*> PROP F S @<SC  #23->21
+com 	[com] <np-close> PRP @N<  #24->23
+a 	[o] <artd> DET F S @>N  #25->26
+lista 	[lista] <cc-r> <coll-sem> N F S @P<  #26->24
+oficial 	[oficial] <nh> <np-close> ADJ F S @N<  #27->26
+de 	[de] <sam-> <np-close> PRP @N<  #28->26
+os 	[o] <-sam> <artd> DET M P @>N  #29->30
+candidatos 	[candidato] <Hprof> N M P @P<  #30->28
+de 	[de] <sam-> <np-close> PRP @N<  #31->30
+o 	[o] <-sam> <artd> DET M S @>N  #32->33
+TSE 	[TSE] <inst> <*> PROP M S @P<  #33->31
+$( #34->0
+Tribunal=Superior=Eleitoral 	[Tribunal=Superior=Eleitoral] <inst> <*> <np-close> PROP M S @N<PRED  #35->33
+$) #36->0
+a 	[a] <sam-> PRP @<ADVL  #37->18
+a 	[o] <-sam> <artd> DET F S @>N  #38->39
+sucessão 	[sucessão] <event> <coll> N F S @P<  #39->37
+presidencial 	[presidencial] <nh> <np-close> ADJ F S @N<  #40->39
+$. #41->0
+</s>
+A 	[o] <*> <artd> DET F S @>N  #1->2
+pesquisa 	[pesquisa] <occ> <act-d> N F S @SUBJ>  #2->5
+de 	[de] <np-close> PRP @N<  #3->2
+hoje 	[hoje] ADV @P<  #4->3
+apresentou 	[apresentar] <fmc> <vH> <mv> V PS 3S IND VFIN @FS-STA  #5->0
+uma 	[um] <arti> DET F S @>N  #6->7
+variação 	[variação] <act> N F S @<ACC  #7->5
+em 	[em] <sam-> PRP @<ADVL  #8->5
+a 	[o] <-sam> <artd> DET F S @>N  #9->10
+lista 	[lista] <cc-r> <coll-sem> N F S @P<  #10->8
+espontânea 	[espontâneo] <np-close> ADJ F S @N<  #11->10
+$( #12->0
+quando 	[quando] <clb> <clb-fs> <rel> <ks> ADV @ADVL>  #13->16
+os 	[o] <artd> DET M P @>N  #14->15
+entrevistados 	[entrevistar] <n> <vH> <jh> V PCP M P @SUBJ>  #15->16
+dizem 	[dizer] <vH> <mv> V PR 3P IND VFIN @FS-<ADVL  #16->5
+em 	[em] PRP @<ADVL  #17->16
+quem 	[quem] <clb> <clb-fs> <rel> SPEC M/F P @SUBJ>  #18->19
+pretendem 	[pretender] <vH> <mv> V PR 3P IND VFIN @FS-P<  #19->17
+votar 	[votar] <vH> <mv> V INF @ICL-<ACC  #20->19
+sem 	[sem] PRP @<ADVL  #21->20
+um 	[um] <arti> DET M S @>N  #22->23
+cartão 	[cartão] <cm> <cc-r> N M S @P<  #23->21
+com 	[com] <np-close> PRP @N<  #24->23
+nomes 	[nome] <percep-f> <ac-cat> N M P @P<  #25->24
+$) #26->0
+$. #27->0
+</s>
+Em 	[em] <*> <sam-> PRP @ADVL>  #1->6
+este 	[este] <-sam> <dem> DET M S @>N  #2->3
+cenário 	[cenário] <sit> N M S @P<  #3->1
+$, #4->0
+Lula 	[Lula] <hum> <newlex> <*> PROP M S @SUBJ> 	[Lula] <*> PROP M S @SUBJ>  #5->6
+sobe 	[subir] <cjt-head> <fmc> <mv> V PR 3S IND VFIN @FS-STA  #6->0
+de 	[de] PRP @<ADVL  #7->6
+27 	[27] <card> NUM M P @>N  #8->9
+$% 	[%] N M P @P<  #9->7
+para 	[para] PRP @<ADVL  #10->6
+31 	[31] <card> NUM M P @>N  #11->12
+$% 	[%] <cjt-head> N M P @P<  #12->10
+e 	[e] <co-prparg> KC @CO  #13->12
+Alckmin 	[Alckmin] <cjt> <hum> <*> <heur> <foreign> PROP M/F S @P<  #14->12
+passa 	[passar] <nosubj> <cjt> <fmc> <mv> V PR 3S IND VFIN @FS-STA  #15->6
+de 	[de] PRP @<PIV  #16->15
+4 	[4] <card> NUM M P @>N  #17->18
+$% 	[%] N M P @P<  #18->16
+para 	[para] PRP @<ADVL  #19->15
+14 	[14] <card> NUM M P @>N  #20->21
+$% 	[%] N M P @P<  #21->19
+$; #22->0
+</s>
+Heloísa 	[Heloísa] <hum> <*> PROP F S @SUBJ>  #1->3
+também 	[também] ADV @ADVL>  #2->3
+cresce 	[crescer] <fmc> <mv> V PR 3S IND VFIN @FS-STA  #3->0
+$, #4->0
+de 	[de] PRP @<PRED  #5->3
+1 	[1] <card> NUM M S @>N  #6->7
+$% 	[%] N M P @P<  #7->5
+para 	[para] PRP @<ADVL  #8->3
+6 	[6] <card> NUM M P @>N  #9->10
+$% 	[%] N M P @P<  #10->8
+$. #11->0
+</s>
+De=acordo 	[de=acordo] <pp> <*> ADV @ADVL>  #1->15
+com 	[com] PRP @A<  #2->1
+a 	[o] <artd> DET F S @>N  #3->4
+CNI 	[CNI] <cjt-head> <org> <*> PROP F S @P<  #4->2
+$/ 	[$/] <co-prparg> KC @CO  #5->4
+Ibope 	[Ibope] <cjt> <hum> <*> PROP M/F S @P<  #6->4
+$, #7->0
+em 	[em] <sam-> PRP @ADVL>  #8->15
+um 	[um] <-sam> <arti> DET M S @>N  #9->10
+possível 	[possível] <n> <nh> ADJ M S @P<  #10->8
+segundo 	[segundo] <com> <adv-rel> PRP @ADVL>  #11->15
+turno 	[turno] <HH> <event> N M S @SUBJ>  #12->15
+$, #13->0
+Lula 	[Lula] <hum> <*> PROP M S @SUBJ> 	[Lula] <newlex> <*> PROP M S @SUBJ>  #14->15
+perderia 	[perder] <fmc> <mv> V COND 3S VFIN @FS-STA  #15->0
+10 	[10] <card> NUM M P @>N  #16->17
+pontos 	[ponto] <Labs> <geom> <temp> <Lh> <sem-c> <unit> N M P @<ACC  #17->15
+de 	[de] <np-close> PRP @N<  #18->17
+vantagem 	[vantagem] <ac> N F S @P<  #19->18
+para 	[para] PRP @<ADVL  #20->15
+Alckmin 	[Alckmin] <hum> <*> <heur> <foreign> PROP M/F S @P<  #21->20
+$. #22->0
+</s>
+Em 	[em] <*> PRP @ADVL>  #1->6
+junho 	[junho] N M S @P<  #2->1
+$, #3->0
+o 	[o] <artd> DET M S @>N  #4->5
+presidente 	[presidente] <Hprof> N M S @SUBJ>  #5->6
+tinha 	[ter] <fmc> <mv> V IMPF 3S IND VFIN @FS-STA  #6->0
+53 	[53] <card> NUM M P @>N  #7->8
+$% 	[%] N M P @<ACC  #8->6
+de 	[de] <sam-> <np-close> PRP @N<  #9->8
+as 	[o] <-sam> <artd> DET F P @>N  #10->11
+intenções 	[intenção] <sem-c> N F P @P<  #11->9
+de 	[de] <np-long> PRP @N<  #12->8
+voto 	[voto] <act-s> N M S @P<  #13->12
+contra 	[contra] <np-close> PRP @N<  #14->13
+29 	[29] <card> NUM M P @>N  #15->16
+$% 	[%] N M P @P<  #16->14
+de 	[de] <sam-> <np-close> PRP @N<  #17->16
+o 	[o] <-sam> <artd> DET M S @>N  #18->19
+tucano 	[tucano] <Aorn> <Hattr> N M S @P<  #19->17
+$. #20->0
+</s>
+Agora 	[agora] <*> <kc> ADV @ADVL>  #1->4
+$, #2->0
+Lula 	[Lula] <hum> <newlex> <*> PROP M S @SUBJ> 	[Lula] <*> PROP M S @SUBJ>  #3->4
+teria 	[ter] <fmc> <mv> V COND 3S VFIN @FS-STA  #4->0
+50 	[50] <card> NUM M P @>N  #5->6
+$% 	[%] N M P @<ACC  #6->4
+$, #7->0
+contra 	[contra] PRP @<ADVL  #8->4
+36 	[36] <card> NUM M P @>N  #9->10
+$% 	[%] N M P @P<  #10->8
+de 	[de] <np-close> PRP @N<  #11->10
+Alckmin 	[Alckmin] <hum> <*> <heur> <foreign> PROP M/F S @P<  #12->11
+$. #13->0
+</s>
+Em 	[em] <*> <sam-> PRP @ADVL>  #1->14
+um 	[um] <-sam> <arti> DET M S @>N  #2->3
+eventual 	[eventual] <n> <nh> ADJ M S @P<  #3->1
+segundo 	[segundo] <com> <adv-rel> PRP @ADVL>  #4->14
+turno 	[turno] <HH> <event> N M S @SUBJ>  #5->14
+com 	[com] <np-close> PRP @N<  #6->5
+Heloísa=Helena 	[Heloísa=Helena] <hum> <*> PROP F S @P<  #7->6
+$, #8->0
+a 	[o] <artd> DET F S @>N  #9->10
+vantagem 	[vantagem] <ac> N F S @SUBJ>  #10->14
+de 	[de] <np-close> PRP @N<  #11->10
+Lula 	[Lula] <hum> <*> PROP M S @P< 	[Lula] <newlex> <*> PROP M S @P<  #12->11
+também 	[também] ADV @ADVL>  #13->14
+cairia 	[cair] <fmc> <mv> V COND 3S VFIN @FS-STA  #14->0
+$, #15->0
+de=acordo 	[de=acordo] <pp> ADV @<ADVL  #16->14
+com 	[com] PRP @A<  #17->16
+a 	[o] <artd> DET F S @>N  #18->19
+pesquisa 	[pesquisa] <occ> <act-d> N F S @P<  #19->17
+de 	[de] <np-close> PRP @N<  #20->19
+hoje 	[hoje] ADV @P<  #21->20
+$. #22->0
+</s>
+O 	[o] <*> <artd> DET M S @>N  #1->2
+presidente 	[presidente] <Hprof> N M S @SUBJ>  #2->3
+teria 	[ter] <fmc> <mv> V COND 3S VFIN @FS-STA  #3->0
+53 	[53] <card> NUM M P @>N  #4->5
+$% 	[%] N M P @<ACC  #5->3
+de 	[de] <sam-> <np-close> PRP @N<  #6->5
+as 	[o] <-sam> <artd> DET F P @>N  #7->8
+intenções 	[intenção] <sem-c> N F P @P<  #8->6
+de 	[de] <np-long> PRP @N<  #9->5
+voto 	[voto] <act-s> N M S @P<  #10->9
+contra 	[contra] <np-close> PRP @N<  #11->10
+30 	[30] <card> NUM M P @>N  #12->13
+$% 	[%] N M P @P<  #13->11
+de 	[de] <np-close> PRP @N<  #14->13
+Heloísa 	[Heloísa] <hum> <*> PROP F S @P<  #15->14
+$. #16->0
+</s>
+Em 	[em] <*> PRP @ADVL>  #1->5
+junho 	[junho] N M S @P<  #2->1
+$, #3->0
+Lula 	[Lula] <hum> <newlex> <*> PROP M S @SUBJ> 	[Lula] <*> PROP M S @SUBJ>  #4->5
+tinha 	[ter] <fmc> <mv> V IMPF 3S IND VFIN @FS-STA  #5->0
+57 	[57] <card> NUM M P @>N  #6->7
+$% 	[%] <cjt-head> N M P @<ACC  #7->5
+e 	[e] <co-acc> KC @CO  #8->7
+Heloísa 	[Heloísa] <cjt> <genre> <*> PROP F S @<ACC  #9->7
+21 	[21] <card> NUM M P @>N  #10->11
+$% 	[%] N M P @<PRED  #11->5
+$. #12->0
+</s>
+A 	[o] <*> <artd> DET F S @>N  #1->2
+pesquisa 	[pesquisa] <occ> <act-d> N F S @SUBJ>  #2->3
+ouviu 	[ouvir] <fmc> <vH> <mv> V PS 3S IND VFIN @FS-STA  #3->0
+2.002 	[2.002] <card> NUM F P @>N  #4->5
+pessoas 	[pessoa] <H> N F P @<SUBJ  #5->3
+entre 	[entre] PRP @<ADVL  #6->3
+os 	[o] <artd> DET M P @>N  #7->8
+dias 	[dia] <cjt-head> <temp> <dur> <per> <unit> N M P @P<  #8->6
+29 	[29] <card> <np-close> NUM M/F P @N<  #9->8
+e 	[e] <co-postnom> KC @CO  #10->8
+31 	[31] <cjt> <card> <np-close> NUM M/F P @N<  #11->8
+de 	[de] <np-close> PRP @N<  #12->8
+julho 	[julho] N M S @P<  #13->12
+$, #14->0
+em 	[em] PRP @<ADVL  #15->3
+142 	[142] <card> NUM M P @>N  #16->17
+municípios 	[município] <Lciv> N M P @P<  #17->15
+de 	[de] <sam-> <np-close> PRP @N<  #18->17
+o 	[o] <-sam> <artd> DET M S @>N  #19->20
+país 	[país] <Lciv> N M S @P<  #20->18
+$. #21->0
+</s>
+A 	[o] <*> <artd> DET F S @>N  #1->2
+margem 	[margem] <Labs> <Ltop> <am> <cc-r> N F S @SUBJ>  #2->5
+de 	[de] <np-close> PRP @N<  #3->2
+erro 	[erro] <ac> <act-d> N M S @P<  #4->3
+é 	[ser] <fmc> <vK> <mv> V PR 3S IND VFIN @FS-STA  #5->0
+de 	[de] PRP @<SC  #6->5
+dois=pontos 	[dois=pontos] <ac-sign> N M P @P<  #7->6
+percentuais 	[percentual] <nh> <np-close> ADJ M P @N<  #8->7
+$, #9->0
+para 	[para] <cjt-head> PRP @<ADVL  #10->5
+mais 	[muito] <quant> <KOMP> DET M/F S/P @P<  #11->10
+ou 	[ou] <co-advl> KC @CO  #12->10
+para 	[para] <cjt> PRP @<ADVL  #13->10
+menos 	[pouco] <quant> <KOMP> DET M/F S/P @P<  #14->13
+$. #15->0
+</s>
+Em 	[em] <*> <sam-> PRP @ADVL>  #1->8
+a 	[o] <-sam> <artd> DET F S @>N  #2->3
+comparação 	[comparação] <act> N F S @P<  #3->1
+com 	[com] <np-close> PRP @N<  #4->3
+a 	[o] <artd> DET F S @>N  #5->6
+pesquisa 	[pesquisa] <occ> <act-d> N F S @P<  #6->4
+Ibope 	[ibope] <prop> <*> <act-d> N M S @PRED>  #7->14
+divulgada 	[divulgar] <vH> <mv> V PCP F S @ICL-<PRED  #8->0
+há 	[há] PRP @<ADVL  #9->8
+nove 	[nove] <card> NUM M P @>N  #10->11
+dias 	[dia] <temp> <dur> <per> <unit> N M P @P<  #11->9
+$, #12->0
+Lula 	[Lula] <hum> <*> PROP M S @SUBJ> 	[Lula] <newlex> <*> PROP M S @SUBJ>  #13->14
+permaneceu 	[permanecer] <cjt-head> <fmc> <vK> <mv> V PS 3S IND VFIN @FS-STA  #14->0
+estável 	[estável] <nh> ADJ M S @<SC  #15->14
+em 	[em] PRP @<ADVL  #16->14
+44 	[44] <card> NUM M P @>N  #17->18
+$% 	[%] <cjt-head> N M P @P<  #18->16
+e 	[e] <co-prparg> KC @CO  #19->18
+Alckmin 	[Alckmin] <cjt> <hum> <*> <heur> <foreign> PROP M/F S @P<  #20->18
+oscilou 	[oscilar] <nosubj> <cjt> <fmc> <mv> V PS 3S IND VFIN @FS-STA  #21->14
+dois=pontos 	[dois=pontos] <ac-sign> N M P @<PRED  #22->21
+percentuais 	[percentual] <nh> <np-close> ADJ M P @N<  #23->22
+$, #24->0
+de 	[de] PRP @<PRED  #25->21
+27 	[27] <card> NUM M P @>N  #26->27
+$% 	[%] N M P @P<  #27->25
+para 	[para] PRP @<ADVL  #28->21
+25 	[25] <card> NUM M P @>N  #29->30
+$% 	[%] N M P @P<  #30->28
+$. #31->0
+</s>
+Já=Heloísa 	[Já=Heloísa] <hum> <*> <heur> PROP M/F S @SUBJ>  #1->2
+subiu 	[subir] <fmc> <mv> V PS 3S IND VFIN @FS-STA  #2->0
+três 	[três] <card> NUM M P @>N  #3->4
+pontos 	[ponto] <Labs> <geom> <temp> <Lh> <sem-c> <unit> N M P @<ACC  #4->2
+$, #5->0
+de 	[de] <np-close> PRP @N<PRED  #6->4
+8 	[8] <card> NUM M P @>N  #7->8
+$% 	[%] N M P @P<  #8->6
+para 	[para] PRP @<ADVL  #9->2
+11 	[11] <card> NUM M P @>N  #10->11
+$% 	[%] N M P @P<  #11->9
+$. #12->0
+</s>
+Em 	[em] <*> <sam-> PRP @ADVL>  #1->20
+um 	[um] <-sam> <arti> DET M S @>N  #2->3
+eventual 	[eventual] <n> <nh> ADJ M S @P<  #3->1
+segundo 	[segundo] <com> <adv-rel> PRP @ADVL>  #4->20
+turno 	[turno] <HH> <event> N M S @SUBJ>  #5->20
+e 	[e] KC @CO  #6->10
+em 	[em] <sam-> PRP @ADVL>  #7->20
+a 	[o] <-sam> <artd> DET F S @>N  #8->9
+comparação 	[comparação] <act> N F S @P<  #9->7
+com 	[com] <np-close> PRP @N<  #10->9
+a 	[o] <artd> DET F S @>N  #11->12
+pesquisa 	[pesquisa] <occ> <act-d> N F S @P<  #12->10
+Ibope 	[Ibope] <hum> <*> PROP M/F S @SUBJ>  #13->20
+de 	[de] <sam-> <np-close> PRP @N<  #14->13
+o 	[o] <-sam> <artd> DET M S @>N  #15->16
+dia 	[dia] <temp> <dur> <per> <unit> N M S @P<  #16->14
+25 	[25] <card> <np-close> NUM M/F P @N<  #17->16
+$, #18->0
+Lula 	[Lula] <hum> <*> PROP M S @SUBJ> 	[Lula] <newlex> <*> PROP M S @SUBJ>  #19->20
+oscila 	[oscilar] <fmc> <mv> V PR 3S IND VFIN @FS-STA  #20->0
+de 	[de] PRP @<ADVL  #21->20
+48 	[48] <card> NUM M P @>N  #22->23
+$% 	[%] N M P @P<  #23->21
+para 	[para] PRP @<ADVL  #24->20
+50 	[50] <card> NUM M P @>N  #25->26
+$% 	[%] N M P @P<  #26->24
+$, #27->0
+enquanto 	[enquanto] <clb> <clb-fs> <rel> <ks> ADV @ADVL>  #28->30
+Alckmin 	[Alckmin] <hum> <*> <heur> <foreign> PROP M/F S @SUBJ>  #29->30
+cai 	[cair] <mv> <np-close> V PR 3S IND VFIN @FS-<ADVL @FS-N<  #30->20
+de 	[de] PRP @<ADVL  #31->30
+39 	[39] <card> NUM M P @>N  #32->33
+$% 	[%] N M P @P<  #33->31
+para 	[para] PRP @<ADVL  #34->30
+36 	[36] <card> NUM M P @>N  #35->36
+$% 	[%] N M P @P<  #36->34
+$. #37->0
+</s>
+Uma 	[um] <*> <arti> DET F S @>N  #1->3
+possível 	[possível] <nh> ADJ F S @>N  #2->3
+disputa 	[disputa] <talk> <fight> N F S @SUBJ>  #3->13
+entre 	[entre] <np-close> PRP @N<  #4->3
+Lula 	[Lula] <cjt-head> <hum> <*> PROP M S @P< 	[Lula] <newlex> <*> PROP M S @P<  #5->4
+e 	[e] <co-prparg> KC @CO  #6->5
+Heloísa 	[Heloísa] <cjt> <hum> <*> PROP F S @P<  #7->5
+em 	[em] <sam-> <np-close> PRP @N<  #8->7
+um 	[um] <-sam> <arti> DET M S @>N  #9->11
+segundo 	[segundo] <NUM-ord> <jh> ADJ M S @>N  #10->11
+turno 	[turno] <HH> <event> N M S @P<  #11->8
+não 	[não] ADV @ADVL>  #12->14
+foi 	[ser] <fmc> <aux> V PS 3S IND VFIN @FS-STA  #13->0
+cogitada 	[cogitar] <vH> <mv> V PCP F S @ICL-AUX<  #14->13
+por 	[por] <sam-> PRP @<PASS  #15->14
+o 	[o] <-sam> <artd> DET M S @>N  #16->17
+Ibope 	[ibope] <prop> <*> <act-d> N M S @P<  #17->15
+em 	[em] <sam-> <np-close> PRP @N<  #18->17
+esse 	[esse] <-sam> <dem> DET M S @>N  #19->20
+levantamento 	[levantamento] <act> N M S @P<  #20->18
+de 	[de] <sam-> <np-close> PRP @N<  #21->20
+o 	[o] <-sam> <artd> DET M S @>N  #22->23
+dia 	[dia] <temp> <dur> <per> <unit> N M S @P<  #23->21
+25 	[25] <card> <np-close> NUM M/F P @N<  #24->23
+$. #25->0
+</s>
+Os 	[o] <*> <artd> DET M P @>N  #1->2
+números 	[número] <ac> <ac-sign> <sem> <ac-cat> N M P @SUBJ>  #2->8
+de 	[de] <sam-> <np-close> PRP @N<  #3->2
+a 	[o] <-sam> <artd> DET F S @>N  #4->6
+última 	[último] <NUM-ord> <jh> ADJ F S @>N  #5->6
+pesquisa 	[pesquisa] <occ> <act-d> N F S @P<  #6->3
+Datafolha 	[datafolha] <media> <*> PROP F S @SUBJ>  #7->8
+são 	[ser] <fmc> <vK> <mv> V PR 3P IND VFIN @FS-STA  #8->0
+semelhantes 	[semelhante] <nh> ADJ F P @<SC  #9->8
+a 	[a] <sam-> PRP @A<  #10->9
+os 	[o] <-sam> <artd> DET M P @>N  #11->12
+divulgados 	[divulgar] <n> <vH> <mv> V PCP M P @ICL-P<  #12->10
+em 	[em] <sam-> PRP @<ADVL  #13->12
+esta 	[este] <-sam> <dem> DET F S @>N  #14->15
+sexta-feira 	[sexta-feira] <temp> N F S @P<  #15->13
+$. #16->0
+</s>
+Em 	[em] <*> <sam-> PRP @ADVL>  #1->16
+a 	[o] <-sam> <artd> DET F S @>N  #2->3
+pesquisa 	[pesquisa] <occ> <act-d> N F S @P<  #3->1
+$, #4->0
+divulgada 	[divulgar] <vH> <mv> V PCP F S @ICL-N<PRED  #5->3
+em 	[em] <sam-> PRP @<ADVL  #6->5
+o 	[o] <-sam> <artd> DET M S @>N  #7->9
+último 	[último] <NUM-ord> ADJ M S @>N  #8->9
+dia 	[dia] <temp> <dur> <per> <unit> N M S @P<  #9->6
+19 	[19] <card> <np-close> NUM M/F P @N<  #10->9
+por 	[por] <sam-> <np-long> PRP @N<  #11->9
+a 	[o] <-sam> <artd> DET F S @>N  #12->13
+Folha 	[Folha] <media> <*> PROP F S @P< 	[Folha] <newlex> <*> PROP F S @P<  #13->11
+$, #14->0
+Lula 	[Lula] <hum> <*> PROP M S @SUBJ> 	[Lula] <newlex> <*> PROP M S @SUBJ>  #15->16
+aparece 	[aparecer] <fmc> <mv> V PR 3S IND VFIN @FS-STA  #16->0
+com 	[com] PRP @<ADVL  #17->16
+44 	[44] <card> NUM M P @>N  #18->19
+$% 	[%] N M P @P<  #19->17
+de 	[de] <sam-> <np-close> PRP @N<  #20->19
+as 	[o] <-sam> <artd> DET F P @>N  #21->22
+intenções 	[intenção] <sem-c> N F P @P<  #22->20
+de 	[de] <np-long> PRP @N<  #23->19
+voto 	[voto] <cjt-head> <act-s> N M S @P<  #24->23
+e 	[e] <co-prparg> KC @CO  #25->24
+Alckmin 	[Alckmin] <cjt> <hum> <*> <heur> <foreign> PROP M/F S @P<  #26->24
+$, #27->0
+com 	[com] <np-close> PRP @N<PRED  #28->26
+28 	[28] <card> NUM M P @>N  #29->30
+$% 	[%] N M P @P<  #30->28
+$. #31->0
+</s>
+A 	[o] <*> <artd> DET F S @>N  #1->2
+candidata 	[candidata] <Hprof> N F S @SUBJ>  #2->9
+de 	[de] <sam-> <np-close> PRP @N<  #3->2
+o 	[o] <-sam> <artd> DET M S @>N  #4->5
+PSOL 	[PSOL] <party> <*> PROP M S @P<  #5->3
+a 	[a] <sam-> <np-long> PRP @N<  #6->2
+a 	[o] <-sam> <artd> DET F S @>N  #7->8
+Presidência 	[presidência] <prop> <*> <pos-soc> N F S @P<  #8->6
+vem 	[vir] <fmc> <mv> V PR 3S IND VFIN @FS-STA  #9->0
+em 	[em] PRP @<ADVL  #10->9
+terceiro 	[terceiro] <H> N M S @P<  #11->10
+$, #12->0
+com 	[com] <np-close> PRP @<ADVL @N<PRED  #13->9
+10 	[10] <card> NUM M P @>N  #14->15
+$% 	[%] N M P @P<  #15->13
+$. #16->0
+</s>

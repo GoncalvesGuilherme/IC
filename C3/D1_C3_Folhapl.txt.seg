@@ -1,0 +1,777 @@
+O=Airbus-A320 	[O=Airbus-A320] <top> <*> <heur> PROP M S @SUBJ>  #1->15
+de 	[de] <sam-> <np-close> PRP @N<  #2->1
+a 	[o] <-sam> <artd> DET F S @>N  #3->4
+Tam 	[Tam] <hum> <newlex> <*> PROP F S @P<  #4->2
+acidentado 	[acidentado] <jh> <np-close> ADJ M S @N< @SUBJ>  #5->15
+em 	[em] PRP @ADVL>  #6->15
+São=Paulo 	[São=Paulo] <civ> <*> <newlex> PROP M S @P<  #7->6
+em 	[em] <sam-> <np-close> PRP @N<  #8->7
+a 	[o] <-sam> <artd> DET F S @>N  #9->11
+última 	[último] <NUM-ord> ADJ F S @>N  #10->11
+terça-feira 	[terça-feira] <temp> N F S @P<  #11->8
+$( #12->0
+17 	[17] <card> <np-close> NUM M/F P @N<PRED  #13->11
+$) #14->0
+tinha 	[ter] <fmc> <mv> V IMPF 3S IND VFIN @FS-STA  #15->0
+um 	[um] <arti> DET M S @>N  #16->17
+defeito 	[defeito] <ac> N M S @<ACC  #17->15
+em 	[em] <sam-> PRP @<ADVL  #18->15
+o 	[o] <-sam> <artd> DET M S @>N  #19->20
+reverso 	[reverso] <Labs> N M S @P<  #20->18
+de 	[de] <sam-> <np-close> PRP @N<  #21->20
+a 	[o] <-sam> <artd> DET F S @>N  #22->23
+turbina 	[turbina] <mach> N F S @P<  #23->21
+direita 	[direito] <np-close> ADJ F S @N<  #24->23
+desde 	[desde] <np-long> PRP @N<  #25->23
+o 	[o] <artd> DET M S @>N  #26->28
+último 	[último] <NUM-ord> ADJ M S @>N  #27->28
+dia 	[dia] <temp> <dur> <per> <unit> N M S @P<  #28->25
+13 	[13] <card> <np-close> NUM M/F P @N<  #29->28
+$. #30->0
+</s>
+A 	[o] <*> <artd> DET F S @>N  #1->2
+informação 	[informação] <ac> N F S @SUBJ>  #2->21
+$, #3->0
+revelada 	[revelar] <mv> V PCP F S @ICL-N<PRED  #4->2
+em 	[em] <sam-> PRP @<ADVL  #5->4
+a 	[o] <-sam> <artd> DET F S @>N  #6->7
+edição 	[edição] <act> <sem-r> N F S @P<  #7->5
+de 	[de] <sam-> <np-close> PRP @N<  #8->7
+esta 	[este] <-sam> <dem> DET F S @>N  #9->10
+quinta 	[quinta] <temp> <BB> <ac-cat> N F S @P<  #10->8
+de 	[de] <sam-> <np-close> PRP @N<  #11->10
+o 	[o] <-sam> <artd> DET M S @>N  #12->14
+$"  #13->0
+Jornal=Nacional 	[Jornal=Nacional] <tit> <*> <*1> <*2> PROP M S @P<  #14->11
+$"  #15->0
+$, #16->0
+de 	[de] <sam-> <np-close> PRP @N<PRED  #17->14
+a 	[o] <-sam> <artd> DET F S @>N  #18->19
+TV=Globo 	[TV=Globo] <media> <*> PROP F S @P<  #19->17
+$, #20->0
+foi 	[ser] <fmc> <aux> V PS 3S IND VFIN @FS-STA  #21->0
+confirmada 	[confirmar] <vH> <mv> V PCP F S @ICL-AUX<  #22->21
+$, #23->0
+em 	[em] PRP @<ADVL  #24->22
+nota 	[nota] <sem-r> <ac-sign> <ac> N F S @P<  #25->24
+$, #26->0
+por 	[por] <sam-> PRP @<ADVL  #27->22
+a 	[o] <-sam> <artd> DET F S @>N  #28->29
+companhia 	[companhia] <HH> N F S @P<  #29->27
+aérea 	[aéreo] <nh> <np-close> ADJ F S @N<  #30->29
+$. #31->0
+</s>
+Reportagem 	[reportagem] <*> <sem-r> <sem-w> N F S @SUBJ>  #1->32
+de 	[de] <sam-> <np-close> PRP @N<  #2->1
+a 	[o] <-sam> <artd> DET F S @>N  #3->4
+colunista 	[colunista] <Hprof> N F S @P<  #4->2
+Eliane=Cantanhêde 	[Eliane=Cantanhêde] <hum> <*> <np-close> PROP F S @N<  #5->4
+$( #6->0
+íntegra 	[íntegra] <cc-r> <np-close> N F S @N<PRED  #7->5
+disponível 	[disponível] <nh> <np-close> ADJ F S @N<  #8->7
+só 	[só] ADV @>P  #9->10
+para 	[para] <np-close> PRP @N<  #10->7
+assinantes 	[assinante] <H> N M/F P @P<  #11->10
+de 	[de] <sam-> <np-close> PRP @N<  #12->11
+o 	[o] <-sam> <artd> DET M S @>N  #13->14
+jornal 	[jornal] <cjt-head> <sem-r> N M S @P<  #14->12
+ou 	[ou] <co-postnom> KC @CO  #15->14
+de 	[de] <cjt> <sam-> <np-close> PRP @N<  #16->14
+o 	[o] <-sam> <artd> DET M S @>N  #17->18
+UOL 	[UOL] <inst> <*> PROP M S @P<  #18->16
+$) #19->0
+$, #20->0
+publicada 	[publicar] <vH> <mv> V PCP F S @ICL-N<PRED  #21->18
+em 	[em] <sam-> PRP @<ADVL  #22->21
+a 	[o] <-sam> <artd> DET F S @>N  #23->24
+edição 	[edição] <act> <sem-r> N F S @P<  #24->22
+de 	[de] <sam-> <np-close> PRP @N<  #25->24
+a 	[o] <-sam> <artd> DET F S @>N  #26->27
+Folha 	[Folha] <media> <*> PROP F S @P< 	[Folha] <newlex> <*> PROP F S @P<  #27->25
+de 	[de] <sam-> <np-close> PRP @N<  #28->27
+esta 	[este] <-sam> <dem> DET F S @>N  #29->30
+quinta 	[quinta] <temp> <BB> <ac-cat> N F S @P<  #30->28
+$, #31->0
+mostra 	[mostrar] <fmc> <mv> V PR 3S IND VFIN @FS-STA  #32->0
+que 	[que] <clb> <clb-fs> KS @SUB  #33->39
+nova 	[novo] <jh> ADJ F S @>N  #34->35
+versão 	[versão] <meta> <sem-r> N F S @SUBJ>  #35->39
+de 	[de] <sam-> <np-close> PRP @N<  #36->35
+a 	[o] <-sam> <artd> DET F S @>N  #37->38
+Infraero 	[Infraero] <org> <*> <heur> PROP F S @P<  #38->36
+inclui 	[incluir] <mv> V PR 3S IND VFIN @FS-<ACC  #39->32
+falha 	[falha] <f-c> <Lopening> <Ltop> N F S @<ACC  #40->39
+mecânica 	[mecânico] <nh> <np-close> ADJ F S @N<  #41->40
+entre 	[entre] <np-long> PRP @<ADVL @N<  #42->39
+as 	[o] <artd> DET F P @>N  #43->44
+hipóteses 	[hipótese] <sem-c> N F P @P<  #44->42
+para 	[para] PRP @<ADVL  #45->39
+o 	[o] <artd> DET M S @>N  #46->47
+acidente 	[acidente] <event> N M S @P<  #47->45
+--o 	[--o] <card> NUM M/F P @>N  #48->49
+maior 	[grande] <KOMP> ADJ M/F S @<PRED  #49->39
+de 	[de] <sam-> <np-close> PRP @N<  #50->47
+a 	[o] <-sam> <artd> DET F S @>N  #51->52
+aviação 	[aviação] <domain> N F S @P<  #52->50
+brasileira 	[brasileiro] <nat> <jh> <np-close> ADJ F S @N<  #53->52
+$. #54->0
+</s>
+A 	[a] <*> PRP @PIV>  #1->3
+Tam 	[Tam] <hum> <newlex> <*> PROP M S @P<  #2->1
+negou 	[negar] <fmc> <vH> <mv> V PS 3S IND VFIN @FS-STA  #3->0
+a 	[o] <artd> DET F S @>N  #4->5
+hipótese 	[hipótese] <sem-c> N F S @<ACC  #5->3
+$. #6->0
+</s>
+A 	[o] <*> <artd> DET F S @>N  #1->2
+falha 	[falha] <cjt-head> <f-c> <Lopening> <Ltop> N F S @SUBJ>  #2->14
+em 	[em] <sam-> <np-close> PRP @N<  #3->2
+o 	[o] <-sam> <artd> DET M S @>N  #4->5
+reversor 	[reversor] <mach> N M S @P<  #5->3
+$--  #6->0
+mecanismo 	[mecanismo] <cjt> <ac> N M S @SUBJ>  #7->2
+que 	[que] <clb> <clb-fs> <rel> SPEC M S @SUBJ>  #8->9
+ajuda 	[ajudar] <vH> <mv> <np-close> V PR 3S IND VFIN @FS-N<  #9->7
+o 	[o] <artd> DET M S @>N  #10->11
+avião 	[avião] <Vair> N M S @<ACC  #11->9
+a 	[o] <artd> DET F S @>N  #12->13
+frear-Y 	[frear-Y] <heur> N F S @SUBJ>  #13->14
+foi 	[ser] <fmc> <aux> V PS 3S IND VFIN @FS-STA  #14->0
+detectada 	[detectar] <vH> <mv> V PCP F S @ICL-AUX<  #15->14
+por 	[por] <sam-> PRP @<PASS  #16->15
+o 	[o] <-sam> <artd> DET M S @>N  #17->18
+sistema 	[sistema] <ac> N M S @P<  #18->16
+eletrônico 	[eletrônico] <nh> <np-close> ADJ M S @N<  #19->18
+de 	[de] <np-close> PRP @N<  #20->18
+checagem 	[checagem] <DERS> N F S @P<  #21->20
+de 	[de] <sam-> <np-close> PRP @N<  #22->21
+a 	[o] <-sam> <artd> DET F S @>N  #23->25
+própria 	[próprio] ADJ F S @>N  #24->25
+aeronave 	[aeronave] <Vair> N F S @P<  #25->22
+$, #26->0
+que 	[que] <clb> <clb-fs> <rel> SPEC M S @SUBJ>  #27->28
+continuou 	[continuar] <vH> <aux> <np-close> V PS 3S IND VFIN @FS-N<  #28->25
+voando 	[voar] <clb> <vA> <mv> V GER @ICL-AUX<  #29->28
+em 	[em] <sam-> PRP @<ADVL  #30->29
+os 	[o] <artd> <-sam> DET M P @>N  #31->32
+dias 	[dia] <temp> <dur> <per> <unit> N M P @P<  #32->30
+seguintes 	[seguinte] <nh> <np-close> ADJ M P @N<  #33->32
+$, #34->0
+com 	[com] <np-close> PRP @<ADVL @N<PRED  #35->29
+o 	[o] <artd> DET M S @>N  #36->37
+reversor 	[reversor] <mach> N M S @P<  #37->35
+direito 	[direito] ADV @ADVL>  #38->39
+desligado 	[desligar] <vH> <mv> <np-close> V PCP M S @ICL-N<  #39->37
+$. #40->0
+</s>
+A 	[a] <*> PRP @ADVL>  #1->3
+Tam 	[Tam] <hum> <newlex> <*> PROP M S @P<  #2->1
+afirma 	[afirmar] <fmc> <vH> <mv> V PR 3S IND VFIN @FS-STA  #3->0
+que 	[que] <clb> <clb-fs> KS @SUB  #4->9
+$"  #5->0
+o 	[o] <*1> <artd> DET M S @>N  #6->7
+procedimento 	[procedimento] <activity> N M S @SUBJ>  #7->9
+não 	[não] ADV @ADVL>  #8->9
+configura 	[configurar] <vH> <mv> V PR 3S IND VFIN @FS-KOMP<  #9->0
+qualquer 	[qualquer] <quant> DET M S @>N  #10->11
+obstáculo 	[obstáculo] <ac> N M S @<ACC  #11->9
+a 	[a] <sam-> <np-close> PRP @N<  #12->11
+o 	[o] <-sam> <artd> DET M S @>N  #13->14
+pouso 	[pouso] <Lh> N M S @P<  #14->12
+de 	[de] <sam-> <np-close> PRP @N<  #15->14
+a 	[o] <-sam> <artd> DET F S @>N  #16->17
+aeronave 	[aeronave] <*2> <Vair> N F S @P<  #17->15
+$"  #18->0
+$. #19->0
+</s>
+A 	[a] <*> <sam-> PRP @ADVL  #1->0
+as 	[o] <-sam> <artd> DET F P @>N  #2->3
+18h50 	[18h50] <card> NUM F P @P<  #3->1
+de 	[de] <sam-> <np-close> PRP @N<  #4->3
+a 	[o] <-sam> <artd> DET F S @>N  #5->7
+última 	[último] <NUM-ord> ADJ F S @>N  #6->7
+terça 	[terça] <temp> <ac-cat> N F S @P<  #7->4
+$, #8->0
+sem 	[sem] <np-close> PRP @N<  #9->7
+controle 	[controle] <am> N M S @P<  #10->9
+$, #11->0
+a 	[o] <artd> DET F S @>N  #12->13
+aeronave 	[aeronave] <Vair> N F S @NPHR  #13->1
+$--  #14->0
+que 	[que] <clb> <clb-fs> <rel> SPEC M S @SUBJ>  #15->16
+havia 	[haver] <aux> <np-close> V IMPF 3S IND VFIN @FS-N<  #16->10
+decolado 	[decolar] <vN> <mv> V PCP M S @ICL-AUX<  #17->16
+de 	[de] PRP @<ADVL  #18->17
+Porto 	[Porto] <civ> <*> PROP M S @P<  #19->18
+Alegre-Y 	[Alegre-Y] <hum> <*> <heur> <np-close> PROP M S @N<  #20->19
+passou 	[passar] <nosubj> <nosubj> <cjt-head> <fmc> <mv> V PS 3S IND VFIN @FS-STA  #21->13
+por 	[por] <sam-> PRP @<PIV  #22->21
+a 	[o] <-sam> <artd> DET F S @>N  #23->24
+pista 	[pista] <Lpath> <Lh> N F S @P<  #24->22
+de 	[de] <np-close> PRP @N<  #25->24
+Congonhas 	[Congonhas] <civ> <newlex> <*> PROP M/F S @P<  #26->25
+$( #27->0
+zona 	[zona] <L> <sick> <np-close> N F S @N<PRED  #28->26
+sul 	[sul] <dir> <np-close> N M S @N<  #29->28
+de 	[de] <np-close> PRP @N<  #30->29
+São=Paulo 	[São=Paulo] <civ> <*> PROP M S @P< 	[São=Paulo] <*> <newlex> PROP M S @P<  #31->30
+$) #32->0
+com 	[com] PRP @<ADVL  #33->21
+velocidade 	[velocidade] <f-q> <ac> N F S @P<  #34->33
+acima=de 	[acima=de] <sam-> PRP @<ADVL  #35->21
+o 	[o] <artd> <-sam> DET M S @>N  #36->37
+normal 	[normal] <n> <nh> ADJ M S @P<  #37->35
+$, #38->0
+atravessou 	[atravessar] <nosubj> <cjt> <fmc> <vH> <mv> V PS 3S IND VFIN @FS-STA  #39->21
+a 	[o] <artd> DET F S @>N  #40->42
+movimentada 	[movimentar] <vH> V PCP F S @>N  #41->42
+avenida 	[avenida] <Lpath> N F S @<ACC  #42->39
+Washington=Luís 	[Washington=Luís] <top> <*> <heur> <foreign> <np-close> PROP F S @N<  #43->42
+e 	[e] <co-fin> <co-fmc> KC @CO  #44->21
+atingiu 	[atingir] <nosubj> <cjt> <fmc> <mv> V PS 3S IND VFIN @FS-STA  #45->21
+um 	[um] <arti> DET M S @>N  #46->47
+prédio 	[prédio] <build> N M S @<ACC  #47->45
+de 	[de] <sam-> <np-close> PRP @N<  #48->47
+a 	[o] <-sam> <artd> DET F S @>N  #49->51
+própria 	[próprio] <ident> DET F S @>N  #50->51
+empresa 	[empresa] <HH> N F S @P<  #51->48
+$--  #52->0
+de 	[de] <sam-> <np-close> PRP @N<  #53->51
+a 	[o] <-sam> <artd> DET F S @>N  #54->55
+Tam=Express 	[Tam=Express] <V> <*> <foreign> PROP F S @P<  #55->53
+$. #56->0
+</s>
+Além=de 	[além=de] <sam-> <*> PRP @ADVL>  #1->7
+os 	[o] <artd> <-sam> DET M P @>N  #2->3
+ocupantes 	[ocupante] <H> N M P @P<  #3->1
+$, #4->0
+o 	[o] <artd> DET M S @>N  #5->6
+acidente 	[acidente] <event> N M S @SUBJ>  #6->7
+vitimou 	[vitimar] <fmc> <mv> V PS 3S IND VFIN @FS-STA  #7->0
+pessoas 	[pessoa] <cjt-head> <H> N F P @<ACC  #8->7
+em 	[em] PRP @<ADVL  #9->7
+terra 	[terra] <cm> <Ltop> <BB> <Lstar> N F S @P<  #10->9
+$, #11->0
+entre 	[entre] PRP @<ADVL  #12->7
+elas 	[elas] PERS F 3P NOM/PIV @P<  #13->12
+funcionários 	[funcionário] <cjt> <Hprof> N M P @<ACC  #14->8
+de 	[de] <sam-> <np-close> PRP @N<  #15->14
+a 	[o] <-sam> <artd> DET F S @>N  #16->17
+empresa 	[empresa] <HH> N F S @P<  #17->15
+de 	[de] <np-close> PRP @N<  #18->17
+transporte 	[transporte] <act> <V> N M S @P<  #19->18
+de 	[de] <np-close> PRP @N<  #20->19
+cargas 	[carga] <amount> <act> <ac> N F P @P<  #21->20
+$. #22->0
+</s>
+Até 	[até] <*> PRP @ADVL>  #1->10
+a 	[o] <artd> DET F S @>N  #2->3
+noite 	[noite] <per> <temp> N F S @P<  #3->1
+de 	[de] <sam-> <np-close> PRP @N<  #4->3
+esta 	[este] <-sam> <dem> DET F S @>N  #5->6
+quinta 	[quinta] <temp> <BB> <ac-cat> N F S @P<  #6->4
+$, #7->0
+os 	[o] <artd> DET M P @>N  #8->9
+bombeiros 	[bombeiro] <Hprof> N M P @SUBJ>  #9->10
+confirmavam 	[confirmar] <fmc> <vH> <mv> V IMPF 3P IND VFIN @FS-STA  #10->0
+a 	[o] <artd> DET F S @>N  #11->12
+morte 	[morte] <event> N F S @<ACC  #12->10
+de 	[de] <np-close> PRP @N<  #13->12
+188 	[188] <card> NUM F P @>N  #14->15
+pessoas 	[pessoa] <H> N F P @P<  #15->13
+$. #16->0
+</s>
+O 	[o] <*> <artd> DET M S @>N  #1->2
+número 	[número] <ac> <ac-sign> <sem> <ac-cat> N M S @SUBJ>  #2->3
+pode 	[poder] <fmc> <aux> V PR 3S IND VFIN @FS-STA  #3->0
+chegar 	[chegar] <mv> V INF @ICL-AUX<  #4->3
+a 	[a] PRP @<ADVL  #5->4
+200 	[200] <card> NUM M/F P @P<  #6->5
+$. #7->0
+</s>
+De=acordo 	[de=acordo] <pp> <*> ADV @ADVL>  #1->24
+com 	[com] PRP @A<  #2->1
+a 	[o] <artd> DET F S @>N  #3->4
+companhia 	[companhia] <cjt-head> <HH> N F S @P<  #4->2
+aérea 	[aéreo] <nh> <np-close> ADJ F S @N<  #5->4
+$, #6->0
+a 	[o] <artd> DET F S @>N  #7->8
+recomendação 	[recomendação] <cjt> <act-s> <sem-r> N F S @P<  #8->4
+de 	[de] <sam-> <np-close> PRP @N<  #9->8
+a 	[o] <-sam> <artd> DET F S @>N  #10->11
+Airbus 	[Airbus] <V> <newlex> <*> PROP F S @P<  #11->9
+$--  #12->0
+fabricante 	[fabricante] <Hprof> N M/F S @SUBJ>  #13->23
+de 	[de] <sam-> <np-close> PRP @N<  #14->13
+o 	[o] <-sam> <artd> DET M S @>N  #15->16
+avião-Y 	[avião-Y] <heur> N M S @P<  #16->14
+é=que 	[é=que] <foc> ADV @<FOC 	[é=que] <v-ks> ADV @<FOC  #17->24
+a 	[o] <artd> DET F S @>N  #18->19
+revisão 	[revisão] <activity> N F S @SUBJ>  #19->23
+em 	[em] <sam-> <np-close> PRP @N<  #20->19
+o 	[o] <-sam> <artd> DET M S @>N  #21->22
+reversor 	[reversor] <mach> N M S @P<  #22->20
+seja 	[ser] <fmc> <aux> V PR 3S SUBJ VFIN @FS-STA  #23->0
+feita 	[fazer] <mv> V PCP F S @ICL-AUX<  #24->23
+até 	[até] PRP @<ADVL  #25->24
+dez 	[dez] <card> NUM M P @>N  #26->27
+dias 	[dia] <temp> <dur> <per> <unit> N M P @>A  #27->28
+depois 	[depois] <np-close> ADV @N< @<ADVL  #28->24
+de 	[de] PRP @A<  #29->28
+o 	[o] <clb> <artd> DET M S @>N  #30->31
+defeito 	[defeito] <ac> N M S @SUBJ>  #31->33
+ser 	[ser] <aux> V INF 3S @ICL-P<  #32->29
+detectado 	[detectar] <vH> <mv> V PCP M S @ICL-AUX<  #33->32
+$. #34->0
+</s>
+Para 	[para] <*> PRP @ADVL>  #1->8
+a 	[a] PRP @ADVL>  #2->8
+Tam 	[Tam] <hum> <newlex> <*> PROP M S @P<  #3->2
+$, #4->0
+a 	[o] <artd> DET F S @>N  #5->6
+falha 	[falha] <f-c> <Lopening> <Ltop> N F S @SUBJ>  #6->8
+não 	[não] ADV @ADVL>  #7->8
+impediria 	[impedir] <fmc> <mv> V COND 3S VFIN @FS-STA  #8->0
+a 	[o] <artd> DET F S @>N  #9->10
+realização 	[realização] <act> N F S @<ACC  #10->8
+de 	[de] <sam-> PRP @<PIV  #11->8
+os 	[o] <-sam> <artd> DET M P @>N  #12->13
+vôos 	[vôo] <activity> N M P @P<  #13->11
+$. #14->0
+</s>
+Em 	[em] <*> PRP @ADVL>  #1->9
+1996 	[1996] <card> <date> <year> NUM M/F S @P<  #2->1
+$, #3->0
+uma 	[um] <arti> DET F S @>N  #4->5
+falha 	[falha] <f-c> <Lopening> <Ltop> N F S @SUBJ>  #5->9
+em 	[em] <sam-> <np-close> PRP @N<  #6->5
+o 	[o] <-sam> <artd> DET M S @>N  #7->8
+reverso 	[reverso] <Labs> N M S @P<  #8->6
+foi 	[ser] <fmc> <vK> <mv> V PS 3S IND VFIN @FS-STA  #9->0
+a 	[o] <artd> DET F S @>N  #10->11
+causa 	[causa] <ac> N F S @<SC  #11->9
+de 	[de] <sam-> <np-close> PRP @N<  #12->11
+o 	[o] <-sam> <artd> DET M S @>N  #13->14
+acidente 	[acidente] <event> N M S @P<  #14->12
+com 	[com] <np-close> PRP @N<  #15->14
+o 	[o] <artd> DET M S @>N  #16->17
+Fokker-Xdddx100 	[Fokker-Xdddx100] <V> <*> <foreign> PROP M S @P<  #17->15
+de 	[de] <sam-> <np-close> PRP @N<  #18->17
+a 	[o] <-sam> <artd> DET F S @>N  #19->20
+Tam 	[Tam] <hum> <newlex> <*> PROP F S @P<  #20->18
+$, #21->0
+ocorrido 	[ocorrer] <vN> <np-close> V PCP M S @N<PRED  #22->20
+segundos 	[segundo] <NUM-ord> <jh> <np-close> ADJ M P @N<PRED  #23->22
+depois 	[depois] ADV @<ADVL  #24->9
+de 	[de] <sam-> PRP @A<  #25->24
+a 	[o] <-sam> <artd> DET F S @>N  #26->27
+decolagem 	[decolagem] <event> N F S @P<  #27->25
+$, #28->0
+também 	[também] ADV @>P  #29->30
+em 	[em] <np-close> PRP @N<  #30->27
+Congonhas 	[Congonhas] <civ> <newlex> <*> PROP M S @P<  #31->30
+$. #32->0
+</s>
+Em 	[em] <*> <sam-> PRP @ADVL>  #1->7
+a 	[o] <-sam> <artd> DET F S @>N  #2->3
+ocasião 	[ocasião] <temp> <ac> N F S @P<  #3->1
+$, #4->0
+99 	[99] <card> NUM F P @>N  #5->6
+pessoas 	[pessoa] <H> N F P @SUBJ>  #6->7
+morreram 	[morrer] <fmc> <mv> V PS/MQP 3P IND VFIN @FS-STA  #7->0
+$. #8->0
+</s>
+Caso 	[caso] <clb> <clb-fs> <*> KS @SUB  #1->36
+a 	[o] <artd> DET F S @>N  #2->3
+possibilidade 	[possibilidade] <cjt-head> <ac> N F S @SUBJ>  #3->36
+de 	[de] <np-close> PRP @N<  #4->3
+que 	[que] <clb> <clb-fs> KS @SUB  #5->11
+uma 	[um] <arti> DET F S @>N  #6->7
+falha 	[falha] <f-c> <Lopening> <Ltop> N F S @SUBJ>  #7->11
+em 	[em] <sam-> <np-close> PRP @N<  #8->7
+a 	[o] <-sam> <artd> DET F S @>N  #9->10
+aeronave 	[aeronave] <Vair> N F S @P<  #10->8
+tenha 	[ter] <aux> V PR 3S SUBJ VFIN @FS-P<  #11->4
+provocado 	[provocar] <mv> V PCP @ICL-AUX<  #12->11
+a 	[o] <artd> DET F S @>N  #13->14
+tragédia 	[tragédia] <sem-w> <event> N F S @<ACC  #14->12
+com 	[com] PRP @<ADVL  #15->12
+o 	[o] <artd> DET M S @>N  #16->17
+Airbus 	[Airbus] <V> <newlex> <*> PROP M S @P<  #17->15
+$, #18->0
+as 	[o] <artd> DET F P @>N  #19->20
+suspeitas 	[suspeita] <cjt> <sem-c> N F P @SUBJ>  #20->3
+de 	[de] <np-close> PRP @N<  #21->20
+que 	[que] <clb> <clb-fs> KS @SUB  #22->25
+o 	[o] <artd> DET M S @>N  #23->24
+acidente 	[acidente] <event> N M S @SUBJ>  #24->25
+esteja 	[estar] <vK> <mv> V PR 3S SUBJ VFIN @FS-P<  #25->21
+relacionado 	[relacionar] <mv> V PCP M S @ICL-<SC  #26->25
+a 	[a] PRP @<ADVL  #27->26
+falhas 	[falho] <jh> ADJ F P @P<  #28->27
+em 	[em] <sam-> PRP @A<  #29->28
+a 	[o] <-sam> <artd> DET F S @>N  #30->32
+recém-reformada 	[recém-reformar] <vH> V PCP F S @>N  #31->32
+pista 	[pista] <Lpath> <Lh> N F S @P<  #32->29
+de 	[de] <sam-> <np-close> PRP @N<  #33->32
+o 	[o] <-sam> <artd> DET M S @>N  #34->35
+aeroporto 	[aeroporto] <Lh> N M S @P<  #35->33
+perdem 	[perder] <fmc> <mv> V PR 3P IND VFIN @FS-ADVL>  #36->0
+força 	[força] <am> <HH> N F S @<ACC  #37->36
+$. #38->0
+</s>
+As 	[o] <*> <artd> DET F P @>N  #1->2
+obras 	[obra] <sem-c> <Lh> <activity> N F P @SUBJ>  #2->3
+foram 	[ser] <fmc> <aux> V PS/MQP 3P IND VFIN @FS-STA  #3->0
+entregues 	[entregar] <vH> <mv> V PCP M P @ICL-AUX<  #4->3
+incompletas 	[incompleto] <nh> ADJ F P @<PRED  #5->4
+$, #6->0
+sem 	[sem] PRP @<ADVL @<PRED  #7->4
+o 	[o] <artd> DET M S @>N  #8->11
+chamado 	[chamado] ADJ M S @>N  #9->11
+$"  #10->0
+grooving 	[grooving] <foreign> <*1> <*2> <heur> N M S @P<  #11->7
+$"  #12->0
+$( #13->0
+ranhuras 	[ranhura] <Lopening> <np-close> N F P @N<PRED  #14->11
+que 	[que] <clb> <clb-fs> <rel> SPEC M S @ACC>  #15->16
+ajudam 	[ajudar] <vH> <mv> <np-close> V PR 3P IND VFIN @FS-N<  #16->14
+em 	[em] <sam-> PRP @<ADVL  #17->16
+o 	[o] <-sam> <artd> DET M S @>N  #18->19
+escoamento 	[escoamento] <process> <ac> N M S @P<  #19->17
+de 	[de] <sam-> <np-close> PRP @N<  #20->19
+a 	[o] <-sam> <artd> DET F S @>N  #21->22
+água 	[água] <cm-liq> <drink> <f-q> N F S @P<  #22->20
+$) #23->0
+$--  #24->0
+que 	[que] <clb> <clb-fs> <rel> SPEC M S @SUBJ>  #25->26
+reduz 	[reduzir] <mv> <np-close> V PR 3S IND VFIN @FS-N<  #26->22
+o 	[o] <artd> DET M S @>N  #27->28
+risco 	[risco] <ac> <ac-sign> N M S @<ACC  #28->26
+de 	[de] <np-close> PRP @N<  #29->28
+derrapagens 	[derrapagem] <event> N F P @P<  #30->29
+de 	[de] <np-close> PRP @N<  #31->30
+aviões 	[avião] <Vair> N M P @P<  #32->31
+em 	[em] PRP @<ADVL  #33->26
+casos 	[caso] <event> <ac-cat> <sem> N M P @P<  #34->33
+de 	[de] <np-close> PRP @N<  #35->34
+chuva 	[chuva] <wea-rain> N F S @P<  #36->35
+$. #37->0
+</s>
+Ainda 	[ainda] <*> ADV @ADVL>  #1->11
+segundo 	[segundo] <com> <adv-rel> PRP @ADVL>  #2->11
+o 	[o] <artd> DET M S @>N  #3->5
+$"  #4->0
+Jornal=Nacional 	[Jornal=Nacional] <tit> <*> <*1> <*2> PROP M S @SUBJ>  #5->11
+$"  #6->0
+$, #7->0
+o 	[o] <artd> DET M S @>N  #8->10
+mesmo 	[mesmo] <diff> <KOMP> DET M S @>N  #9->10
+avião 	[avião] <Vair> N M S @SUBJ>  #10->11
+teve 	[ter] <fmc> <mv> V PS 3S IND VFIN @FS-STA  #11->0
+problemas 	[problema] <ac> N M P @<ACC  #12->11
+para 	[para] <np-close> PRP @N<  #13->12
+pousar 	[pousar] <vH> <mv> V INF @ICL-P<  #14->13
+$, #15->0
+um 	[um] <card> NUM M S @>N  #16->17
+dia 	[dia] <temp> <dur> <per> <unit> N M S @>A  #17->18
+antes 	[antes] <np-close> ADV @N< @<ADVL  #18->14
+de 	[de] <sam-> PRP @A<  #19->18
+o 	[o] <-sam> <artd> DET M S @>N  #20->21
+acidente 	[acidente] <event> N M S @P<  #21->19
+$, #22->0
+também 	[também] ADV @>P  #23->24
+em 	[em] PRP @<ADVL  #24->14
+Congonhas 	[Congonhas] <civ> <newlex> <*> PROP M S @P<  #25->24
+$. #26->0
+</s>
+O 	[o] <*> <artd> DET M S @>N  #1->2
+vôo 	[vôo] <activity> N M S @SUBJ>  #2->9
+$, #3->0
+que 	[que] <clb> <clb-fs> <rel> SPEC M S @SUBJ>  #4->5
+havia 	[haver] <aux> <np-close> V IMPF 3S IND VFIN @FS-N<  #5->2
+saído 	[sair] <mv> V PCP M S @ICL-AUX<  #6->5
+de 	[de] PRP @<SA  #7->6
+Minas 	[Minas] <hum> <newlex> <*> PROP F S @P<  #8->7
+conseguiu 	[conseguir] <fmc> <vH> <mv> V PS 3S IND VFIN @FS-STA  #9->0
+parar 	[parar] <mv> V INF @ICL-<ACC  #10->9
+apenas 	[apenas] ADV @>P  #11->12
+em 	[em] <sam-> PRP @<PIV  #12->10
+o 	[o] <-sam> <artd> DET M S @>N  #13->14
+limite 	[limite] <bar> <ac> N M S @P<  #14->12
+de 	[de] <sam-> <np-close> PRP @N<  #15->14
+a 	[o] <-sam> <artd> DET F S @>N  #16->17
+pista 	[pista] <Lpath> <Lh> N F S @P<  #17->15
+$. #18->0
+</s>
+Em 	[em] <*> PRP @ADVL>  #1->13
+nota 	[nota] <sem-r> <ac-sign> <ac> N F S @P<  #2->1
+enviada 	[enviar] <vH> <np-close> V PCP F S @N<  #3->2
+após 	[após] <np-long> PRP @N<  #4->2
+a 	[o] <artd> DET F S @>N  #5->6
+exibição 	[exibição] <act> N F S @P<  #6->4
+de 	[de] <sam-> <np-close> PRP @N<  #7->6
+a 	[o] <-sam> <artd> DET F S @>N  #8->9
+reportagem 	[reportagem] <sem-r> <sem-w> N F S @P<  #9->7
+$, #10->0
+a 	[a] PRP @ADVL>  #11->13
+Tam 	[Tam] <hum> <newlex> <*> PROP M S @P<  #12->11
+afirma 	[afirmar] <fmc> <vH> <mv> V PR 3S IND VFIN @FS-STA  #13->0
+$"  #14->0
+que 	[que] <clb> <clb-fs> <*1> KS @SUB  #15->17
+não 	[não] ADV @ADVL>  #16->17
+teve 	[ter] <mv> V PS 3S IND VFIN @FS-KOMP<  #17->0
+registro 	[registro] <cc-r> N M S @<ACC  #18->17
+de 	[de] <np-close> PRP @N<  #19->18
+qualquer 	[qualquer] <quant> DET M S @>N  #20->21
+problema 	[problema] <ac> N M S @P<  #21->19
+mecânico 	[mecânico] <nh> <np-close> ADJ M S @N<  #22->21
+em 	[em] <sam-> PRP @<ADVL  #23->17
+este 	[este] <-sam> <dem> DET M S @>N  #24->25
+avião 	[avião] <Vair> N M S @P<  #25->23
+em 	[em] <sam-> PRP @<ADVL  #26->17
+o 	[o] <-sam> <artd> DET M S @>N  #27->28
+dia 	[dia] <temp> <dur> <per> <unit> N M S @P<  #28->26
+16 	[16] <card> <np-close> NUM M/F P @N<  #29->28
+de 	[de] <np-close> PRP @N<  #30->28
+julho 	[julho] <*2> N M S @P<  #31->30
+$"  #32->0
+$. #33->0
+</s>
+Imagens 	[imagem] <*> <pict> <sem-c> <ac-cat> N F P @SUBJ>  #1->22
+gravadas 	[gravar] <vH> <mv> <np-close> V PCP F P @ICL-N<  #2->1
+em 	[em] <sam-> PRP @<ADVL  #3->2
+o 	[o] <-sam> <artd> DET M S @>N  #4->5
+aeroporto 	[aeroporto] <Lh> N M S @P<  #5->3
+de 	[de] <np-close> PRP @N<  #6->5
+Congonhas 	[Congonhas] <civ> <newlex> <*> PROP M/F S @P<  #7->6
+$( #8->0
+zona 	[zona] <L> <sick> <np-close> N F S @N<PRED  #9->7
+sul 	[sul] <dir> <np-close> N M S @N<  #10->9
+de 	[de] <np-close> PRP @N<  #11->10
+São=Paulo 	[São=Paulo] <cjt-head> <civ> <*> PROP M S @P< 	[São=Paulo] <*> <newlex> PROP M S @P<  #12->11
+$) #13->0
+e 	[e] <co-prparg> KC @CO  #14->12
+divulgadas 	[divulgar] <vH> <mv> V PCP F P @ICL-P<  #15->3
+em 	[em] <sam-> PRP @<ADVL  #16->15
+a 	[o] <-sam> <artd> DET F S @>N  #17->18
+quarta-feira 	[quarta-feira] <cjt> <temp> N F S @P<  #18->12
+$( #19->0
+18 	[18] <card> <np-close> NUM M/F P @N<PRED  #20->18
+$) #21->0
+mostram 	[mostrar] <fmc> <mv> V PR 3P IND VFIN @FS-STA  #22->0
+o 	[o] <artd> DET M S @>N  #23->24
+momento 	[momento] <dur> <f-q> N M S @<ACC  #24->22
+de 	[de] <sam-> <np-close> PRP @N<  #25->24
+o 	[o] <-sam> <artd> DET M S @>N  #26->27
+pouso 	[pouso] <Lh> N M S @P<  #27->25
+de 	[de] <sam-> <np-close> PRP @N<  #28->27
+o 	[o] <-sam> <artd> DET M S @>N  #29->30
+vôo 	[vôo] <activity> N M S @P<  #30->28
+3054 	[3054] <card> <np-close> NUM M/F P @N<  #31->30
+de 	[de] <sam-> <np-close> PRP @N<  #32->30
+a 	[o] <-sam> <artd> DET F S @>N  #33->34
+Tam 	[Tam] <hum> <newlex> <*> PROP F S @P<  #34->32
+$. #35->0
+</s>
+Os 	[o] <*> <artd> DET M P @>N  #1->2
+vídeos 	[vídeo] <sem-w> N M P @SUBJ>  #2->3
+comparam 	[comparar] <fmc> <vH> <mv> V PR 3P IND VFIN @FS-STA  #3->0
+pousos 	[pouso] <Lh> N M P @<ACC  #4->3
+de 	[de] <np-close> PRP @N<  #5->4
+outras 	[outro] <diff> <KOMP> DET F P @>N  #6->7
+aeronaves 	[aeronave] <Vair> N F P @P<  #7->5
+com 	[com] PRP @<PIV  #8->3
+o 	[o] <dem> DET M S @P<  #9->8
+de 	[de] <sam-> <np-close> PRP @N<  #10->9
+o 	[o] <-sam> <artd> DET M S @>N  #11->12
+Airbus=A-320 	[Airbus=A-320] <V> <*> PROP M S @P<  #12->10
+acidentado 	[acidentado] <np-close> ADJ M S @N<  #13->12
+$. #14->0
+</s>
+As 	[o] <*> <artd> DET F P @>N  #1->2
+imagens 	[imagem] <pict> <sem-c> <ac-cat> N F P @SUBJ>  #2->9
+$, #3->0
+divulgadas 	[divulgar] <vH> <mv> V PCP F P @ICL-N<PRED  #4->2
+por 	[por] <sam-> PRP @<PASS  #5->4
+a 	[o] <-sam> <artd> DET F S @>N  #6->7
+Infraero 	[Infraero] <org> <*> <heur> PROP F S @P<  #7->5
+$, #8->0
+mostram 	[mostrar] <cjt-head> <fmc> <mv> V PR 3P IND VFIN @FS-STA  #9->0
+que 	[que] <clb> <clb-fs> KS @SUB  #10->16
+o 	[o] <artd> DET M S @>N  #11->12
+avião 	[avião] <Vair> N M S @SUBJ>  #12->16
+de 	[de] <sam-> <np-close> PRP @N<  #13->12
+a 	[o] <-sam> <artd> DET F S @>N  #14->15
+Tam 	[Tam] <hum> <newlex> <*> PROP F S @P<  #15->13
+levou 	[levar] <mv> V PS 3S IND VFIN @FS-<ACC  #16->9
+três 	[três] <card> NUM M P @>N  #17->18
+segundos 	[segundo] <dur> <unit> N M P @<ACC  #18->16
+para 	[para] PRP @<OA  #19->16
+fazer 	[fazer] <mv> V INF @ICL-P<  #20->19
+o 	[o] <artd> DET M S @>N  #21->22
+trajeto 	[trajeto] <Lpath> <activity> N M S @<ACC  #22->20
+em 	[em] <sam-> <np-close> PRP @N<  #23->22
+a 	[o] <-sam> <artd> DET F S @>N  #24->25
+pista 	[pista] <Lpath> <Lh> N F S @P<  #25->23
+que 	[que] <clb> KS @SUB  #26->32
+$, #27->0
+em 	[em] PRP @ADVL>  #28->32
+condições 	[condição] <sem-c> <sit> <state> N F P @P<  #29->28
+normais 	[normal] <nh> <np-close> ADJ F P @N<  #30->29
+$, #31->0
+levariam 	[levar] <nosubj> <cjt> <fmc> <mv> V COND 3P VFIN @FS-STA  #32->9
+11 	[11] <card> NUM M P @>N  #33->34
+segundos 	[segundo] <dur> <unit> N M P @<ACC  #34->32
+$. #35->0
+</s>
+O 	[o] <*> <artd> DET M S @>N  #1->2
+presidente 	[presidente] <Hprof> N M S @SUBJ>  #2->20
+de 	[de] <sam-> <np-close> PRP @N<  #3->2
+a 	[o] <-sam> <artd> DET F S @>N  #4->5
+Infraero 	[Infraero] <org> <*> <heur> PROP F S @P<  #5->3
+$( #6->0
+estatal 	[estatal] <HH> <np-close> N F S @N<PRED  #7->5
+que 	[que] <clb> <clb-fs> <rel> SPEC M S @SUBJ>  #8->9
+administra 	[administrar] <vH> <mv> <np-close> V PR 3S IND VFIN @FS-N<  #9->7
+os 	[o] <artd> DET M P @>N  #10->11
+aeroportos 	[aeroporto] <Lh> N M P @<ACC  #11->9
+de 	[de] <sam-> <np-close> PRP @N<  #12->11
+o 	[o] <-sam> <artd> DET M S @>N  #13->14
+país 	[país] <Lciv> N M S @P<  #14->12
+$) #15->0
+$, #16->0
+brigadeiro 	[brigadeiro] <Hprof> <food> <np-close> N M S @APP  #17->14
+José=Carlos=Pereira 	[José=Carlos=Pereira] <hum> <*> <np-close> PROP M S @N<  #18->17
+$, #19->0
+disse 	[dizer] <fmc> <vH> <mv> V PS 3S IND VFIN @FS-STA  #20->0
+ontem 	[ontem] ADV @<ADVL  #21->20
+que 	[que] <clb> <clb-fs> KS @SUB  #22->25
+os 	[o] <artd> DET M P @>N  #23->24
+peritos 	[perito] <Hprof> N M P @SUBJ>  #24->25
+detectaram 	[detectar] <vH> <mv> V PS/MQP 3P IND VFIN @FS-<ACC  #25->20
+$"  #26->0
+fumaça 	[fumaça] <*1> <cm> N F S @<ACC  #27->25
+forte 	[forte] <*2> <np-close> ADJ F S @N<  #28->27
+$"  #29->0
+em 	[em] <sam-> PRP @<ADVL  #30->25
+o 	[o] <-sam> <artd> DET M S @>N  #31->32
+motor 	[motor] <mach> N M S @P<  #32->30
+esquerdo 	[esquerdo] <np-close> ADJ M S @N<  #33->32
+de 	[de] <sam-> <np-close> PRP @N<  #34->32
+o 	[o] <-sam> <artd> DET M S @>N  #35->36
+Airbus-A320 	[Airbus-A320] <V> <*> PROP M S @P<  #36->34
+de 	[de] <sam-> <np-close> PRP @N<  #37->36
+a 	[o] <-sam> <artd> DET F S @>N  #38->39
+Tam 	[Tam] <hum> <newlex> <*> PROP F S @P<  #39->37
+em 	[em] <sam-> PRP @<ADVL  #40->25
+o 	[o] <-sam> <artd> DET M S @>N  #41->42
+filme 	[filme] <sem-w> <cc> N M S @P<  #42->40
+$, #43->0
+de=acordo 	[de=acordo] <pp> ADV @<ADVL  #44->25
+com 	[com] PRP @A<  #45->44
+a 	[o] <artd> DET F S @>N  #46->47
+reportagem 	[reportagem] <sem-r> <sem-w> N F S @P<  #47->45
+publicada 	[publicar] <vH> <mv> V PCP F S @ICL-N<PRED  #48->47
+por 	[por] <sam-> PRP @<PASS  #49->48
+a 	[o] <-sam> <artd> DET F S @>N  #50->51
+Folha 	[Folha] <media> <*> PROP F S @P< 	[Folha] <newlex> <*> PROP F S @P<  #51->49
+$. #52->0
+</s>
+Segundo 	[segundo] <com> <*> <adv-rel> PRP @ADVL>  #1->7
+o 	[o] <artd> DET M S @>N  #2->6
+brigadeiro 	[brigadeiro] <Hprof> <food> N M S @SUBJ>  #3->7
+$, #4->0
+a 	[o] <artd> DET F S @>N  #5->6
+fumaça 	[fumaça] <asarg> <cm> N F S @P<  #6->1
+introduz 	[introduzir] <fmc> <vH> <mv> V PR 3S IND VFIN @FS-STA  #7->0
+um 	[um] <arti> DET M S @>N  #8->9
+elemento 	[elemento] <ac> <H> N M S @<SUBJ  #9->7
+novo 	[novo] <jh> <np-close> ADJ M S @N<  #10->9
+em 	[em] <sam-> PRP @<ADVL  #11->7
+o 	[o] <-sam> <artd> DET M S @>N  #12->13
+início 	[início] <temp> N M S @P<  #13->11
+de 	[de] <sam-> <np-close> PRP @N<  #14->13
+as 	[o] <-sam> <artd> DET F P @>N  #15->16
+investigações 	[investigação] <act> N F P @P<  #16->14
+$:  #17->0
+</s>
+a 	[o] <artd> DET F S @>N  #1->2
+possibilidade 	[possibilidade] <ac> N F S @NPHR  #2->0
+de 	[de] <np-close> PRP @N<  #3->2
+falha 	[falha] <f-c> <Lopening> <Ltop> N F S @P<  #4->3
+mecânica 	[mecânico] <nh> <np-close> ADJ F S @N<  #5->4
+em 	[em] <sam-> <np-long> PRP @N<  #6->4
+o 	[o] <-sam> <artd> DET M S @>N  #7->8
+equipamento 	[equipamento] <cm> <tool> <mach> N M S @P<  #8->6
+$. #9->0
+</s>
+A 	[o] <*> <artd> DET F S @>N  #1->2
+fumaça 	[fumaça] <cm> N F S @SUBJ>  #2->9
+$, #3->0
+de=acordo 	[de=acordo] <pp> ADV @ADVL>  #4->10
+com 	[com] PRP @A<  #5->4
+a 	[o] <artd> DET F S @>N  #6->7
+reportagem 	[reportagem] <sem-r> <sem-w> N F S @P<  #7->5
+$, #8->0
+pode 	[poder] <fmc> <aux> V PR 3S IND VFIN @FS-STA  #9->0
+indicar 	[indicar] <mv> V INF @ICL-AUX<  #10->9
+que 	[que] <clb> <clb-fs> KS @SUB  #11->14
+os 	[o] <artd> DET M P @>N  #12->13
+motores 	[motor] <mach> N M P @SUBJ>  #13->14
+estavam 	[estar] <aux> V IMPF 3P IND VFIN @FS-<ACC  #14->10
+funcionando 	[funcionar] <clb> <mv> V GER @ICL-AUX<  #15->14
+em 	[em] PRP @<ADVL  #16->15
+sentidos 	[sentido] <f-an> <am> <ac> <dir> N M P @P<  #17->16
+opostos 	[oposto] <nh> <np-close> ADJ M P @N<  #18->17
+$, #19->0
+um 	[um] <quant> <np-close> DET M S @SUBJ> @N<PRED  #20->21
+impulsionando 	[impulsionar] <cjt-head> <clb> <vH> <mv> V GER @ICL-<ADVL  #21->15
+para 	[para] PRP @<ADVL  #22->21
+frente 	[frente] <Labs> <dir> <an> <wea-c> N F S @P<  #23->22
+e 	[e] <co-ger> KC @CO  #24->21
+outro 	[outro] <diff> <KOMP> DET M S @SUBJ> @<ACC  #25->26
+freando 	[frear] <cjt> <mv> V GER @ICL-<ADVL  #26->21
+$, #27->0
+o=que 	[o=que] <clb> <clb-fs> <rel> SPEC M S @SUBJ>  #28->29
+explicaria 	[explicar] <vH> <mv> V COND 3S VFIN @FS-S< @FS-<ACC  #29->26
+$, #30->0
+por=exemplo 	[por=exemplo] ADV @<ADVL  #31->29
+$, #32->0
+por=que 	[por=que] <clb> <clb-fs> <interr> ADV @ADVL>  #33->37
+o 	[o] <artd> DET M S @>N  #34->35
+piloto 	[piloto] <Hprof> <Aich> N M S @SUBJ>  #35->37
+não 	[não] ADV @ADVL>  #36->37
+conseguiu 	[conseguir] <nosubj> <cjt-head> <vH> <mv> V PS 3S IND VFIN @FS-<ACC  #37->29
+parar 	[parar] <mv> V INF @ICL-<ACC  #38->37
+o 	[o] <artd> DET M S @>N  #39->40
+avião 	[avião] <Vair> N M S @<ACC  #40->38
+$, #41->0
+que 	[que] <clb> <clb-fs> KS @SUB  #42->43
+continuou 	[continuar] <nosubj> <cjt> <vH> <mv> V PS 3S IND VFIN @FS-<ACC  #43->37
+em 	[em] PRP @<ADVL  #44->43
+velocidade 	[velocidade] <f-q> <ac> N F S @P<  #45->44
+bem 	[bem] <quant> ADV @>A  #46->47
+alta 	[alto] <np-close> ADJ F S @N<  #47->45
+depois 	[depois] ADV @<ADVL  #48->43
+de 	[de] PRP @A<  #49->48
+tocar 	[tocar] <mv> V INF @ICL-P<  #50->49
+o 	[o] <artd> DET M S @>N  #51->52
+solo 	[solo] <Ltop> <part-build> <sem-l> N M S @SUBJ>  #52->54
+e 	[e] <co-fin> <co-fmc> KC @CO  #53->37
+girou 	[girar] <cjt> <fmc> <mv> V PS 3S IND VFIN @FS-<ACC  #54->37
+para 	[para] PRP @<ADVL  #55->54
+a 	[o] <artd> DET F S @>N  #56->57
+esquerda 	[esquerda] <Labs> <HH> N F S @P<  #57->55
+a 	[a] <sam-> PRP @<ADVL  #58->54
+o 	[o] <-sam> <artd> DET M S @>N  #59->60
+final 	[final] <event> <temp> N M S @P<  #60->58
+de 	[de] <sam-> <np-close> PRP @N<  #61->60
+a 	[o] <-sam> <artd> DET F S @>N  #62->63
+pista 	[pista] <Lpath> <Lh> N F S @P<  #63->61
+$, #64->0
+em=vez=de 	[em=vez=de] PRP @<ADVL  #65->54
+seguir 	[seguir] <mv> V INF @ICL-P<  #66->65
+reto 	[reto] <anorg> N M S @<ACC  #67->66
+$. #68->0
+</s>

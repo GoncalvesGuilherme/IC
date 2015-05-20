@@ -1,0 +1,460 @@
+A 	[o] <*> <artd> DET F S @>N  #1->2
+lista 	[lista] <cc-r> <coll-sem> N F S @TOP  #2->14
+de 	[de] <sam-> <np-close> PRP @N<  #3->2
+os 	[o] <-sam> <artd> DET M P @>N  #4->6
+chamados 	[chamado] ADJ M P @>N  #5->6
+exoplanetas 	[exoplaneta] <Lstar> <DERP> N M P @P<  #6->3
+$, #7->0
+mundos 	[mundo] <L> <np-close> N M P @N<PRED  #8->6
+localizados 	[localizar] <vH> <mv> <np-close> V PCP M P @ICL-N<  #9->2
+fora=de 	[fora=de] <sam-> PRP @<ADVL  #10->9
+o 	[o] <artd> <-sam> DET M S @>N  #11->12
+sistema=solar 	[sistema=solar] <Ltop> N M S @P<  #12->10
+$, #13->0
+têm 	[ter] <fmc> <mv> V PR 3P IND VFIN @FS-STA  #14->0
+um 	[um] <arti> DET M S @>N  #15->18
+extraordinário 	[extraordinário] <jh> ADJ M S @>N  #16->18
+novo 	[novo] <jh> ADJ M S @>N  #17->18
+membro 	[membro] <an> <H> N M S @<ACC  #18->14
+$. #19->0
+</s>
+Usando 	[usar] <clb> <*> <vH> <mv> V GER @ICL-ADVL>  #1->11
+telescópios 	[telescópio] <tool> N M P @<ACC  #2->1
+de 	[de] <sam-> <np-close> PRP @N<  #3->2
+o 	[o] <-sam> <artd> DET M S @>N  #4->5
+Observatório=Europeu=Sul 	[Observatório=Europeu=Sul] <inst> <*> PROP M S @P<  #5->3
+$( #6->0
+ESO 	[ESO] <inst> <*> <np-close> PROP M S @APP  #7->5
+$) #8->0
+$, #9->0
+astrônomos 	[astrônomo] <Hprof> N M P @SUBJ>  #10->11
+descobriram 	[descobrir] <fmc> <vH> <mv> V PS/MQP 3P IND VFIN @FS-STA  #11->0
+um 	[um] <arti> DET M S @>N  #12->13
+planeta 	[planeta] <Lstar> N M S @<ACC  #13->11
+com 	[com] PRP @<ADVL  #14->11
+sete 	[sete] <card> NUM F P @>N  #15->16
+vezes 	[vez] <temp> N F P @P<  #16->14
+a 	[o] <artd> DET F S @>N  #17->18
+massa 	[massa] <amount> <f-q> <food-h> <cm> <mon> <HH> N F S @<PRED  #18->11
+de 	[de] <np-close> PRP @N<  #19->18
+Júpiter 	[Júpiter] <astro> <*> PROP M S @P<  #20->19
+$, #21->0
+o 	[o] <artd> DET M S @>N  #22->24
+mais 	[mais] <quant> <KOMP> ADV @>A  #23->24
+pesado 	[pesar] <n> <jh> <np-close> V PCP M S @APP  #24->20
+de 	[de] <sam-> PRP @KOMP<  #25->23
+os 	[o] <-sam> DET M P @AS<  #26->0
+que 	[que] <clb> <clb-fs> <rel> SPEC M S @SUBJ>  #27->28
+giram 	[girar] <mv> <np-close> V PR 3P IND VFIN @FS-N<  #28->24
+em=torno=de 	[em=torno=de] <sam-> PRP @<ADVL  #29->28
+o 	[o] <artd> <-sam> DET M S @>N  #30->31
+Sol 	[sol] <prop> <*> <Lstar> <ac-sign> <percep-l> N M S <cm> <cur> @P<  #31->29
+$, #32->0
+e 	[e] KC @CO  #33->31
+outro 	[outro] <diff> <KOMP> DET M S @<ACC  #34->28
+$, #35->0
+com 	[com] <np-close> PRP @<ADVL @N<PRED  #36->28
+o 	[o] <artd> DET M S @>N  #37->38
+dobro 	[dobro] <amount> N M S @P<  #38->36
+de 	[de] <sam-> <np-close> PRP @N<  #39->38
+esse 	[esse] <dem> <-sam> DET M S @>N  #40->41
+peso 	[peso] <f-q> <unit> <tool> <cur> <cc> N M S @P<  #41->39
+$. #42->0
+</s>
+Ambos 	[ambos] <*> <quant> DET M P @>N  #1->3
+os 	[o] <artd> DET M P @>N  #2->3
+mundos 	[mundo] <L> N M P @SUBJ>  #3->4
+têm 	[ter] <nosubj> <cjt-head> <fmc> <mv> V PR 3P IND VFIN @FS-STA  #4->0
+massa 	[massa] <amount> <f-q> <food-h> <cm> <mon> <HH> N F S @<ACC  #5->4
+semelhante 	[semelhante] <nh> <np-close> ADJ F S @N<  #6->5
+a 	[a] <sam-> PRP @A<  #7->6
+a 	[o] <-sam> <dem> DET F S @P<  #8->7
+de 	[de] <np-close> PRP @N<  #9->8
+outros 	[outro] <diff> <KOMP> DET M P @>N  #10->11
+exoplanetas 	[exoplaneta] <Lstar> <DERP> N M P @P<  #11->9
+já 	[já] ADV @ADVL>  #12->13
+catalogados 	[catalogar] <vH> <mv> <np-close> V PCP M P @ICL-N<  #13->11
+$, #14->0
+mas 	[mas] <clb> KC @CO  #15->4
+não 	[não] ADV @ADVL>  #16->17
+giram 	[girar] <nosubj> <cjt> <fmc> <mv> V PR 3P IND VFIN @FS-STA  #17->4
+em=torno=de 	[em=torno=de] PRP @<ADVL  #18->17
+uma 	[um] <arti> DET F S @>N  #19->20
+estrela 	[estrela] <Lstar> <H> <tool> <ac-sign> N F S @P<  #20->18
+$--  #21->0
+em 	[em] <sam-> PRP @ADVL>  #22->26
+a 	[o] <-sam> <artd> DET F S @>N  #23->24
+verdade 	[verdade] <percep-f> <ac> N F S @P<  #24->22
+$, #25->0
+giram 	[girar] <nosubj> <cjt> <fmc> <mv> V PR 3P IND VFIN @FS-STA  #26->4
+em=torno 	[em=torno] <pp> ADV @<ADVL  #27->26
+um 	[um] <quant> DET M S @<ACC  #28->26
+de 	[de] <sam-> <np-close> PRP @N<  #29->28
+o 	[o] <-sam> <artd> DET M S @>N  #30->31
+outro 	[outro] <diff> <KOMP> DET M S @P<  #31->29
+$. #32->0
+</s>
+O 	[o] <*> <artd> DET M S @>N  #1->2
+pesquisadores 	[pesquisador] <Hprof> N M P @SUBJ>  #2->6
+Ray=Jayawardhana 	[Ray=Jayawardhana] <cjt-head> <hum> <*> <foreign> <np-close> PROP M S @N<  #3->2
+e 	[e] <co-postnom> KC @CO  #4->3
+Valentin=D.=Ivanov 	[Valentin=D.=Ivanov] <cjt> <hum> <*> <foreign> <np-close> PROP M S @N<  #5->3
+informam 	[informar] <fmc> <vH> <mv> V PR 3P IND VFIN @FS-STA  #6->0
+a 	[o] <artd> DET F S @>N  #7->8
+descoberta 	[descoberta] <event> <act-d> N F S @<ACC  #8->6
+em 	[em] <sam-> <np-close> PRP @N<  #9->8
+a 	[o] <-sam> <artd> DET F S @>N  #10->11
+edição 	[edição] <act> <sem-r> N F S @P<  #11->9
+de 	[de] <np-close> PRP @N<  #12->11
+quinta-feira 	[quinta-feira] <temp> N F S @P<  #13->12
+de 	[de] <sam-> <np-close> PRP @N<  #14->13
+o 	[o] <-sam> <artd> DET M S @>N  #15->16
+serviço 	[serviço] <act-d> N M S @P<  #16->14
+online 	[online] <jh> <np-close> ADJ M S @N<  #17->16
+Science=Express 	[Science=Express] <V> <*> <foreign> <np-long> PROP M S @N<  #18->16
+$, #19->0
+mantido 	[manter] <vH> <mv> V PCP M S @ICL-N<PRED  #20->18
+por 	[por] <sam-> PRP @<PASS  #21->20
+a 	[o] <-sam> <artd> DET F S @>N  #22->23
+revista 	[revista] <act> <sem-r> <occ> N F S @P<  #23->21
+Science 	[Science] <media> <*> <heur> <np-close> PROP F S @N<  #24->23
+$. #25->0
+</s>
+$"  #1->0
+É 	[ser] <clb-fs> <*> <*1> <vK> <mv> <quote> V PR 3S IND VFIN @FS-ACC>>  #2->22
+um 	[um] <arti> DET M S @>N  #3->4
+par 	[par] <cjt-head> <HH> <H> <Htit> N M S @<SC  #4->2
+de 	[de] <np-close> PRP @N<  #5->4
+irmãos 	[irmão] <Hfam> N M P @P<  #6->5
+admirável 	[admirável] <jh> <np-long> ADJ M S @N<  #7->4
+$, #8->0
+cada=um 	[cada=um] <cjt> SPEC M/F S @<SC  #9->4
+com 	[com] PRP @<ADVL  #10->2
+cerca=de 	[cerca=de] ADV @>A  #11->12
+1 	[1] <card> NUM M S @>N  #12->13
+$% 	[%] N M P @P<  #13->10
+de 	[de] <sam-> <np-close> PRP @N<  #14->13
+a 	[o] <-sam> <artd> DET F S @>N  #15->16
+massa 	[massa] <amount> <f-q> <food-h> <cm> <mon> <HH> N F S @P<  #16->14
+de 	[de] <sam-> <np-close> PRP @N<  #17->16
+o 	[o] <-sam> <artd> DET M S @>N  #18->19
+Sol 	[sol] <prop> <*> <*2> <Lstar> <ac-sign> <percep-l> N M S <cm> <cur> @P<  #19->17
+$"  #20->0
+$, #21->0
+disse 	[dizer] <fmc> <vH> <mv> <v-quote> V PS 3S IND VFIN @FS-STA  #22->0
+Jayawardhana 	[Jayawardhana] <hum> <*> <heur> <foreign> PROP M/F S @<SUBJ  #23->22
+$. #24->0
+</s>
+$"  #1->0
+A 	[o] <*> <*1> <artd> DET F S @>N  #2->4
+mera 	[mero] ADJ F S @>N  #3->4
+existência 	[existência] <percep-f> N F S @SUBJ>  #4->5
+é 	[ser] <cjt-head> <fmc> <vK> <mv> V PR 3S IND VFIN @FS-STA  #5->0
+uma 	[um] <arti> DET F S @>N  #6->7
+surpresa 	[surpresa] <ac> N F S @<SC  #7->5
+$, #8->0
+e 	[e] <clb> KC @CO  #9->5
+a 	[o] <artd> DET F S @>N  #10->11
+origem 	[origem] <Labs> <f-h> N F S @SUBJ>  #11->15
+e 	[e] <co-subj> KC @CO  #12->5
+o 	[o] <artd> DET M S @>N  #13->14
+destino 	[destino] <cjt> <f-psych> <Labs> N M S @SUBJ>  #14->5
+são 	[ser] <cjt> <fmc> <vK> <mv> V PR 3P IND VFIN @FS-STA  #15->5
+um 	[um] <arti> DET M S @>N  #16->17
+mistério 	[mistério] <*2> <ac> N M S @<SC  #17->15
+$"  #18->0
+$. #19->0
+</s>
+Cerca=de 	[cerca=de] <*> PRP @ADVL>  #1->12
+metade 	[metade] <amount> N F S @P<  #2->1
+de 	[de] <sam-> <np-close> PRP @N<  #3->2
+as 	[o] <-sam> <artd> DET F P @>N  #4->5
+estrelas 	[estrela] <Lstar> <H> <tool> <ac-sign> N F P @P<  #5->3
+de 	[de] <sam-> <np-close> PRP @N<  #6->5
+o 	[o] <-sam> <artd> DET M S @>N  #7->8
+tamanho 	[tamanho] <f-q> N M S @P<  #8->6
+de 	[de] <sam-> <np-close> PRP @N<  #9->8
+o 	[o] <-sam> <artd> DET M S @>N  #10->11
+Sol 	[sol] <prop> <*> <Lstar> <ac-sign> <percep-l> N M S <cm> <cur> @P<  #11->9
+existem 	[existir] <fmc> <mv> V PR 3P IND VFIN @FS-STA  #12->0
+em 	[em] PRP @<ADVL  #13->12
+pares 	[par] <HH> <H> <Htit> N M P @P<  #14->13
+$. #15->0
+</s>
+O 	[o] <*> <artd> DET M S @>N  #1->2
+mesmo 	[mesmo] <diff> <KOMP> DET M S @SUBJ>  #2->3
+ocorre 	[ocorrer] <fmc> <vN> <mv> V PR 3S IND VFIN @FS-STA  #3->0
+com 	[com] PRP @<ADVL  #4->3
+um 	[um] <arti> DET M S @>N  #5->6
+sexto 	[sexto] <amount> N M S @P<  #6->4
+de 	[de] <sam-> <np-close> PRP @N<  #7->2
+as 	[o] <-sam> <artd> DET F P @>N  #8->9
+anãs 	[anã] <Hmyth> N F P @P<  #9->7
+marrons 	[marron] <col> <jh> <np-close> ADJ F P @N< @N< 	[marrom] <jh> <col> <np-close> ADJ F P  #10->2
+$, #11->0
+corpos 	[corpo] <anmov> <HH> <build> <part-build> <ac-sign> <np-close> N M P @N<PRED  #12->2
+pesados 	[pesado] <jh> <np-close> ADJ M P @N<  #13->2
+o 	[o] <artd> DET M S @>N  #14->15
+suficiente 	[suficiente] <amount> <np-close> N M S @N<PRED  #15->2
+para 	[para] <np-close> PRP @N<  #16->2
+gerar 	[gerar] <mv> V INF @ICL-P<  #17->16
+calor 	[calor] <cjt-head> <am> N M S @<ACC  #18->17
+$, #19->0
+mas 	[mas] <co-acc> KC @CO  #20->18
+não 	[não] ADV @>N  #21->23
+o 	[o] <artd> DET M S @>N  #22->23
+bastante 	[bastante] <cjt> <n> <nh> ADJ M S @<ACC  #23->18
+para 	[para] PRP @<ADVL  #24->17
+iniciar 	[iniciar] <vH> <mv> V INF @ICL-P<  #25->24
+uma 	[um] <arti> DET F S @>N  #26->27
+reação 	[reação] <act> <event> N F S @<ACC  #27->25
+de 	[de] <np-close> PRP @N<  #28->2
+fusão=nuclear 	[fusão=nuclear] <event> <domain> N F S @P<  #29->28
+como 	[como] <com> <adv-rel> PRP @<ADVL  #30->25
+as 	[o] <artd> DET F P @>N  #31->32
+estrelas 	[estrela] <asarg> <Lstar> <H> <tool> <ac-sign> N F P @P<  #32->30
+$"  #33->0
+legítimas 	[legítimo] <*1> <*2> <jh> <np-close> ADJ F P @N<  #34->2
+$"  #35->0
+$. #36->0
+</s>
+Em 	[em] <sam-> <*> PRP @ADVL>  #1->8
+os 	[o] <artd> <-sam> DET M P @>N  #2->5
+últimos 	[último] <NUM-ord> ADJ M P @>N  #3->5
+cinco 	[cinco] <card> NUM M P @>N  #4->5
+anos 	[ano] <dur> <temp> <per> <unit> N M P @P<  #5->1
+$, #6->0
+astrônomos 	[astrônomo] <Hprof> N M P @SUBJ>  #7->8
+identificaram 	[identificar] <fmc> <vH> <mv> V PS/MQP 3P IND VFIN @FS-STA  #8->0
+algumas 	[algum] <quant> DET F P @>N  #9->11
+dezenas=de 	[dezenas=de] <quant> DET M P @>N  #10->11
+objetos 	[objeto] <cc> <ac-cat> N M P @<ACC  #11->8
+ainda 	[ainda] ADV @>A  #12->13
+menores 	[pequeno] <KOMP> <np-close> ADJ M/F P @N<  #13->11
+que 	[que] <com> KS @AS-KOMP<  #14->13
+anãs 	[anã] <Hmyth> N F P @AS<  #15->14
+marrons 	[marron] <col> <jh> <np-close> ADJ F P @N< @N< 	[marrom] <jh> <col> <np-close> ADJ F P  #16->15
+que 	[que] <clb> <clb-fs> <rel> SPEC M S @SUBJ>  #17->19
+não 	[não] ADV @ADVL>  #18->19
+estão 	[estar] <predco> <cjt-head> <vK> <mv> <np-close> V PR 3P IND VFIN @FS-N<  #19->11
+presos 	[preso] <H> N M P @<SC  #20->19
+a=nenhum 	[a=nenhum] <pp> ADV @<ADVL  #21->19
+sistema 	[sistema] <ac> N M S @<SUBJ  #22->19
+estelar 	[estelar] <nh> <np-close> ADJ M S @N<  #23->22
+$, #24->0
+apelidados 	[apelidar] <vH> <mv> V PCP M P @ICL-N<PRED  #25->22
+de 	[de] PRP @<PIV  #26->25
+objetos 	[objeto] <cc> <ac-cat> N M P @P<  #27->26
+de 	[de] <np-close> PRP @N<  #28->27
+massa 	[massa] <amount> <f-q> <food-h> <cm> <mon> <HH> N F S @P<  #29->28
+planetária 	[planetário] <nh> <np-close> ADJ F S @N<  #30->29
+$, #31->0
+ou 	[ou] <co-fin> <co-fmc> KC @CO  #32->19
+planemos 	[planar] <nosubj> <cjt> <fmc> <mv> <np-close> V PR 1P SUBJ VFIN @FS-N<  #33->19
+$, #34->0
+localizados 	[localizar] <vH> <mv> V PCP M P @ICL-<PRED  #35->33
+em 	[em] <sam-> PRP @<ADVL  #36->35
+os 	[o] <artd> <-sam> DET M P @>N  #37->38
+arredores 	[arredores] <Ltop> N M P @P<  #38->36
+de 	[de] <np-close> PRP @N<  #39->38
+regiões 	[região] <L> <Ltop> N F P @P<  #40->39
+de 	[de] <np-close> PRP @N<  #41->40
+formação 	[formação] <process> <f-h> <L> <geom> N F S @P<  #42->41
+de 	[de] <np-close> PRP @N<  #43->42
+estrelas 	[estrela] <Lstar> <H> <tool> <ac-sign> N F P @P<  #44->43
+$. #45->0
+</s>
+O 	[o] <*> <artd> DET M S @>N  #1->3
+mais 	[mais] <quant> <KOMP> ADV @>A  #2->3
+recente 	[recente] <n> <nh> ADJ M S @SUBJ>  #3->8
+$, #4->0
+Oph 	[Oph] <hum> <*> <heur> <foreign> <np-close> PROP M/F S @APP  #5->3
+162225-240515 	[162225-240515] <card> <np-close> NUM M/F P @N<  #6->5
+$, #7->0
+é 	[ser] <fmc> <vK> <mv> V PR 3S IND VFIN @FS-STA  #8->0
+o 	[o] <artd> DET M S @>N  #9->11
+primeiro 	[primeiro] <NUM-ord> ADJ M S @>N  #10->11
+planemo 	[planemo] <heur> N M S @<SC  #11->8
+duplo 	[duplo] <nh> <np-close> ADJ M S @N<  #12->11
+$. #13->0
+</s>
+Comparando 	[comparar] <clb> <*> <vH> <mv> V GER @ICL-ADVL>  #1->5
+os 	[o] <artd> DET M P @>N  #2->3
+dados 	[dado] <cc> <ac> N M P @<ACC  #3->1
+obtidos 	[obter] <vH> <np-close> V PCP M P @N<  #4->3
+via 	[ver] <cjt-head> <fmc> <vH> <mv> V IMPF 1/3S IND VFIN @FS-STA  #5->0
+telescópio 	[telescópio] <tool> N M S @<ACC  #6->5
+com 	[com] <np-close> PRP @N<  #7->6
+modelos 	[modelo] <ac> <Hprof> N M P @P< 	[modelo] <Hprof> N F P @P<  #8->7
+teóricos 	[teórico] <H> <np-close> N M P @N<  #9->8
+$, #10->0
+Jayawardhana 	[Jayawardhana] <hum> <*> <heur> <foreign> PROP M/F S @SUBJ>  #11->14
+e 	[e] <co-subj> KC @CO  #12->5
+Ivanov 	[Ivanov] <cjt> <hum> <*> <foreign> PROP M/F S @SUBJ>  #13->5
+estimaram 	[estimar] <cjt> <fmc> <vH> <mv> V PS/MQP 3P IND VFIN @FS-STA  #14->5
+a 	[o] <artd> DET F S @>N  #15->16
+massa 	[massa] <amount> <f-q> <food-h> <cm> <mon> <HH> N F S @<ACC  #16->14
+de 	[de] <sam-> <np-close> PRP @N<  #17->16
+os 	[o] <-sam> <artd> DET M P @>N  #18->19
+componentes 	[componente] <cc> N M P @P<  #19->17
+de 	[de] <sam-> <np-close> PRP @N<  #20->19
+o 	[o] <-sam> <artd> DET M S @>N  #21->22
+par 	[par] <HH> <H> <Htit> N M S @P<  #22->20
+e 	[e] <co-fin> <co-fmc> KC @CO  #23->5
+concluíram 	[concluir] <nosubj> <cjt> <fmc> <vH> <mv> V PS/MQP 3P IND VFIN @FS-STA  #24->5
+que 	[que] <clb> <clb-fs> KS @SUB  #25->29
+o 	[o] <artd> DET M S @>N  #26->27
+planemo 	[planemo] <heur> N M S @SUBJ>  #27->29
+duplo 	[duplo] <nh> <np-close> ADJ M S @N<  #28->27
+é 	[ser] <vK> <mv> V PR 3S IND VFIN @FS-<ACC  #29->24
+jovem 	[jovem] ADJ M S @<SC  #30->29
+em 	[em] PRP @<ADVL  #31->29
+termos 	[termo] <ac-cat> <Labs> <temp> <act-s> <con> N M P @P<  #32->31
+cósmicos 	[cósmico] <nh> <np-close> ADJ M P @N<  #33->32
+$, #34->0
+com 	[com] PRP @<ADVL @<SC  #35->24
+cerca=de 	[cerca=de] ADV @>A  #36->37
+um=milhão 	[um=milhão] <card> NUM M/F P @P<  #37->35
+de 	[de] <np-close> PRP @N< @<SC  #38->14
+anos 	[ano] <dur> <temp> <per> <unit> N M P @P<  #39->38
+$. #40->0
+</s>
+Os 	[o] <*> <artd> DET M P @>N  #1->2
+dois 	[dois] <card> NUM M P @SUBJ>  #2->3
+estão 	[estar] <fmc> <vK> <mv> V PR 3P IND VFIN @FS-STA  #3->0
+separados 	[separar] <mv> V PCP M P @ICL-<SC  #4->3
+por 	[por] PRP @<PASS  #5->4
+uma 	[um] <arti> DET F S @>N  #6->7
+distância 	[distância] <am> N F S @P<  #7->5
+de 	[de] <np-close> PRP @N<  #8->7
+seis 	[seis] <card> NUM F P @>N  #9->10
+vezes 	[vez] <temp> N F P @P<  #10->8
+a 	[a] <clb> PRP @ADVL>  #11->13
+que 	[que] <clb-fs> <rel> SPEC M S @P<  #12->11
+existe 	[existir] <nosubj> <cjt-head> <mv> <np-close> V PR 3S IND VFIN @FS-N<  #13->10
+entre 	[entre] PRP @<ADVL  #14->13
+o 	[o] <artd> DET M S @>N  #15->16
+Sol 	[sol] <cjt-head> <prop> <*> <Lstar> <ac-sign> <percep-l> N M S <cm> <cur> @P<  #16->14
+e 	[e] <co-prparg> KC @CO  #17->16
+Plutão 	[Plutão] <cjt> <hum> <newlex> <*> PROP M S @P<  #18->16
+e 	[e] <co-fin> <co-fmc> KC @CO  #19->13
+ficam 	[ficar] <nosubj> <cjt> <fmc> <mv> <np-close> V PR 3P IND VFIN @FS-N<  #20->13
+em 	[em] <sam-> PRP @<SA  #21->20
+o 	[o] <-sam> <artd> DET M S @>N  #22->23
+berçário 	[berçário] <inst> N M S @P<  #23->21
+de 	[de] <np-close> PRP @N<  #24->23
+estrelas 	[estrela] <Lstar> <H> <tool> <ac-sign> N F P @P<  #25->24
+de 	[de] <np-close> PRP @N<  #26->25
+Ophiuchus 	[Ophiuchus] <hum> <*> <heur> PROP M/F S @P<  #27->26
+$, #28->0
+a 	[a] PRP @<ADVL  #29->20
+400 	[400] <card> NUM M P @>N  #30->31
+anos-luz 	[ano-luz] N M P @P<  #31->29
+de 	[de] <sam-> <np-close> PRP @N<  #32->31
+a 	[o] <-sam> <artd> DET F S @>N  #33->34
+Terra 	[Terra] <top> <newlex> <*> PROP F S @P<  #34->32
+$. #35->0
+</s>
+Acredita- 	[acreditar] <predco> <cjt-head> <fmc> <*> <hyfen> <vH> <mv> <v-pron> V PR 3S IND VFIN @FS-STA  #1->0
+se 	[se] <refl> PERS M/F 3S ACC @<ACC-PASS  #2->1
+que 	[que] <clb> <clb-fs> KS @SUB  #3->5
+planetas 	[planeta] <Lstar> N M P @SUBJ>  #4->5
+nascem 	[nascer] <mv> V PR 3P IND VFIN @FS-<SUBJ  #5->1
+de 	[de] <sam-> PRP @<PIV  #6->5
+as 	[o] <-sam> <artd> DET F P @>N  #7->8
+nuvens 	[nuvem] <wea-c> N F P @P<  #8->6
+de 	[de] <np-close> PRP @N<  #9->8
+poeira 	[poeira] <cm> <am> <Lh> N F S @P<  #10->9
+que 	[que] <clb> <clb-fs> <rel> SPEC M S @ACC>  #11->12
+circulam 	[circular] <vN> <mv> <np-close> V PR 3P IND VFIN @FS-N<  #12->10
+estrelas 	[estrela] <cjt-head> <Lstar> <H> <tool> <ac-sign> N F P @<SUBJ  #13->12
+$, #14->0
+anãs 	[anã] <cjt> <Hmyth> N F P @<SUBJ  #15->13
+marrons 	[marron] <col> <jh> <np-close> ADJ F P @N< @N< 	[marrom] <jh> <col> <np-close> ADJ F P  #16->15
+e 	[e] <co-fin> <co-fmc> KC @CO  #17->1
+$, #18->0
+até 	[até] ADV @ADVL>  #19->22
+$, #20->0
+alguns 	[algum] <quant> DET M P @SUBJ>  #21->22
+planemos 	[planar] <cjt> <fmc> <mv> V PR 1P SUBJ VFIN @FS-STA  #22->1
+que 	[que] <clb> <clb-fs> KS @SUB  #23->24
+flutuam 	[flutuar] <vN> <mv> V PR 3P IND VFIN @FS-<ACC  #24->22
+livres 	[livre] <act-d> N M P @<SUBJ  #25->24
+por 	[por] <sam-> PRP @<ADVL  #26->24
+o 	[o] <-sam> <artd> DET M S @>N  #27->28
+espaço 	[espaço] <Labs> <Ltop> N M S @P<  #28->26
+$. #29->0
+</s>
+Mas 	[mas] <*> KC @CO  #1->34
+$"  #2->0
+é 	[ser] <clb-fs> <*1> <vK> <mv> <quote> V PR 3S IND VFIN @FS-ACC>>  #3->34
+provável 	[provável] <nh> ADJ M S @<SC  #4->3
+que 	[que] <clb> <clb-fs> KS @SUB  #5->7
+estes 	[este] <dem> DET M P @SUBJ>  #6->7
+planemos 	[planar] <mv> V PR 1P SUBJ VFIN @FS-<SUBJ  #7->3
+irmãos 	[irmão] <Hfam> N M P @SUBJ>  #8->10
+se 	[se] <refl> PERS M/F 3P ACC @ACC>-PASS  #9->10
+formaram 	[formar] <clb-fs> <vH> <mv> <v-pron> <quote> V PS/MQP 3P IND VFIN @FS-ACC>>  #10->3
+juntos 	[juntar] <jh> <vH> V PCP M P @<PRED  #11->10
+$, #12->0
+a=partir=de 	[a=partir=de] PRP @<ADVL  #13->10
+uma 	[um] <arti> DET F S @>N  #14->15
+nuvem 	[nuvem] <wea-c> N F S @P<  #15->13
+de 	[de] <np-close> PRP @N<  #16->15
+gás 	[gás] <cm-gas> N M S @P<  #17->16
+em 	[em] PRP @<PIV  #18->10
+contração 	[contração] <act-d> <process> N F S @P<  #19->18
+que 	[que] <clb> <clb-fs> <rel> SPEC M S @ACC>  #20->22
+se 	[se] PERS M/F 3S/P ACC @SUBJ>  #21->22
+partiu 	[partir] <vH> <mv> <np-close> V PS 3S IND VFIN @FS-N<  #22->19
+em 	[em] PRP @<ADVL  #23->22
+duas 	[duas] <card> NUM F S @P<  #24->23
+$, #25->0
+como 	[como] <com> <adv-rel> PRP @<ADVL  #26->22
+uma 	[um] <arti> DET F S @>N  #27->28
+estrela 	[estrela] <Lstar> <H> <tool> <ac-sign> N F S @SUBJ>  #28->34
+binária 	[binário] <nh> <np-close> ADJ F S @N<  #29->28
+em 	[em] <np-long> PRP @N<  #30->28
+miniatura 	[miniatura] <*2> <pict> N F S @P<  #31->30
+$"  #32->0
+$, #33->0
+disse 	[dizer] <fmc> <vH> <mv> <v-quote> V PS 3S IND VFIN @FS-STA  #34->0
+Jayawardhana 	[Jayawardhana] <hum> <*> <heur> <foreign> PROP M/F S @<SUBJ  #35->34
+$. #36->0
+</s>
+$"  #1->0
+Estamos 	[estar] <clb-fs> <*> <*1> <aux> <quote> V PR 1P IND VFIN @FS-ACC>>  #2->33
+resistindo 	[resistir] <clb> <mv> V GER @ICL-AUX<  #3->2
+a 	[a] <sam-> PRP @<PIV  #4->3
+a 	[o] <-sam> <artd> DET F S @>N  #5->6
+tentação 	[tentação] <ac> N F S @P<  #6->4
+de 	[de] <np-close> PRP @N<  #7->6
+chamar 	[chamar] <vH> <mv> V INF @ICL-P<  #8->7
+o 	[o] <artd> DET M S @>N  #9->10
+par 	[par] <HH> <H> <Htit> N M S @<ACC  #10->8
+de 	[de] <np-close> PRP @N<  #11->10
+planeta 	[planeta] <Lstar> N M S @P<  #12->11
+duplo 	[duplo] <nh> <np-close> ADJ M S @N<  #13->12
+porque 	[porque] <clb> <clb-fs> KS @SUB  #14->19
+ele 	[ele] PERS M 3S NOM @SUBJ>  #15->19
+provavelmente 	[provavelmente] ADV @ADVL>  #16->19
+não 	[não] ADV @ADVL>  #17->19
+se 	[se] <refl> PERS M/F 3S ACC @ACC>-PASS  #18->19
+formou 	[formar] <vH> <mv> <v-pron> V PS 3S IND VFIN @FS-<ADVL  #19->8
+de 	[de] <sam-> PRP @<ADVL  #20->19
+o 	[o] <-sam> <artd> DET M S @>N  #21->22
+jeito 	[jeito] <act-trick> <f-h> <ac> N M S @P<  #22->20
+que 	[que] <clb> <clb-fs> <rel> SPEC M S @ACC>  #23->30
+os 	[o] <artd> DET M P @>N  #24->25
+planetas 	[planeta] <Lstar> N M P @SUBJ>  #25->30
+em 	[em] <sam-> <np-close> PRP @N<  #26->25
+o 	[o] <-sam> <artd> DET M S @>N  #27->29
+nosso 	[nosso] Æposs 1PØ DET M S @>N  #28->29
+sistema=solar 	[sistema=solar] <Ltop> N M S @P<  #29->26
+apareceram 	[aparecer] <*2> <mv> <np-close> V PS/MQP 3P IND VFIN @FS-N<  #30->22
+$"  #31->0
+$, #32->0
+acrescenta 	[acrescentar] <fmc> <vH> <mv> <v-quote> V PR 3S IND VFIN @FS-STA  #33->0
+Ivanov 	[Ivanov] <hum> <*> <foreign> PROP M/F S @<SUBJ  #34->33
+$. #35->0
+</s>

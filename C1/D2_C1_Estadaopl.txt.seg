@@ -1,0 +1,167 @@
+Um 	[um] <*> <arti> DET M S @>N  #1->2
+acidente 	[acidente] <event> N M S @SUBJ>  #2->20
+aéreo 	[aéreo] <nh> <np-close> ADJ M S @N<  #3->2
+em 	[em] <sam-> <np-long> PRP @N<  #4->2
+a 	[o] <-sam> <artd> DET F S @>N  #5->6
+localidade 	[localidade] <Labs> <Lciv> N F S @P<  #6->4
+de 	[de] <np-close> PRP @N<  #7->6
+Bukavu 	[Bukavu] <civ> <*> <heur> PROP M/F S @P<  #8->7
+$, #9->0
+em 	[em] <sam-> PRP @ADVL>  #10->20
+o 	[o] <-sam> <artd> DET M S @>N  #11->12
+leste 	[leste] <dir> N M S @P<  #12->10
+de 	[de] <sam-> <np-close> PRP @N<  #13->12
+a 	[o] <-sam> <artd> DET F S @>N  #14->15
+República=Democrática=do=Congo 	[República=Democrática=do=Congo] <civ> <*> PROP F S @P<  #15->13
+$( #16->0
+RDC 	[RDC] <civ> <*> <np-close> PROP F S @APP  #17->15
+$) #18->0
+$, #19->0
+matou 	[matar] <cjt-head> <fmc> <mv> V PS 3S IND VFIN @FS-STA  #20->0
+17 	[17] <card> NUM F P @>N  #21->22
+pessoas 	[pessoa] <H> N F P @<ACC  #22->20
+em 	[em] <sam-> PRP @<ADVL  #23->20
+a 	[o] <-sam> <artd> DET F S @>N  #24->25
+quinta-feira 	[quinta-feira] <temp> N F S @P<  #25->23
+a 	[a] <sam-> PRP @<ADVL  #26->20
+a 	[o] <-sam> <artd> DET F S @>N  #27->28
+tarde 	[tarde] <per> N F S @P<  #28->26
+$, #29->0
+informou 	[informar] <nosubj> <cjt> <fmc> <vH> <mv> V PS 3S IND VFIN @FS-STA  #30->20
+em 	[em] <sam-> PRP @<ADVL  #31->30
+esta 	[este] <-sam> <dem> DET F S @>N  #32->33
+sexta-feira 	[sexta-feira] <temp> N F S @P<  #33->31
+um 	[um] <arti> DET M S @>N  #34->35
+porta-voz 	[porta-voz] <tool> <Hprof> N M S @<ACC  #35->30
+de 	[de] <sam-> PRP @<PIV  #36->30
+as 	[o] <-sam> <artd> DET F P @>N  #37->38
+Nações=Unidas 	[Nações=Unidas] <civ> <*> PROP F P @P<  #38->36
+$. #39->0
+</s>
+As 	[o] <*> <artd> DET F P @>N  #1->2
+vítimas 	[vítima] <H> N F P @SUBJ>  #2->6
+de 	[de] <sam-> <np-close> PRP @N<  #3->2
+o 	[o] <-sam> <artd> DET M S @>N  #4->5
+acidente 	[acidente] <event> N M S @P<  #5->3
+foram 	[ser] <fmc> <vK> <mv> V PS/MQP 3P IND VFIN @FS-STA  #6->0
+14 	[14] <card> NUM M P @>N  #7->8
+passageiros 	[passageiro] <cjt-head> <H> N M P @<SC  #8->6
+e 	[e] <co-sc> KC @CO  #9->8
+três 	[três] <card> NUM M P @>N  #10->11
+membros 	[membro] <cjt> <an> <H> N M P @<SC  #11->8
+de 	[de] <sam-> <np-close> PRP @N<  #12->11
+a 	[o] <-sam> <artd> DET F S @>N  #13->14
+tripulação 	[tripulação] <HH> N F S @P<  #14->12
+$. #15->0
+</s>
+Todos 	[todo] <*> <quant> DET M P @SUBJ>  #1->2
+morreram 	[morrer] <fmc> <mv> V PS/MQP 3P IND VFIN @FS-STA  #2->0
+quando 	[quando] <clb> <clb-fs> <rel> <ks> ADV @ADVL>  #3->14
+o 	[o] <artd> DET M S @>N  #4->5
+avião 	[avião] <Vair> N M S @SUBJ>  #5->14
+$, #6->0
+prejudicado 	[prejudicar] <np-close> V PCP M S @N<PRED  #7->5
+por 	[por] <sam-> PRP @<ADVL  #8->2
+o 	[o] <-sam> <artd> DET M S @>N  #9->11
+mau 	[mau] ADJ M S @>N  #10->11
+tempo 	[tempo] <am> <temp> <per> <ac-cat> <wea> N M S @P<  #11->8
+$, #12->0
+não 	[não] ADV @ADVL>  #13->14
+conseguiu 	[conseguir] <cjt-head> <vH> <mv> V PS 3S IND VFIN @FS-<ADVL  #14->2
+chegar 	[chegar] <mv> V INF @ICL-<ACC  #15->14
+a 	[a] <sam-> PRP @<SA  #16->15
+a 	[o] <-sam> <artd> DET F S @>N  #17->18
+pista 	[pista] <Lpath> <Lh> N F S @P<  #18->16
+de 	[de] <np-close> PRP @N<  #19->18
+aterrissagem 	[aterrissagem] <DERS> N F S @P<  #20->19
+e 	[e] <co-fin> <co-fmc> KC @CO  #21->14
+caiu 	[cair] <nosubj> <cjt> <fmc> <mv> V PS 3S IND VFIN @FS-<ADVL  #22->14
+em 	[em] <sam-> PRP @<PIV  #23->22
+uma 	[um] <-sam> <arti> DET F S @>N  #24->25
+floresta 	[floresta] <BB> N F S @P<  #25->23
+a 	[a] PRP @<PIV  #26->22
+15 	[15] <card> NUM M P @>N  #27->28
+quilômetros 	[quilômetro] <unit> N M P @P<  #28->26
+de 	[de] <sam-> <np-close> PRP @N<  #29->28
+o 	[o] <-sam> <artd> DET M S @>N  #30->31
+aeroporto 	[aeroporto] <Lh> N M S @P<  #31->29
+de 	[de] <np-close> PRP @N<  #32->31
+Bukavu 	[Bukavu] <hum> <*> <heur> PROP M/F S @P<  #33->32
+$. #34->0
+</s>
+Segundo 	[segundo] <advl> <*> <adv-rel> PRP @ADVL>  #1->10
+fontes 	[fonte] <asarg> <Lwater> <Labs> <H> <an> N F P @P<  #2->1
+aeroportuárias 	[aeroportuário] <nh> <np-close> ADJ F P @N<  #3->2
+$, #4->0
+os 	[o] <artd> DET M P @>N  #5->6
+membros 	[membro] <an> <H> N M P @SUBJ>  #6->10
+de 	[de] <sam-> <np-close> PRP @N<  #7->6
+a 	[o] <-sam> <artd> DET F S @>N  #8->9
+tripulação 	[tripulação] <HH> N F S @P<  #9->7
+eram 	[ser] <fmc> <vK> <mv> V IMPF 3P IND VFIN @FS-STA  #10->0
+de 	[de] PRP @<SC  #11->10
+nacionalidade 	[nacionalidade] <f-h> N F S @P<  #12->11
+russa 	[russo] <nat> <np-close> ADJ F S @N<  #13->12
+$. #14->0
+</s>
+O 	[o] <*> <artd> DET M S @>N  #1->2
+avião 	[avião] <Vair> N M S @SUBJ>  #2->3
+explodiu 	[explodir] <clb-fs> <mv> <quote> V PS 3S IND VFIN @FS-ACC>>  #3->6
+e 	[e] <co-fin> KC @CO  #4->8
+se 	[se] <refl> PERS M 3S ACC @ACC>  #5->6
+incendiou 	[incendiar] <nosubj> <cjt> <fmc> <mv> <v-pron> V PS 3S IND VFIN @FS-STA  #6->8
+$, #7->0
+acrescentou 	[acrescentar] <predco> <cjt-head> <fmc> <vH> <mv> <v-quote> V PS 3S IND VFIN @FS-STA  #8->0
+o 	[o] <artd> DET M S @>N  #9->10
+porta-voz 	[porta-voz] <tool> <Hprof> N M S @<SUBJ  #10->8
+de 	[de] <sam-> <np-close> PRP @N<  #11->10
+a 	[o] <-sam> <artd> DET F S @>N  #12->13
+ONU 	[ONU] <org> <*> PROP F S @P<  #13->11
+em 	[em] PRP @<ADVL  #14->8
+Kinshasa 	[Kinshasa] <civ> <*> PROP M S @P<  #15->14
+$, #16->0
+Jean-Tobias 	[Jean-Tobias] <hum> <*> <np-close> PROP M S @APP  #17->15
+Okala 	[Okala] <hum> <*> <heur> <np-close> PROP M S @N<  #18->17
+$. #19->0
+</s>
+$"  #1->0
+Não 	[não] <*> <*1> ADV @ADVL>  #2->3
+houve 	[haver] <clb-fs> <mv> <quote> V PS 3S IND VFIN @FS-ACC>>  #3->7
+sobreviventes 	[sobrevivente] <*2> <Hattr> N M/F P @<ACC  #4->3
+$"  #5->0
+$, #6->0
+disse 	[dizer] <fmc> <vH> <mv> <v-quote> V PS 3S IND VFIN @FS-STA  #7->0
+Okala 	[Okala] <hum> <*> <heur> PROP M/F S @<SUBJ  #8->7
+$. #9->0
+</s>
+O 	[o] <*> <artd> DET M S @>N  #1->2
+porta-voz 	[porta-voz] <tool> <Hprof> N M S @SUBJ>  #2->3
+informou 	[informar] <fmc> <vH> <mv> V PS 3S IND VFIN @FS-STA  #3->0
+que 	[que] <clb> <clb-fs> KS @SUB  #4->25
+o 	[o] <artd> DET M S @>N  #5->6
+avião 	[avião] <Vair> N M S @SUBJ>  #6->25
+$, #7->0
+um 	[um] <arti> DET M S @>N  #8->9
+Soviet 	[Soviet] <V> <*> <heur> <foreign> <np-close> PROP M S @APP  #9->6
+Antonov-28 	[Antonov-28] <V> <*> <np-close> PROP M/F S @N<  #10->9
+de 	[de] <np-close> PRP @N<  #11->10
+fabricação 	[fabricação] <cjt-head> <act> N F S @P<  #12->11
+ucraniana 	[ucraniano] <nat> <jh> <np-close> ADJ F S @N<  #13->12
+e 	[e] <co-prparg> KC @CO  #14->12
+propriedade 	[propriedade] <cjt> <cm> <Lh> N F S @P<  #15->12
+de 	[de] <np-close> PRP @N<  #16->15
+uma 	[um] <arti> DET F S @>N  #17->18
+companhia 	[companhia] <HH> N F S @P<  #18->16
+congolesa 	[congolês] <nat> <jh> <np-close> ADJ F S @N<  #19->18
+$, #20->0
+a 	[o] <artd> DET F S @>N  #21->22
+Trasept=Congo 	[Trasept=Congo] <org> <*> <heur> <np-close> PROP F S @APP  #22->18
+$, #23->0
+também 	[também] ADV @ADVL>  #24->25
+levava 	[levar] <mv> V IMPF 3S IND VFIN @FS-<ACC  #25->3
+uma 	[um] <arti> DET F S @>N  #26->27
+carga 	[carga] <amount> <act> <ac> N F S @<ACC  #27->25
+de 	[de] <np-close> PRP @N<  #28->27
+minerais 	[mineral] <cm-chem> N M P @P<  #29->28
+$. #30->0
+</s>
