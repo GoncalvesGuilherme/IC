@@ -30,12 +30,9 @@
 
 # Debug files
 *.dSYM/
-<<<<<<< HEAD
 
 *.swo
 *.swm
 *.swn
 *.swo
 *.swp
-=======
->>>>>>> 8148b6042b534cfafbaf2b3c4d52ca958ecf2c57
