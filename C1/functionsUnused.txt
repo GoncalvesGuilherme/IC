@@ -1,0 +1,93 @@
+/*
+	fp = fopen("D1_D2_C1L.cst", "r");
+
+    countLine = 0;
+    fgets(line, 1000, fp);
+    c = fgetc(fp);
+    fseek(fp, 0, SEEK_SET);
+    while (c != EOF) {  // (line != NULL) && (!feof(fp)))
+        if (countLine != 0) {   
+            position = ftell(fp);
+            position--;
+            fseek(fp, position, SEEK_SET);
+        }
+        fgets(line, 1000, fp);
+        chomp(line);
+
+        if (strcmp(line, "</R>") != 0) {
+            //puts(line);
+
+            begin = 0; count = 0;
+            for (i = 0; i < strlen(line); i++) {
+//printf("b %d\n", begin);
+                if (line[i] == '"') {
+                    if (begin == 0) {
+                        begin = 1;
+                        i++;
+                        j = 0;
+                    }
+                    else if (begin == 1) {
+                        //printf("count %d\n", count);
+                        begin = 0;
+                        str[j] = '\0';
+                        //puts(str);
+                        if (countLine % 2 == 0) {
+                            if (count == 0) {
+                                strcpy(SDID, str);
+                                //puts(SDID);
+                                count++;
+                            }
+							else if (count == 1) {
+                                SSENT = atoi(str);
+                                //printf("SSENT %d\n", SSENT);
+                                count++;
+                            }
+                            else if (count == 2) {
+                                strcpy(TDID, str);
+                                //puts(TDID);
+                                count++;
+                            }
+                            else if (count == 3){
+                                TSENT = atoi(str);
+                                //printf("TSENT %d\n", TSENT);
+                                count++;
+                            }
+                        }
+                        else {
+                            if (count == 0) {
+                                strcpy(TYPE, str);
+                                //puts(TYPE);
+                                count++;
+								if (strcmp(TYPE, "Identity") == 0) {
+                                    setCST(F, nDocs, SDID, TDID, SSENT, TSENT, TYPE);
+                                }
+                                else if (strcmp(TYPE, "Equivalence") == 0) {
+                                    setCST(F, nDocs, SDID, TDID, SSENT, TSENT, TYPE);
+                                }
+                                else if (strcmp(TYPE, "Summary") == 0) {
+                                    setCST(F, nDocs, SDID, TDID, SSENT, TSENT, TYPE);
+                                }
+                                else if (strcmp(TYPE, "Subsumption") == 0) {
+                                    setCST(F, nDocs, SDID, TDID, SSENT, TSENT, TYPE);
+                                }
+                                else if (strcmp(TYPE, "Overlap") == 0) {
+                                    setCST(F, nDocs, SDID, TDID, SSENT, TSENT, TYPE);
+                                }
+                            }
+                        }
+                    }
+                }
+                if (begin == 1) {
+                    str[j] = line[i];
+                    j++;
+                }
+            }
+            countLine++;
+        }
+        c = fgetc(fp);
+    }
+
+    fclose(fp);
+	printf("\n\n");
+	printText(F->firstTxt->nextTxt);
+}*/
