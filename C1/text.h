@@ -194,4 +194,6 @@ void readCST(File *F, int nDocs);
 
 void readFile(File *F, int nDocs);
 
+void selectSentences(File *F, int nDocs);
+
 #endif

@@ -917,3 +917,61 @@ void readFile(File *F, int nDocs) {
 	}
 	printText(F->firstTxt);
 }
+
+/******************** content selection ********************/
+
+void selectSentences(File *F, int nDocs) {
+	int i;
+	sentence *auxs;
+	text *auxt;
+
+	auxt = F->firstTxt;
+
+	for (i = 0; i < nDocs; i++) {
+		puts(auxt->DocName);
+		auxs = auxt->firstSent;
+		while (auxs != NULL) {
+			// rule 1
+			if (auxs->location == BEGIN) {
+				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+			} // rule 2
+			else if (auxs->standardRedundancy >= 0.9 && auxs->standardRedundancy <= 1) {
+				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+			} // rule 3
+			else if (auxs->standardRedundancy >= 0.6 && auxs->standardRedundancy <= 0.7) {
+				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+			} // rule 4
+			else if (auxs->standardRedundancy >= 0.3 && auxs->standardRedundancy <= 0.4) {
+				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+			} // rule 5
+			else if (auxs->standardRedundancy >= 0.7 && auxs->standardRedundancy <= 0.8) {
+				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+			} // rule 6
+			else if (auxs->standardRedundancy >= 0.4 && auxs->standardRedundancy <= 0.5) {
+				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+			} // rule 7
+			else if ((auxs->standardRedundancy >= 0.2 && auxs->standardRedundancy <= 0.3) &&
+						(auxs->standardFrequency >= 0.5 && auxs->standardFrequency >= 0.6)) {
+				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+			} // rule 8
+			else if ((auxs->standardRedundancy >= 0.1 && auxs->standardRedundancy <= 0.2) &&
+						(auxs->standardFrequency >= 0.4 && auxs->standardFrequency >= 0.5)) {
+				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+			} // rule 9
+			else if ((auxs->standardRedundancy >= 0.1 && auxs->standardRedundancy <= 0.2) &&
+						(auxs->standardSize >= 0.2 && auxs->standardSize >= 0.3)) {
+				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+			} // rule 10
+			else if ((auxs->standardSize >= 0.1 && auxs->standardSize <= 0.2) &&
+						(auxs->standardFrequency >= 0.3 && auxs->standardFrequency >= 0.4)) {
+				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+			} // rule 11
+			else {
+				printf("Sentence %d sumario nao\n", auxs->nro_sent);
+			}
+			auxs = auxs->nextSent;
+		}
+		auxt = auxt->nextTxt;
+	}
+	printf("end selectSentences\n\n");
+}

@@ -35,6 +35,8 @@ int main (void) {
 
 	readFile(&F, nDocs);
 
+	selectSentences(&F, nDocs);
+
 	printf("end\n");
 
 	return 0;
