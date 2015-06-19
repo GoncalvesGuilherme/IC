@@ -7,6 +7,8 @@
 #define BEGIN 10
 #define MIDDLE 11
 #define END 12
+#define YES 13
+#define NO 14
 
 typedef struct frequency_table {
 	char lema[50];
@@ -31,6 +33,7 @@ typedef struct sentence {
 	float standardSize;		// normalizado
 	int redundancy;		//
 	float standardRedundancy;	// normalizado
+	int summary;		// indica se a sentenca vai ou nao para o sumario
 	word *firstWord;
 	struct sentence *nextSent;
 } sentence;
