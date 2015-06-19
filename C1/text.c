@@ -362,7 +362,8 @@ int print(sentence *sent) {
 	printf("Redundancia normalizada = %f .\n", sent->standardRedundancy);
 
 	printf("\t");
-	printWords(sent->firstWord);
+	printf("%s\n", sent->sentenca);
+	//printWords(sent->firstWord);
 	printf("\n\n");
 	print(sent->nextSent);
 }
@@ -789,7 +790,7 @@ void readCST(File *F, int nDocs) {
 		fp = fopen(CSTName, "r");
 
 	    countLine = 0;
-	    fgets(line, 1000, fp);
+	    fgets(line, 1000, fp);  // ignora o lixo do buffer
 	    c = fgetc(fp);
 	    fseek(fp, 0, SEEK_SET);
 	    while (c != EOF) {  // (line != NULL) && (!feof(fp)))
@@ -879,5 +880,40 @@ void readCST(File *F, int nDocs) {
 	}
 	printf("\n");
 	findMaxRedundancy(F, nDocs);		// call to set CST attribute function
+	//printText(F->firstTxt);
+}
+
+void readFile(File *F, int nDocs) {
+    int countLine, position, c, i;
+    char *pch, line[1000];
+    FILE *fp;
+	sentence *auxs;
+	text *auxt;
+
+	auxt = F->firstTxt;
+
+	for (i = 0; i < nDocs; i++) {
+    	fp = fopen(auxt->DocName, "r");
+		auxs = auxt->firstSent;
+		countLine = 0;
+	    c = fgetc(fp);
+	    fseek(fp, 0, SEEK_SET);
+	    while (c != EOF) {  // (line != NULL) && (!feof(fp)))
+	        if (countLine != 0) { 
+	            position = ftell(fp);
+	            position--;
+	            fseek(fp, position, SEEK_SET);
+	        }
+	        fgets(line, 1000, fp);
+	        chomp(line);
+			strcpy(auxs->sentenca, line);
+			//puts(auxs->sentenca);
+			auxs = auxs->nextSent;
+
+	        countLine++;
+	        c = fgetc(fp);
+	    }
+		auxt = auxt->nextTxt;
+	}
 	printText(F->firstTxt);
 }

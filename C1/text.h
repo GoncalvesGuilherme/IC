@@ -22,7 +22,7 @@ typedef struct word {
 } word;
 
 typedef struct sentence {
-	char sentenca[100];
+	char sentenca[1000];
 	int nro_sent;
 	int location;			//
 	int frequency;			// valores dos atributos
@@ -191,5 +191,7 @@ void standard_frequency(File *F, int nDocs);
 void calculates_frequency_sentence(File *F, int nDocs);
 
 void readCST(File *F, int nDocs);
+
+void readFile(File *F, int nDocs);
 
 #endif

@@ -33,6 +33,8 @@ int main (void) {
 
 	readCST(&F, nDocs);
 
+	readFile(&F, nDocs);
+
 	printf("end\n");
 
 	return 0;
