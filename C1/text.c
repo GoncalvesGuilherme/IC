@@ -922,8 +922,21 @@ void readFile(File *F, int nDocs) {
 
 void selectSentences(File *F, int nDocs) {
 	int i;
+	float R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11;
 	sentence *auxs;
 	text *auxt;
+
+	R1 = 140 / (140 + 16);
+	R3 = 81 / (81 + 11);
+	R3 = 68 / (68 + 12);
+	R4 = 172 / (172 + 76);
+	R5 = 46 / (46 + 7);
+	R6 = 197 / (197 + 88);
+	R7 = 35 / (35 + 9);
+	R8 = 10 / (10 + 2);
+	R9 = 12 / (12 + 2);
+	R10 = 14 / (14 + 3);
+	R11 = 1305 / (1305 + 346);
 
 	auxt = F->firstTxt;
 
@@ -934,50 +947,61 @@ void selectSentences(File *F, int nDocs) {
 			// rule 1
 			if (auxs->location == BEGIN) {
 				auxs->summary = YES;
+				auxs->rulePrecision = R1;
 				printf("Sentence %d sumario sim\n", auxs->nro_sent);
 			} // rule 2
 			else if (auxs->standardRedundancy >= 0.9 && auxs->standardRedundancy <= 1) {
 				auxs->summary = YES;
+				auxs->rulePrecision = R1;
 				printf("Sentence %d sumario sim\n", auxs->nro_sent);
 			} // rule 3
 			else if (auxs->standardRedundancy >= 0.6 && auxs->standardRedundancy <= 0.7) {
 				auxs->summary = YES;
+				auxs->rulePrecision = R1;
 				printf("Sentence %d sumario sim\n", auxs->nro_sent);
 			} // rule 4
 			else if (auxs->standardRedundancy >= 0.3 && auxs->standardRedundancy <= 0.4) {
 				auxs->summary = YES;
+				auxs->rulePrecision = R1;
 				printf("Sentence %d sumario sim\n", auxs->nro_sent);
 			} // rule 5
 			else if (auxs->standardRedundancy >= 0.7 && auxs->standardRedundancy <= 0.8) {
 				auxs->summary = YES;
+				auxs->rulePrecision = R1;
 				printf("Sentence %d sumario sim\n", auxs->nro_sent);
 			} // rule 6
 			else if (auxs->standardRedundancy >= 0.4 && auxs->standardRedundancy <= 0.5) {
 				auxs->summary = YES;
+				auxs->rulePrecision = R1;
 				printf("Sentence %d sumario sim\n", auxs->nro_sent);
 			} // rule 7
 			else if ((auxs->standardRedundancy >= 0.2 && auxs->standardRedundancy <= 0.3) &&
 						(auxs->standardFrequency >= 0.5 && auxs->standardFrequency >= 0.6)) {
 				auxs->summary = YES;
+				auxs->rulePrecision = R1;
 				printf("Sentence %d sumario sim\n", auxs->nro_sent);
 			} // rule 8
 			else if ((auxs->standardRedundancy >= 0.1 && auxs->standardRedundancy <= 0.2) &&
 						(auxs->standardFrequency >= 0.4 && auxs->standardFrequency >= 0.5)) {
 				auxs->summary = YES;
+				auxs->rulePrecision = R1;
 				printf("Sentence %d sumario sim\n", auxs->nro_sent);
 			} // rule 9
 			else if ((auxs->standardRedundancy >= 0.1 && auxs->standardRedundancy <= 0.2) &&
 						(auxs->standardSize >= 0.2 && auxs->standardSize >= 0.3)) {
 				auxs->summary = YES;
+				auxs->rulePrecision = R1;
 				printf("Sentence %d sumario sim\n", auxs->nro_sent);
 			} // rule 10
 			else if ((auxs->standardSize >= 0.1 && auxs->standardSize <= 0.2) &&
 						(auxs->standardFrequency >= 0.3 && auxs->standardFrequency >= 0.4)) {
 				auxs->summary = YES;
+				auxs->rulePrecision = R1;
 				printf("Sentence %d sumario sim\n", auxs->nro_sent);
 			} // rule 11
 			else {
 				auxs->summary = NO;
+				auxs->rulePrecision = R1;
 				printf("Sentence %d sumario nao\n", auxs->nro_sent);
 			}
 			auxs = auxs->nextSent;

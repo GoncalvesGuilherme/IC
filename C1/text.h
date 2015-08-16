@@ -34,6 +34,7 @@ typedef struct sentence {
 	int redundancy;		//
 	float standardRedundancy;	// normalizado
 	int summary;		// indica se a sentenca vai ou nao para o sumario
+	float rulePrecision;
 	word *firstWord;
 	struct sentence *nextSent;
 } sentence;
