@@ -926,17 +926,17 @@ void selectSentences(File *F, int nDocs) {
 	sentence *auxs;
 	text *auxt;
 
-	R1 = 140 / (140 + 16);
-	R3 = 81 / (81 + 11);
-	R3 = 68 / (68 + 12);
-	R4 = 172 / (172 + 76);
-	R5 = 46 / (46 + 7);
-	R6 = 197 / (197 + 88);
-	R7 = 35 / (35 + 9);
-	R8 = 10 / (10 + 2);
-	R9 = 12 / (12 + 2);
-	R10 = 14 / (14 + 3);
-	R11 = 1305 / (1305 + 346);
+	R1 = 140.0 / (156.0);
+	R3 = 81.0 / (92.0);
+	R3 = 68.0 / (80.0);
+	R4 = 172.0 / (248.0);
+	R5 = 46.0 / (53.0);
+	R6 = 197.0 / (285.0);
+	R7 = 35.0 / (44.0);
+	R8 = 10.0 / (12.0);
+	R9 = 12.0 / (14.0);
+	R10 = 14.0 / (17.0);
+	R11 = 1305.0 / (1651.0);
 
 	auxt = F->firstTxt;
 
@@ -948,65 +948,71 @@ void selectSentences(File *F, int nDocs) {
 			if (auxs->location == BEGIN) {
 				auxs->summary = YES;
 				auxs->rulePrecision = R1;
-				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 2
 			else if (auxs->standardRedundancy >= 0.9 && auxs->standardRedundancy <= 1) {
 				auxs->summary = YES;
-				auxs->rulePrecision = R1;
-				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+				auxs->rulePrecision = R2;
+				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 3
 			else if (auxs->standardRedundancy >= 0.6 && auxs->standardRedundancy <= 0.7) {
 				auxs->summary = YES;
-				auxs->rulePrecision = R1;
-				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+				auxs->rulePrecision = R3;
+				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 4
 			else if (auxs->standardRedundancy >= 0.3 && auxs->standardRedundancy <= 0.4) {
 				auxs->summary = YES;
-				auxs->rulePrecision = R1;
-				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+				auxs->rulePrecision = R4;
+				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 5
 			else if (auxs->standardRedundancy >= 0.7 && auxs->standardRedundancy <= 0.8) {
 				auxs->summary = YES;
-				auxs->rulePrecision = R1;
-				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+				auxs->rulePrecision = R5;
+				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 6
 			else if (auxs->standardRedundancy >= 0.4 && auxs->standardRedundancy <= 0.5) {
 				auxs->summary = YES;
-				auxs->rulePrecision = R1;
-				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+				auxs->rulePrecision = R6;
+				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 7
 			else if ((auxs->standardRedundancy >= 0.2 && auxs->standardRedundancy <= 0.3) &&
 						(auxs->standardFrequency >= 0.5 && auxs->standardFrequency >= 0.6)) {
 				auxs->summary = YES;
-				auxs->rulePrecision = R1;
-				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+				auxs->rulePrecision = R7;
+				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 8
 			else if ((auxs->standardRedundancy >= 0.1 && auxs->standardRedundancy <= 0.2) &&
 						(auxs->standardFrequency >= 0.4 && auxs->standardFrequency >= 0.5)) {
 				auxs->summary = YES;
-				auxs->rulePrecision = R1;
-				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+				auxs->rulePrecision = R8;
+				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 9
 			else if ((auxs->standardRedundancy >= 0.1 && auxs->standardRedundancy <= 0.2) &&
 						(auxs->standardSize >= 0.2 && auxs->standardSize >= 0.3)) {
 				auxs->summary = YES;
-				auxs->rulePrecision = R1;
-				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+				auxs->rulePrecision = R9;
+				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 10
 			else if ((auxs->standardSize >= 0.1 && auxs->standardSize <= 0.2) &&
 						(auxs->standardFrequency >= 0.3 && auxs->standardFrequency >= 0.4)) {
 				auxs->summary = YES;
-				auxs->rulePrecision = R1;
-				printf("Sentence %d sumario sim\n", auxs->nro_sent);
+				auxs->rulePrecision = R10;
+				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 11
 			else {
 				auxs->summary = NO;
-				auxs->rulePrecision = R1;
-				printf("Sentence %d sumario nao\n", auxs->nro_sent);
+				auxs->rulePrecision = R11;
+				printf("Sentence %d sumario nao, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			}
 			auxs = auxs->nextSent;
 		}
 		auxt = auxt->nextTxt;
 	}
 	printf("end selectSentences\n\n");
+}
+
+/***************************** ranking ****************************/
+
+int makeRanking(File *F, int nDocs) {
+	
 }
