@@ -28,6 +28,7 @@ int createFile(File *F, int nDocs) {
 	F->nDocs = nDocs;
 	F->firstTxt = NULL;
 	F->FTfirstword = NULL;
+	F->rankingFirst = NULL;
 	return SUCCESS;
 }
 
@@ -73,8 +74,8 @@ int createDoc(File *F, int nDocs) {
 }
 
 void callPL(File *F, int nDocs) {
-        int lenght, i, j, w, find;
-        char docName[100], docNamepl[100];
+	int lenght, i, j, w, find;
+	char docName[100], docNamepl[100];
 	text *auxt;
 
 	auxt = F->firstTxt;
@@ -948,61 +949,61 @@ void selectSentences(File *F, int nDocs) {
 			if (auxs->location == BEGIN) {
 				auxs->summary = YES;
 				auxs->rulePrecision = R1;
-				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
+				printf("Sentence %d sumario sim, R1 rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 2
 			else if (auxs->standardRedundancy >= 0.9 && auxs->standardRedundancy <= 1) {
 				auxs->summary = YES;
 				auxs->rulePrecision = R2;
-				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
+				printf("Sentence %d sumario sim, R2 rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 3
 			else if (auxs->standardRedundancy >= 0.6 && auxs->standardRedundancy <= 0.7) {
 				auxs->summary = YES;
 				auxs->rulePrecision = R3;
-				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
+				printf("Sentence %d sumario sim, R3 rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 4
 			else if (auxs->standardRedundancy >= 0.3 && auxs->standardRedundancy <= 0.4) {
 				auxs->summary = YES;
 				auxs->rulePrecision = R4;
-				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
+				printf("Sentence %d sumario sim, R4 rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 5
 			else if (auxs->standardRedundancy >= 0.7 && auxs->standardRedundancy <= 0.8) {
 				auxs->summary = YES;
 				auxs->rulePrecision = R5;
-				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
+				printf("Sentence %d sumario sim, R5 rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 6
 			else if (auxs->standardRedundancy >= 0.4 && auxs->standardRedundancy <= 0.5) {
 				auxs->summary = YES;
 				auxs->rulePrecision = R6;
-				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
+				printf("Sentence %d sumario sim, R6 rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 7
 			else if ((auxs->standardRedundancy >= 0.2 && auxs->standardRedundancy <= 0.3) &&
 						(auxs->standardFrequency >= 0.5 && auxs->standardFrequency >= 0.6)) {
 				auxs->summary = YES;
 				auxs->rulePrecision = R7;
-				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
+				printf("Sentence %d sumario sim, R7 rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 8
 			else if ((auxs->standardRedundancy >= 0.1 && auxs->standardRedundancy <= 0.2) &&
 						(auxs->standardFrequency >= 0.4 && auxs->standardFrequency >= 0.5)) {
 				auxs->summary = YES;
 				auxs->rulePrecision = R8;
-				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
+				printf("Sentence %d sumario sim, R8 rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 9
 			else if ((auxs->standardRedundancy >= 0.1 && auxs->standardRedundancy <= 0.2) &&
 						(auxs->standardSize >= 0.2 && auxs->standardSize >= 0.3)) {
 				auxs->summary = YES;
 				auxs->rulePrecision = R9;
-				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
+				printf("Sentence %d sumario sim, R9 rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 10
 			else if ((auxs->standardSize >= 0.1 && auxs->standardSize <= 0.2) &&
 						(auxs->standardFrequency >= 0.3 && auxs->standardFrequency >= 0.4)) {
 				auxs->summary = YES;
 				auxs->rulePrecision = R10;
-				printf("Sentence %d sumario sim, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
+				printf("Sentence %d sumario sim, R10 rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			} // rule 11
 			else {
 				auxs->summary = NO;
 				auxs->rulePrecision = R11;
-				printf("Sentence %d sumario nao, rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
+				printf("Sentence %d sumario nao, R11 rulePrecison %f\n", auxs->nro_sent, auxs->rulePrecision);
 			}
 			auxs = auxs->nextSent;
 		}
@@ -1013,6 +1014,54 @@ void selectSentences(File *F, int nDocs) {
 
 /***************************** ranking ****************************/
 
-int makeRanking(File *F, int nDocs) {
-	
+int doRanking(File *F, int nDocs) {
+	int i;
+	sentence *auxs, *auxs1, *newS, *prev, *auxRankingFirst;
+	text *auxt;
+
+	auxt = F->firstTxt;
+	auxRankingFirst = F->rankingFirst;
+
+	for (i = 0; i < nDocs; i++) {
+		auxs = auxt->firstSent;
+
+		while (auxs != NULL) {
+			if (auxs->summary == YES) {
+				CREATES(newS);	
+				if (newS == NULL) {
+					return OUT_OF_MEMORY;
+				}
+				newS->nro_sent = auxs->nro_sent;
+				newS->firstWord = NULL;
+				newS->nextSent = NULL;
+				newS->standardSize = auxs->standardSize;
+				newS->rulePrecision = auxs->rulePrecision;
+				newS->nro_doc = i;
+				strcpy(newS->sentenca, auxs->sentenca);
+
+				//caso 1: menor que todas mas tem elementos na lista jah ou lista vazia
+				if ((auxRankingFirst == NULL) || (newS->rulePrecision < auxRankingFirst->rulePrecision)) {
+					newS->nextSent = auxRankingFirst;
+					auxRankingFirst = newS;
+				}
+				else {
+					prev = NULL;
+					auxs1 = auxRankingFirst;
+
+					//caso 2: entra no meio de dois elementos
+					//caso 3: entra no final
+					while ((auxs1 != NULL) && (auxs1->rulePrecision < newS->rulePrecision)) {
+						prev = auxs1;
+						auxs1 = auxs1->nextSent;
+					}
+					newS->nextSent = auxs1;
+					prev->nextSent = newS;
+				}
+				printf("rp %f idSent %d idDoc %d\n", newS->rulePrecision, newS->nro_sent, newS->nro_doc);
+			}
+			auxs = auxs->nextSent;
+		}
+		auxt = auxt->nextTxt;
+	}
+	return SUCCESS;
 }

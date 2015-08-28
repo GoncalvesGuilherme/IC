@@ -26,6 +26,7 @@ typedef struct word {
 typedef struct sentence {
 	char sentenca[1000];
 	int nro_sent;
+	int nro_doc;
 	int location;			//
 	int frequency;			// valores dos atributos
 	float standardFrequency;	// normalizado
@@ -51,6 +52,7 @@ typedef struct file {
 	int nDocs;
 	frequencyBlock *FTfirstword;
 	text *firstTxt;
+	sentence *rankingFirst;
 } File;					// colecao
 
 /**
@@ -199,5 +201,7 @@ void readCST(File *F, int nDocs);
 void readFile(File *F, int nDocs);
 
 void selectSentences(File *F, int nDocs);
+
+int doRanking(File *F, int nDocs);
 
 #endif

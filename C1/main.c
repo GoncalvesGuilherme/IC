@@ -37,6 +37,8 @@ int main (void) {
 
 	selectSentences(&F, nDocs);
 
+	doRanking(&F, nDocs);
+
 	printf("end\n");
 
 	return 0;
