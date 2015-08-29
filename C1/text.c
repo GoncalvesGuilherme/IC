@@ -28,7 +28,7 @@ int createFile(File *F, int nDocs) {
 	F->nDocs = nDocs;
 	F->firstTxt = NULL;
 	F->FTfirstword = NULL;
-	F->rankingFirst = NULL;
+	F->ranking = NULL;
 	return SUCCESS;
 }
 
@@ -928,7 +928,7 @@ void selectSentences(File *F, int nDocs) {
 	text *auxt;
 
 	R1 = 140.0 / (156.0);
-	R3 = 81.0 / (92.0);
+	R2 = 81.0 / (92.0);
 	R3 = 68.0 / (80.0);
 	R4 = 172.0 / (248.0);
 	R5 = 46.0 / (53.0);
@@ -1016,52 +1016,59 @@ void selectSentences(File *F, int nDocs) {
 
 int doRanking(File *F, int nDocs) {
 	int i;
-	sentence *auxs, *auxs1, *newS, *prev, *auxRankingFirst;
+	sentence *auxs, *auxs1, *news, *prev, *ranking;
 	text *auxt;
 
 	auxt = F->firstTxt;
-	auxRankingFirst = F->rankingFirst;
+	ranking = F->ranking;
 
 	for (i = 0; i < nDocs; i++) {
-		auxs = auxt->firstSent;
 
+		auxs = auxt->firstSent;
 		while (auxs != NULL) {
 			if (auxs->summary == YES) {
-				CREATES(newS);	
-				if (newS == NULL) {
+				CREATES(news);	
+				if (news == NULL) {
 					return OUT_OF_MEMORY;
 				}
-				newS->nro_sent = auxs->nro_sent;
-				newS->firstWord = NULL;
-				newS->nextSent = NULL;
-				newS->standardSize = auxs->standardSize;
-				newS->rulePrecision = auxs->rulePrecision;
-				newS->nro_doc = i;
-				strcpy(newS->sentenca, auxs->sentenca);
+				news->nro_sent = auxs->nro_sent;
+				news->firstWord = NULL;
+				news->nextSent = NULL;
+				news->standardSize = auxs->standardSize;
+				news->rulePrecision = auxs->rulePrecision;
+				news->nro_doc = i;
+				strcpy(news->sentenca, auxs->sentenca);
 
 				//caso 1: menor que todas mas tem elementos na lista jah ou lista vazia
-				if ((auxRankingFirst == NULL) || (newS->rulePrecision < auxRankingFirst->rulePrecision)) {
-					newS->nextSent = auxRankingFirst;
-					auxRankingFirst = newS;
+				if ((ranking == NULL) || (news->rulePrecision > ranking->rulePrecision)) {
+					news->nextSent = ranking;
+					ranking = news;
+					puts(ranking->sentenca);
 				}
 				else {
 					prev = NULL;
-					auxs1 = auxRankingFirst;
+					auxs1 = ranking;
 
 					//caso 2: entra no meio de dois elementos
 					//caso 3: entra no final
-					while ((auxs1 != NULL) && (auxs1->rulePrecision < newS->rulePrecision)) {
+					while ((auxs1 != NULL) && (auxs1->rulePrecision > news->rulePrecision)) {
 						prev = auxs1;
 						auxs1 = auxs1->nextSent;
 					}
-					newS->nextSent = auxs1;
-					prev->nextSent = newS;
+					news->nextSent = auxs1;
+					prev->nextSent = news;
 				}
-				printf("rp %f idSent %d idDoc %d\n", newS->rulePrecision, newS->nro_sent, newS->nro_doc);
 			}
 			auxs = auxs->nextSent;
 		}
 		auxt = auxt->nextTxt;
+	}
+
+	auxs = F->ranking;
+	while (auxs != NULL) {
+		puts("print ranking");
+		printf("rp %f idSent %d idDoc %d\n", auxs->rulePrecision, auxs->nro_sent, auxs->nro_doc);
+		auxs = auxs->nextSent;
 	}
 	return SUCCESS;
 }

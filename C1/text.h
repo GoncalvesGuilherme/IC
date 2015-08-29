@@ -52,7 +52,7 @@ typedef struct file {
 	int nDocs;
 	frequencyBlock *FTfirstword;
 	text *firstTxt;
-	sentence *rankingFirst;
+	sentence *ranking;
 } File;					// colecao
 
 /**
