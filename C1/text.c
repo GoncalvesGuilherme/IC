@@ -1023,7 +1023,6 @@ int doRanking(File *F, int nDocs) {
 	ranking = F->ranking;
 
 	for (i = 0; i < nDocs; i++) {
-
 		auxs = auxt->firstSent;
 		while (auxs != NULL) {
 			if (auxs->summary == YES) {
@@ -1039,25 +1038,32 @@ int doRanking(File *F, int nDocs) {
 				news->nro_doc = i;
 				strcpy(news->sentenca, auxs->sentenca);
 
-				//caso 1: menor que todas mas tem elementos na lista jah ou lista vazia
-				if ((ranking == NULL) || (news->rulePrecision > ranking->rulePrecision)) {
-					news->nextSent = ranking;
-					ranking = news;
-					puts(ranking->sentenca);
+				if ((F->ranking == NULL) || (news->rulePrecision > F->ranking->rulePrecision)) {
+					news->nextSent = F->ranking;
+					F->ranking = news;
+//					puts(F->ranking->sentenca);
+				}
+				else if ((F->ranking != NULL) && (news->rulePrecision == F->ranking->rulePrecision)) {
+					news->nextSent = F->ranking->nextSent;
+					F->ranking->nextSent = news;
+//					puts(news->sentenca);
 				}
 				else {
 					prev = NULL;
-					auxs1 = ranking;
+					auxs1 = F->ranking;
 
-					//caso 2: entra no meio de dois elementos
-					//caso 3: entra no final
+//					printf("newsruleprecision %f\n", news->rulePrecision);
+//					puts(news->sentenca);
 					while ((auxs1 != NULL) && (auxs1->rulePrecision > news->rulePrecision)) {
+//						printf("auxs1rulep %f\n", auxs1->rulePrecision);
 						prev = auxs1;
 						auxs1 = auxs1->nextSent;
 					}
 					news->nextSent = auxs1;
 					prev->nextSent = news;
 				}
+//				printf("rp %f idSent %d idDoc %d\n", news->rulePrecision, news->nro_sent, news->nro_doc);
+				news = NULL;
 			}
 			auxs = auxs->nextSent;
 		}
@@ -1065,9 +1071,9 @@ int doRanking(File *F, int nDocs) {
 	}
 
 	auxs = F->ranking;
+	puts("final ranking");
 	while (auxs != NULL) {
-		puts("print ranking");
-		printf("rp %f idSent %d idDoc %d\n", auxs->rulePrecision, auxs->nro_sent, auxs->nro_doc);
+		printf("%f %s\n", auxs->rulePrecision, auxs->sentenca);
 		auxs = auxs->nextSent;
 	}
 	return SUCCESS;
