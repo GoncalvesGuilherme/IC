@@ -10,6 +10,11 @@
 #define YES 13
 #define NO 14
 
+typedef struct cstName {
+	char docName[100];
+	struct cstName *next;
+} cstName;
+
 typedef struct frequency_table {
 	char lema[50];
 	int frequency;
@@ -51,6 +56,7 @@ typedef struct text {
 typedef struct file {
 	int nDocs;
 	frequencyBlock *FTfirstword;
+	cstName *firstCstDoc;
 	text *firstTxt;
 	sentence *ranking;
 } File;					// colecao
@@ -203,5 +209,7 @@ void readFile(File *F, int nDocs);
 void selectSentences(File *F, int nDocs);
 
 int doRanking(File *F, int nDocs);
+
+int removeRedundancyFromRank(File *F, int nDocs);
 
 #endif

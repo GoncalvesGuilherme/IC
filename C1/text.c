@@ -10,6 +10,7 @@
 #define CREATEW(ptr) word *ptr = (word*) malloc (sizeof(word))
 #define CREATED(ptr) text *ptr = (text *) malloc (sizeof(text))
 #define CREATEFB(ptr) frequencyBlock *ptr = (frequencyBlock *) malloc (sizeof(frequencyBlock)) 
+#define CREATECSTDOC(ptr) cstName *ptr = (cstName *) malloc (sizeof(cstName)) 
 
 void chomp(char str[]) {
     int i;
@@ -29,6 +30,7 @@ int createFile(File *F, int nDocs) {
 	F->firstTxt = NULL;
 	F->FTfirstword = NULL;
 	F->ranking = NULL;
+//	F->firstDoc = NULL;
 	return SUCCESS;
 }
 
@@ -53,6 +55,7 @@ int createDoc(File *F, int nDocs) {
 
 		newTxt->nextTxt = NULL;
 		newTxt->nDoc = i;
+//		newTxt->firstCstDoc = NULL; //POINT to cst doc is here
 		puts("Digite o nome do documento: ");
 		fgets(DocName, 100, stdin);	// a fgets nao esta lendo o primeiro nome Segmentation fault (core dumped)
 		chomp(DocName);
@@ -768,9 +771,9 @@ void setCST(File *F, int nDocs, char *SDID, char *TDID, int SSENT, int TSENT, ch
 }
 
 void readCST(File *F, int nDocs) {
-    int SSENT, TSENT, begin, i, j, w, k, count, countLine, c, position, nCst;
-    char *pch, SDID[100], TDID[100], TYPE[100], line[1000], str[100], CSTName[100];
-    FILE *fp;
+	int SSENT, TSENT, begin, i, j, w, k, count, countLine, c, position, nCst;
+	char *pch, SDID[100], TDID[100], TYPE[100], line[1000], str[100], CSTName[100];
+	FILE *fp;
 
 	puts("Numero de arquivos CST: ");
 	scanf("%d", &nCst);
@@ -1019,13 +1022,17 @@ int doRanking(File *F, int nDocs) {
 	sentence *auxs, *auxs1, *news, *prev, *ranking;
 	text *auxt;
 
+	F->ranking = NULL;
 	auxt = F->firstTxt;
-	ranking = F->ranking;
+//	ranking = F->ranking;
+
+	printf("numero de documentos %d\n", nDocs);
 
 	for (i = 0; i < nDocs; i++) {
 		auxs = auxt->firstSent;
 		while (auxs != NULL) {
 			if (auxs->summary == YES) {
+				puts(auxs->sentenca);
 				CREATES(news);	
 				if (news == NULL) {
 					return OUT_OF_MEMORY;
@@ -1033,32 +1040,52 @@ int doRanking(File *F, int nDocs) {
 				news->nro_sent = auxs->nro_sent;
 				news->firstWord = NULL;
 				news->nextSent = NULL;
+//				if (news->nextSent == NULL) { puts("news->nextSent is NULL"); }
 				news->standardSize = auxs->standardSize;
 				news->rulePrecision = auxs->rulePrecision;
 				news->nro_doc = i;
 				strcpy(news->sentenca, auxs->sentenca);
 
 				if ((F->ranking == NULL) || (news->rulePrecision > F->ranking->rulePrecision)) {
+//					if (F->ranking == NULL) { puts("F->ranking is NULL"); }
 					news->nextSent = F->ranking;
 					F->ranking = news;
+//					if (F->ranking->nextSent == NULL) { puts("ranking->nextSent is NULL"); }
 //					puts(F->ranking->sentenca);
 				}
 				else if ((F->ranking != NULL) && (news->rulePrecision == F->ranking->rulePrecision)) {
-					news->nextSent = F->ranking->nextSent;
-					F->ranking->nextSent = news;
-//					puts(news->sentenca);
+//					puts("in on else if");
+					if (news->rulePrecision == F->ranking->nextSent->rulePrecision) { // se varias sentencas possuirem a mesma rulePrecision o ranking manterah a ordem de texto-fonte
+						auxs1 = F->ranking->nextSent;
+						while (news->rulePrecision == auxs1->nextSent->rulePrecision) {
+							auxs1 = auxs1->nextSent;
+						}
+						news->nextSent = auxs1->nextSent;
+						auxs1->nextSent = news;
+					}
+					else {
+						news->nextSent = F->ranking->nextSent;
+						F->ranking->nextSent = news;
+//						puts(news->sentenca);
+					}
 				}
 				else {
 					prev = NULL;
 					auxs1 = F->ranking;
-
+//					puts("entered inside else");
 //					printf("newsruleprecision %f\n", news->rulePrecision);
 //					puts(news->sentenca);
-					while ((auxs1 != NULL) && (auxs1->rulePrecision > news->rulePrecision)) {
+					while ((auxs1 != NULL) && ((auxs1->rulePrecision >= news->rulePrecision) /*|| (auxs1->rulePrecision == news->rulePrecision)*/)) {
 //						printf("auxs1rulep %f\n", auxs1->rulePrecision);
+//						puts("inside while");
 						prev = auxs1;
+//						puts("after sets prev");
 						auxs1 = auxs1->nextSent;
+//						puts("after sets auxs1");
+//						if (auxs1 == NULL) { puts("auxs1 is NULL"); }
 					}
+//					puts("after the while");
+//					if (prev == NULL) { puts("prev is NULL"); }
 					news->nextSent = auxs1;
 					prev->nextSent = news;
 				}
@@ -1066,6 +1093,7 @@ int doRanking(File *F, int nDocs) {
 				news = NULL;
 			}
 			auxs = auxs->nextSent;
+//			if (auxs == NULL) { puts("auxs is NULL"); }
 		}
 		auxt = auxt->nextTxt;
 	}
@@ -1073,8 +1101,16 @@ int doRanking(File *F, int nDocs) {
 	auxs = F->ranking;
 	puts("final ranking");
 	while (auxs != NULL) {
-		printf("%f %s\n", auxs->rulePrecision, auxs->sentenca);
+		printf("%f %s set %d doc %d\n", auxs->rulePrecision, auxs->sentenca, auxs->nro_sent, auxs->nro_doc);
 		auxs = auxs->nextSent;
 	}
+
+	puts("");
 	return SUCCESS;
+}
+
+int removeRedundancyFromRanking(File *F, int nDocs) {
+	
+
+
 }

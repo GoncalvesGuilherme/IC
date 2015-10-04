@@ -39,7 +39,9 @@ int main (void) {
 
 	doRanking(&F, nDocs);
 
-	printf("end\n");
+//	removeRedundancyFromRank(&F, nDocs);
+
+	printf("endofprogram\n");
 
 	return 0;
 }
