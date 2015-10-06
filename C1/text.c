@@ -747,7 +747,7 @@ void setCST(File *F, int nDocs, char *SDID, char *TDID, int SSENT, int TSENT, ch
 			for (j = 0; j != SSENT - 1; j++) { // - 1 por comecar em zero
 				auxs = auxs->nextSent;
 			}
-			auxs->redundancy++;
+			auxs->redundancy++; // setar a lista de relacoes cst aqui
 			puts(SDID);
 			printf("for0 j %d SSENT %d r %d .\n", j, SSENT, auxs->redundancy);
 		}
@@ -850,19 +850,19 @@ void readCST(File *F, int nDocs) {
 	                                strcpy(TYPE, str);
 	                                //puts(TYPE);
 	                                count++;
-									if (strcmp(TYPE, "Identity") == 0) {
+									if (strcmp(TYPE, "Identity") == 0) { // qualquer uma
 	                                    setCST(F, nDocs, SDID, TDID, SSENT, TSENT, TYPE);
 	                                }
-	                                else if (strcmp(TYPE, "Equivalence") == 0) {
+	                                else if (strcmp(TYPE, "Equivalence") == 0) { // pega a menor sentenca
 	                                    setCST(F, nDocs, SDID, TDID, SSENT, TSENT, TYPE);
 	                                }
-	                                else if (strcmp(TYPE, "Summary") == 0) {
+	                                else if (strcmp(TYPE, "Summary") == 0) { // pega a menor sentenca
 	                                    setCST(F, nDocs, SDID, TDID, SSENT, TSENT, TYPE);
 	                                }
-	                                else if (strcmp(TYPE, "Subsumption") == 0) {
+	                                else if (strcmp(TYPE, "Subsumption") == 0) { // a que engloba a outra
 	                                    setCST(F, nDocs, SDID, TDID, SSENT, TSENT, TYPE);
 	                                }
-	                                else if (strcmp(TYPE, "Overlap") == 0) {
+	                                else if (strcmp(TYPE, "Overlap") == 0) { // pega a menor sentenca
 	                                    setCST(F, nDocs, SDID, TDID, SSENT, TSENT, TYPE);
 	                                }
 	                            }
@@ -887,6 +887,7 @@ void readCST(File *F, int nDocs) {
 	//printText(F->firstTxt);
 }
 
+// pega as sentencas originais dos textos-fonte
 void readFile(File *F, int nDocs) {
     int countLine, position, c, i;
     char *pch, line[1000];
@@ -1040,21 +1041,16 @@ int doRanking(File *F, int nDocs) {
 				news->nro_sent = auxs->nro_sent;
 				news->firstWord = NULL;
 				news->nextSent = NULL;
-//				if (news->nextSent == NULL) { puts("news->nextSent is NULL"); }
 				news->standardSize = auxs->standardSize;
 				news->rulePrecision = auxs->rulePrecision;
 				news->nro_doc = i;
 				strcpy(news->sentenca, auxs->sentenca);
 
 				if ((F->ranking == NULL) || (news->rulePrecision > F->ranking->rulePrecision)) {
-//					if (F->ranking == NULL) { puts("F->ranking is NULL"); }
 					news->nextSent = F->ranking;
 					F->ranking = news;
-//					if (F->ranking->nextSent == NULL) { puts("ranking->nextSent is NULL"); }
-//					puts(F->ranking->sentenca);
 				}
 				else if ((F->ranking != NULL) && (news->rulePrecision == F->ranking->rulePrecision)) {
-//					puts("in on else if");
 					if (news->rulePrecision == F->ranking->nextSent->rulePrecision) { // se varias sentencas possuirem a mesma rulePrecision o ranking manterah a ordem de texto-fonte
 						auxs1 = F->ranking->nextSent;
 						while (news->rulePrecision == auxs1->nextSent->rulePrecision) {
@@ -1066,34 +1062,21 @@ int doRanking(File *F, int nDocs) {
 					else {
 						news->nextSent = F->ranking->nextSent;
 						F->ranking->nextSent = news;
-//						puts(news->sentenca);
 					}
 				}
 				else {
 					prev = NULL;
 					auxs1 = F->ranking;
-//					puts("entered inside else");
-//					printf("newsruleprecision %f\n", news->rulePrecision);
-//					puts(news->sentenca);
-					while ((auxs1 != NULL) && ((auxs1->rulePrecision >= news->rulePrecision) /*|| (auxs1->rulePrecision == news->rulePrecision)*/)) {
-//						printf("auxs1rulep %f\n", auxs1->rulePrecision);
-//						puts("inside while");
+					while ((auxs1 != NULL) && ((auxs1->rulePrecision >= news->rulePrecision))) {
 						prev = auxs1;
-//						puts("after sets prev");
 						auxs1 = auxs1->nextSent;
-//						puts("after sets auxs1");
-//						if (auxs1 == NULL) { puts("auxs1 is NULL"); }
 					}
-//					puts("after the while");
-//					if (prev == NULL) { puts("prev is NULL"); }
 					news->nextSent = auxs1;
 					prev->nextSent = news;
 				}
-//				printf("rp %f idSent %d idDoc %d\n", news->rulePrecision, news->nro_sent, news->nro_doc);
 				news = NULL;
 			}
 			auxs = auxs->nextSent;
-//			if (auxs == NULL) { puts("auxs is NULL"); }
 		}
 		auxt = auxt->nextTxt;
 	}
@@ -1109,8 +1092,50 @@ int doRanking(File *F, int nDocs) {
 	return SUCCESS;
 }
 
-int removeRedundancyFromRanking(File *F, int nDocs) {
-	
+int getCstDocName(File *F, int nDocs) {
+	int i, nCst;
+	char CSTName[100];
+	cstName *auxCst, *newCst;
+
+	F->firstCstDoc = NULL;
+
+	puts("Numero de arquivos CST: ");
+	scanf("%d", &nCst);
+
+	fgets(CSTName, 100, stdin);		// para limpar o buffer do stdin
+	chomp(CSTName);
+	//puts(CSTName);
 
 
+	for (i = 0; i < nCst; i++) {
+		puts("Nome do arquivo: ");
+		fgets(CSTName, 100, stdin);
+		chomp(CSTName);
+
+		CREATECSTDOC(newCst);
+		if (newCst == NULL) {
+			return OUT_OF_MEMORY;
+		}
+		newCst->next = NULL;
+		strcpy(newCst->docName, CSTName);
+
+		if (F->firstCstDoc == NULL) {
+			F->firstCstDoc = newCst;
+		}
+		else {
+			auxCst = F->firstCstDoc;
+			while (auxCst->next != NULL) {
+				auxCst = auxCst->next;
+			}
+			auxCst->next = newCst;
+		}
+	}
+
+	auxCst = F->firstCstDoc;
+	while (auxCst != NULL) {
+		puts(auxCst->docName);
+		auxCst = auxCst->next;
+	}
+
+	return SUCCESS;
 }

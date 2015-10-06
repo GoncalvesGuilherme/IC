@@ -39,6 +39,8 @@ int main (void) {
 
 	doRanking(&F, nDocs);
 
+	getCstDocName(&F, nDocs);
+
 //	removeRedundancyFromRank(&F, nDocs);
 
 	printf("endofprogram\n");

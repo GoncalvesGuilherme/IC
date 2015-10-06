@@ -210,6 +210,8 @@ void selectSentences(File *F, int nDocs);
 
 int doRanking(File *F, int nDocs);
 
-int removeRedundancyFromRank(File *F, int nDocs);
+//int removeRedundancyFromRank(File *F, int nDocs);
+
+int getCstDocName(File *F, int nDocs);
 
 #endif
