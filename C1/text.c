@@ -6,11 +6,13 @@
 
 #include "text.h"
 
-#define CREATES(ptr) sentence *ptr = (sentence*) malloc (sizeof(sentence))
-#define CREATEW(ptr) word *ptr = (word*) malloc (sizeof(word))
+#define CREATES(ptr) sentence *ptr = (sentence *) malloc (sizeof(sentence))
+#define CREATEW(ptr) word *ptr = (word *) malloc (sizeof(word))
 #define CREATED(ptr) text *ptr = (text *) malloc (sizeof(text))
 #define CREATEFB(ptr) frequencyBlock *ptr = (frequencyBlock *) malloc (sizeof(frequencyBlock)) 
 #define CREATECSTDOC(ptr) cstName *ptr = (cstName *) malloc (sizeof(cstName)) 
+#define CREATECR(ptr) cstRelation *ptr = (cstRelation *) malloc (sizeof(cstRelation)) 
+#define CHECK(ptr) if (ptr == NULL) { return OUT_OF_MEMORY; }
 
 void chomp(char str[]) {
     int i;
@@ -191,6 +193,9 @@ int separate(text *txt) {
 			sent->standardSize = 0;
 			sent->redundancy = 0;
 			sent->standardRedundancy = 0;
+			sent->firstcr == NULL; // first cstRelation
+			strcpy(sent->docName, txt->DocName);
+			puts(sent->docName);
 
 			// chains the new sentence
 			if (txt->firstSent == NULL) {
@@ -733,6 +738,33 @@ void findMaxRedundancy(File *F, int nDocs) {
 
 }
 
+int setCstRelationList(sentence *sent, char *TYPE, int sentNum, char *docName, int SSENT) {
+	cstRelation *auxcr, *newcr;
+
+//	CREATECR(newcr);
+	newcr = (cstRelation *) malloc (sizeof(cstRelation));
+	CHECK(newcr);
+
+	strcpy(newcr->type, TYPE);
+	strcpy(newcr->docName, docName);
+	newcr->sentNum = sentNum;
+	newcr->SSENT = SSENT;
+	newcr->next = NULL;
+
+	if (sent->firstcr == NULL) {
+		sent->firstcr = newcr;
+	}
+	else {
+		auxcr = sent->firstcr;
+		while (auxcr->next != NULL) {
+			auxcr = auxcr->next;
+		}
+		auxcr->next = newcr;
+	}
+
+	return SUCCESS;
+}
+
 void setCST(File *F, int nDocs, char *SDID, char *TDID, int SSENT, int TSENT, char *TYPE) {
 	int i, j;
 	word *auxw;
@@ -748,6 +780,7 @@ void setCST(File *F, int nDocs, char *SDID, char *TDID, int SSENT, int TSENT, ch
 				auxs = auxs->nextSent;
 			}
 			auxs->redundancy++; // setar a lista de relacoes cst aqui
+			setCstRelationList(auxs, TYPE, TSENT - 1, TDID, YES);
 			puts(SDID);
 			printf("for0 j %d SSENT %d r %d .\n", j, SSENT, auxs->redundancy);
 		}
@@ -764,6 +797,7 @@ void setCST(File *F, int nDocs, char *SDID, char *TDID, int SSENT, int TSENT, ch
 			}
 			auxs->redundancy++;
 			puts(TDID);
+			setCstRelationList(auxs, TYPE, SSENT - 1, SDID, NO);
 			printf("for1 j %d TSENT %d r %d .\n", j, TSENT, auxs->redundancy);
 		}
 		auxt = auxt->nextTxt;
@@ -1045,6 +1079,8 @@ int doRanking(File *F, int nDocs) {
 				news->rulePrecision = auxs->rulePrecision;
 				news->nro_doc = i;
 				strcpy(news->sentenca, auxs->sentenca);
+				news->firstcr = auxs->firstcr; // gambiarra pra nao perder as relacoes do tipo cst, ficaram dois ponteiros para uma mesma regioa de memoria
+				strcpy(news->docName, auxs->docName);
 
 				if ((F->ranking == NULL) || (news->rulePrecision > F->ranking->rulePrecision)) {
 					news->nextSent = F->ranking;
@@ -1135,6 +1171,74 @@ int getCstDocName(File *F, int nDocs) {
 	while (auxCst != NULL) {
 		puts(auxCst->docName);
 		auxCst = auxCst->next;
+	}
+
+	return SUCCESS;
+}
+
+int printRelation2(cstRelation *cr) {
+
+	if (cr == NULL) {
+		return 0;
+	}
+	puts(cr->docName);
+	printf("sentNum %d\n", cr->sentNum);
+	puts(cr->type);
+	if (cr->SSENT == YES) {
+		puts("is source.");
+	}
+	else {
+		puts("not source.");
+	}
+	printRelation2(cr->next);
+}
+
+int printRelation1(sentence *sent) {
+
+	if (sent == NULL) {
+		return 0;
+	}	
+	puts(sent->docName);
+	printRelation2(sent->firstcr);
+	puts("");
+	printRelation1(sent->nextSent);
+}
+
+int printCstRelationList(File *F, int nDocs) {
+	int i;
+	text *auxTxt;
+/*
+	auxTxt = F->firstTxt;
+	for (i = 0; i < nDocs; i++) {
+		printf("nDoc %d\n", i);
+		puts(auxTxt->DocName);
+		printRelation1(auxTxt->firstSent);
+		auxTxt = auxTxt->nextTxt;
+	}*/
+
+	printRelation1(F->ranking);
+
+	return SUCCESS;
+}
+
+int removeRedundancyFromRank(File *F, int nDocs) {
+	sentence *auxs, *auxs1;
+	cstRelation *auxcr;
+
+	auxs = F->ranking;
+	while (auxs != NULL) {
+		auxs1 = auxs->nextSent;
+		while (auxs1 != NULL) {
+			auxscr = auxs->firstcr;
+			while (auxcr != NULL) {
+				if (strcmp(auxs1->docName, auxcr->docName) == 0 && auxs1->nro_sent == auxcr->sentNum) {
+					// verificar que tipo de relacao e remover a setenca necessaria
+				}
+				auxcr = auxcr->next;
+			}
+			auxs1 = auxs1->nextSent;
+		}
+		auxs = auxs->nextSent;
 	}
 
 	return SUCCESS;

@@ -10,6 +10,14 @@
 #define YES 13
 #define NO 14
 
+typedef struct cstRelation {
+	char type[100];
+	char docName[100]; // numero do documento que a sentenca em questao possui relacao
+	int sentNum; // numero da sentenca que a em questao possui relacao
+	int SSENT; // 1 indica que eh souce sentence, 0 que eh TSENT. Usado para a relacao sumbsumption, a SSENT engloba a TSENT.
+	struct cstRelation *next;
+} cstRelation;
+
 typedef struct cstName {
 	char docName[100];
 	struct cstName *next;
@@ -30,6 +38,7 @@ typedef struct word {
 
 typedef struct sentence {
 	char sentenca[1000];
+	char docName[100]; // nome do texto ao qual a sentenca pertence
 	int nro_sent;
 	int nro_doc;
 	int location;			//
@@ -41,6 +50,7 @@ typedef struct sentence {
 	float standardRedundancy;	// normalizado
 	int summary;		// indica se a sentenca vai ou nao para o sumario
 	float rulePrecision;
+	cstRelation *firstcr;
 	word *firstWord;
 	struct sentence *nextSent;
 } sentence;
@@ -210,8 +220,12 @@ void selectSentences(File *F, int nDocs);
 
 int doRanking(File *F, int nDocs);
 
-//int removeRedundancyFromRank(File *F, int nDocs);
+int removeRedundancyFromRank(File *F, int nDocs);
 
 int getCstDocName(File *F, int nDocs);
+
+int setCstRelationList(sentence *sent, char *TYPE, int setNum, char *docName, int SSENT);
+
+int printCstRelationList(File *F, int nDocs);
 
 #endif

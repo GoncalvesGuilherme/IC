@@ -41,7 +41,11 @@ int main (void) {
 
 	getCstDocName(&F, nDocs);
 
+	printCstRelationList(&F, nDocs);
+
 //	removeRedundancyFromRank(&F, nDocs);
+
+//	freeAll(&F, nDocs);
 
 	printf("endofprogram\n");
 
