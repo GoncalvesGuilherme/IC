@@ -1222,22 +1222,110 @@ int printCstRelationList(File *F, int nDocs) {
 }
 
 int removeRedundancyFromRank(File *F, int nDocs) {
-	sentence *auxs, *auxs1;
+	int nextcr;
+	sentence *auxs, *auxs1, *prevs, *prevs1, *auxsf;
 	cstRelation *auxcr;
 
+	prevs = NULL;
+	prevs1 = NULL;
 	auxs = F->ranking;
 	while (auxs != NULL) {
+		prevs1 = auxs;
 		auxs1 = auxs->nextSent;
 		while (auxs1 != NULL) {
-			auxscr = auxs->firstcr;
+			auxcr = auxs->firstcr;
 			while (auxcr != NULL) {
-				if (strcmp(auxs1->docName, auxcr->docName) == 0 && auxs1->nro_sent == auxcr->sentNum) {
-					// verificar que tipo de relacao e remover a setenca necessaria
+				nextcr = 0;
+				if ((strcmp(auxs1->docName, auxcr->docName) == 0) && (auxs1->nro_sent == auxcr->sentNum)) {
+					// verificar que tipo de relacao e remover a setenca necessaria, lembrar de setar o auxcr
+					if (strcmp(auxcr->type, "Identity") == 0) { // qqr uma, ambas sao iguais, remove sempre a segunda
+						prevs1->nextSent = auxs1->nextSent;
+						auxsf = auxs1;
+						auxs1 = auxs1->nextSent;
+						auxcr = auxs->firstcr;
+						nextcr = 1;
+						//freeSentence(auxsf); // implementar a f freeSentence
+						puts(auxcr->type);
+					}
+					else if (strcmp(auxcr->type, "Sumbsuption") == 0) { // seleciona-se a que engloba a outra, a que for SSENT eh selecionada
+						if (auxcr->SSENT == YES) { // indica que a auxs1 eh source
+							if (prevs == NULL) { // retira a primeira sentenca do rank, que esta sendo apotada por auxs e eh necessario andar com o rank
+								auxsf = auxs;
+								F->ranking = auxs->nextSent;
+								auxs = auxs->nextSent;
+								prevs1 = auxs1;
+								auxs1 = auxs1->nextSent;
+								auxcr = auxs->firstcr;
+								nextcr = 1;
+								//freeSentence(auxsf);
+							}
+							else { // retira uma sentenca apontada por auxs no meio do rank
+								prevs->nextSent = auxs->nextSent;
+								auxsf = auxs;
+								auxs = auxs->nextSent;
+								if (auxs == auxs1) { // caso sobreponha o auxs com o auxs1
+									prevs1 = auxs1;
+									auxs1 = auxs1->nextSent;
+								}
+								auxcr = auxs->firstcr;
+								nextcr = 1;
+								//freeSentence(auxsf);
+							}
+						}
+						else {
+							prevs1->nextSent = auxs1->nextSent;
+							auxsf = auxs1;
+							auxs1 = auxs1->nextSent;
+							auxcr = auxs->firstcr;
+							//freeSentence(auxsf); // implementar a f freeSentence
+							nextcr = 1;
+						}
+						puts(auxcr->type);
+					}
+					else { // Overlap, Equivalency, Summary => seleciona-se a menor
+						if (auxs->standardSize <= auxs1->standardSize) { // remove a apontada por auxs1
+							prevs1->nextSent = auxs1->nextSent;
+							auxsf = auxs1;
+							auxs1 = auxs1->nextSent;
+							auxcr = auxs->firstcr;
+							nextcr = 1;
+							//freeSentence(auxsf); // implementar a f freeSentence
+						}
+						else { // remove a apontada por auxs
+							if (prevs == NULL) { // retira a primeira sentenca do rank, que esta sendo apotada por auxs e eh necessario andar com o rank
+								auxsf = auxs;
+								F->ranking = auxs->nextSent;
+								auxs = auxs->nextSent;
+								prevs1 = auxs1;
+								auxs1 = auxs1->nextSent;
+								auxcr = auxs->firstcr;
+								nextcr = 1;
+								//freeSentence(auxsf);
+							}
+							else { // retira uma sentenca apontada por auxs no meio do rank
+								prevs->nextSent = auxs->nextSent;
+								auxsf = auxs;
+								auxs = auxs->nextSent;
+								if (auxs == auxs1) { // caso sobreponha o auxs com o auxs1
+									prevs1 = auxs1;
+									auxs1 = auxs1->nextSent;
+								}
+								auxcr = auxs->firstcr;
+								nextcr = 1;
+								//freeSentence(auxsf);
+							}
+						}
+						puts(auxcr->type);
+					}
 				}
-				auxcr = auxcr->next;
+				if (nextcr == 0) {
+					auxcr = auxcr->next; // caso entre no primeiro if nao deve executar esse passo senao pula uma relacao cst    
+				}
 			}
+			prevs1 = auxs1;
 			auxs1 = auxs1->nextSent;
 		}
+		prevs = auxs;
 		auxs = auxs->nextSent;
 	}
 
