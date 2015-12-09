@@ -43,7 +43,9 @@ int main (void) {
 
 	printCstRelationList(&F, nDocs);
 
-	removeRedundancyFromRank(&F, nDocs);
+//	removeRedundancyFromRank(&F, nDocs);
+
+	rmRedundancySimple(&F, nDocs);
 
 //	freeAll(&F, nDocs);
 

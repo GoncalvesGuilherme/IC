@@ -222,6 +222,8 @@ int doRanking(File *F, int nDocs);
 
 int removeRedundancyFromRank(File *F, int nDocs);
 
+int rmRedundancySimple(File *F, int nDocs);
+
 int getCstDocName(File *F, int nDocs);
 
 int setCstRelationList(sentence *sent, char *TYPE, int setNum, char *docName, int SSENT);

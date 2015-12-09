@@ -1221,7 +1221,41 @@ int printCstRelationList(File *F, int nDocs) {
 	return SUCCESS;
 }
 
-int removeRedundancyFromRank(File *F, int nDocs) {
+int rmRedundancySimple(File *F, int nDocs) {
+	sentence *auxs, *auxs1;
+	cstRelation *auxcr;
+
+	puts("In simple");
+
+	auxs = F->ranking;
+
+	while (auxs != NULL) {
+		auxs1 = auxs->nextSent;
+		auxcr = auxs->firstcr;
+		while (auxcr != NULL) {
+			while (auxs1 != NULL) {
+				if (strcmp(auxs1->docName, auxcr->docName) && (auxs1->nro_sent == auxcr->sentNum)) {
+					if (strcmp(auxcr->type, "Identity") == 0) {
+						puts("Identity");
+					}
+					else if (strcmp(auxcr->type, "Subsumption") == 0) {
+						puts("Subsumption");
+					}
+					else {
+						puts("Others");
+					}
+				}
+				auxs1->nextSent;
+			}
+			auxcr = auxcr->next;
+		}
+		auxs = auxs->nextSent;
+	}
+
+	return SUCCESS;
+}
+
+/*int removeRedundancyFromRank(File *F, int nDocs) {
 	int nextcr;
 	sentence *auxs, *auxs1, *prevs, *prevs1, *auxsf;
 	cstRelation *auxcr;
@@ -1247,7 +1281,7 @@ int removeRedundancyFromRank(File *F, int nDocs) {
 						//freeSentence(auxsf); // implementar a f freeSentence
 						puts(auxcr->type);
 					}
-					else if (strcmp(auxcr->type, "Sumbsuption") == 0) { // seleciona-se a que engloba a outra, a que for SSENT eh selecionada
+					else if (strcmp(auxcr->type, "Subsumption") == 0) { // seleciona-se a que engloba a outra, a que for SSENT eh selecionada
 						if (auxcr->SSENT == YES) { // indica que a auxs1 eh source
 							if (prevs == NULL) { // retira a primeira sentenca do rank, que esta sendo apotada por auxs e eh necessario andar com o rank
 								auxsf = auxs;
@@ -1330,4 +1364,4 @@ int removeRedundancyFromRank(File *F, int nDocs) {
 	}
 
 	return SUCCESS;
-}
+}*/
