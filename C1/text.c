@@ -1052,6 +1052,8 @@ void selectSentences(File *F, int nDocs) {
 
 /***************************** ranking ****************************/
 
+/* doRanking praticamente coloca em uma lista ordenada as sentencas por precisao das regras que as selecionaram */
+
 int doRanking(File *F, int nDocs) {
 	int i;
 	sentence *auxs, *auxs1, *news, *prev, *ranking;
@@ -1127,6 +1129,8 @@ int doRanking(File *F, int nDocs) {
 	puts("");
 	return SUCCESS;
 }
+
+/* pega os nomes dos textos que contem as relacoes do tipo cst e coloca em uma lista encadeada para evitar de ficar pedindo varias vezes */
 
 int getCstDocName(File *F, int nDocs) {
 	int i, nCst;
@@ -1222,17 +1226,17 @@ int printCstRelationList(File *F, int nDocs) {
 }
 
 int rmRedundancySimple(File *F, int nDocs) {
-	sentence *auxs, *auxs1;
+	sentence *auxs, *auxs1, *prev, *prev1;
 	cstRelation *auxcr;
 
-	puts("In simple");
-
 	auxs = F->ranking;
+	prev = NULL;
+	prev1 = NULL;
 
 	while (auxs != NULL) {
-		auxs1 = auxs->nextSent;
 		auxcr = auxs->firstcr;
 		while (auxcr != NULL) {
+			auxs1 = auxs->nextSent;
 			while (auxs1 != NULL) {
 				if (strcmp(auxs1->docName, auxcr->docName) && (auxs1->nro_sent == auxcr->sentNum)) {
 					if (strcmp(auxcr->type, "Identity") == 0) {
@@ -1245,10 +1249,12 @@ int rmRedundancySimple(File *F, int nDocs) {
 						puts("Others");
 					}
 				}
-				auxs1->nextSent;
+				prev1 = auxs1;
+				auxs1 = auxs1->nextSent;
 			}
 			auxcr = auxcr->next;
 		}
+		prev = auxs;
 		auxs = auxs->nextSent;
 	}
 
