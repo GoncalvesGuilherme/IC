@@ -14,7 +14,7 @@ typedef struct cstRelation {
 	char type[100];
 	char docName[100]; // numero do documento que a sentenca em questao possui relacao
 	int sentNum; // numero da sentenca que a em questao possui relacao
-	int SSENT; // 1 indica que eh souce sentence, 0 que eh TSENT. Usado para a relacao sumbsumption, a SSENT engloba a TSENT. qual sentenca????????
+	int SSENT; // 1 indica que eh souce sentence, 0 que eh TSENT. Usado para a relacao sumbsumption, a SSENT engloba a TSENT.
 	struct cstRelation *next;
 } cstRelation;
 
