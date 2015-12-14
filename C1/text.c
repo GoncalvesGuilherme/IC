@@ -1239,8 +1239,20 @@ int rmRedundancySimple(File *F, int nDocs) {
 			auxs1 = auxs->nextSent;
 			while (auxs1 != NULL) {
 				if (strcmp(auxs1->docName, auxcr->docName) && (auxs1->nro_sent == auxcr->sentNum)) {
-					if (strcmp(auxcr->type, "Identity") == 0) {
+					if (strcmp(auxcr->type, "Identity") == 0) { // removo sempre a segunda sentenca por questao de facilidade
 						puts("Identity");
+						if (prev1 == NULL) {
+							puts("case 1 identity");
+							auxs->nextSent = auxs1->nextSent;
+							auxs1 = auxs->nextSent;
+							auxcr = auxs->firstcr;
+						}
+						else {
+							puts("case 2 identity");
+							prev1->nextSent = auxs1->nextSent;
+							auxs1 = prev1->nextSent;
+						}
+						puts("exit from identity");
 					}
 					else if (strcmp(auxcr->type, "Subsumption") == 0) {
 						puts("Subsumption");
@@ -1248,9 +1260,12 @@ int rmRedundancySimple(File *F, int nDocs) {
 					else {
 						puts("Others");
 					}
+					//puts("exit from equals docName");
 				}
-				prev1 = auxs1;
-				auxs1 = auxs1->nextSent;
+				if (auxs1 != NULL) {
+					prev1 = auxs1;
+					auxs1 = auxs1->nextSent;
+				}
 			}
 			auxcr = auxcr->next;
 		}
