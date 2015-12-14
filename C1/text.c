@@ -1225,6 +1225,22 @@ int printCstRelationList(File *F, int nDocs) {
 	return SUCCESS;
 }
 
+int removeAuxs1(sentence *prev, sentence *auxs, sentence *prev1, sentence *auxs1, cstRelation *auxcr) {
+
+	if (prev1 == NULL) { // caso o auxs1 nao tenha sido movimentado ainda
+		auxs->nextSent = auxs1->nextSent;
+		auxs1 = auxs->nextSent;
+		auxcr = auxs->firstcr;
+	}
+	else {
+		prev1->nextSent = auxs1->nextSent;
+		auxs1 = prev1->nextSent;
+		auxcr = auxs->firstcr;
+	}
+
+	return SUCCESS;
+}
+
 int rmRedundancySimple(File *F, int nDocs) {
 	sentence *auxs, *auxs1, *prev, *prev1;
 	cstRelation *auxcr;
@@ -1239,9 +1255,10 @@ int rmRedundancySimple(File *F, int nDocs) {
 			auxs1 = auxs->nextSent;
 			while (auxs1 != NULL) {
 				if (strcmp(auxs1->docName, auxcr->docName) && (auxs1->nro_sent == auxcr->sentNum)) {
-					if (strcmp(auxcr->type, "Identity") == 0) { // removo sempre a segunda sentenca por questao de facilidade
+					if (strcmp(auxcr->type, "Identity") == 0) { // removo sempre auxs1 por questao de facilidade
 						puts("Identity");
-						if (prev1 == NULL) {
+						removeAuxs1(prev, auxs, prev1, auxs1, auxcr);
+						/*if (prev1 == NULL) { // caso o auxs1 nao tenha sido movimentado ainda
 							puts("case 1 identity");
 							auxs->nextSent = auxs1->nextSent;
 							auxs1 = auxs->nextSent;
@@ -1251,11 +1268,18 @@ int rmRedundancySimple(File *F, int nDocs) {
 							puts("case 2 identity");
 							prev1->nextSent = auxs1->nextSent;
 							auxs1 = prev1->nextSent;
-						}
+							auxcr = auxs->firstcr;
+						}*/
 						puts("exit from identity");
 					}
 					else if (strcmp(auxcr->type, "Subsumption") == 0) {
 						puts("Subsumption");
+						if (auxcr->SSENT == 1) { // ver qual engloba qual
+							
+						}
+						else {
+							
+						}
 					}
 					else {
 						puts("Others");
