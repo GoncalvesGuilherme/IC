@@ -1241,6 +1241,28 @@ int removeAuxs1(sentence *prev, sentence *auxs, sentence *prev1, sentence *auxs1
 	return SUCCESS;
 }
 
+int removeAuxs(sentence *prev, sentence *auxs, sentence *prev1, sentence *auxs1, cstRelation *auxcr) {
+
+	if (prev == NULL) { // caso o auxs nao tenha sido movimentado ainda
+		auxs = auxs->nextSent;
+		auxcr = auxs->firstcr;
+		if (auxs == auxs1) {
+			auxs1 = auxs1->nextSent;
+		}
+	}
+	else {
+		prev->nextSent = auxs->nextSent;
+		if (auxs == prev1) {
+			prev1 = prev1->nextSent;
+			auxs1 = auxs1->nextSent;
+		}
+		auxs = prev->nextSent;
+		auxcr = auxs->firstcr;
+	}
+
+	return SUCCESS;
+}
+
 int rmRedundancySimple(File *F, int nDocs) {
 	sentence *auxs, *auxs1, *prev, *prev1;
 	cstRelation *auxcr;
@@ -1283,6 +1305,19 @@ int rmRedundancySimple(File *F, int nDocs) {
 					}
 					else {
 						puts("Others");
+						if (auxs->standardSize < auxs1->standardSize) {
+							puts("auxs->stdSize > auxs1->stdSize");
+							removeAuxs1(prev, auxs, prev1, auxs1, auxcr);
+						}
+						else {
+							puts("auxs->stdSize > auxs1->stdSize");
+							if (prev == NULL) {
+								removeAuxs(prev, F->ranking, prev1, auxs1, auxcr);
+							}
+							else {
+								removeAuxs(prev, auxs, prev1, auxs1, auxcr);
+							} 
+						}
 					}
 					//puts("exit from equals docName");
 				}
