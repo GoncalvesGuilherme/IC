@@ -1292,53 +1292,56 @@ int rmRedundancySimple(File *F, int nDocs) {
 			while (auxs1 != NULL) {
 				if (strcmp(auxs1->docName, auxcr->docName) && (auxs1->nro_sent == auxcr->sentNum)) {
 					if (strcmp(auxcr->type, "Identity") == 0) { // removo sempre auxs1 por questao de facilidade
-						puts("Identity");
-						removeAuxs1(prev, auxs, prev1, auxs1, auxcr);
-						/*if (prev1 == NULL) { // caso o auxs1 nao tenha sido movimentado ainda
-							puts("case 1 identity");
-							auxs->nextSent = auxs1->nextSent;
-							auxs1 = auxs->nextSent;
-							auxcr = auxs->firstcr;
-						}
-						else {
-							puts("case 2 identity");
-							prev1->nextSent = auxs1->nextSent;
-							auxs1 = prev1->nextSent;
-							auxcr = auxs->firstcr;
-						}*/
-						puts("exit from identity");
+						puts("\tIdentity");
+						puts(auxs->sentenca);
+						puts(auxs1->sentenca);
+						//removeAuxs1(prev, auxs, prev1, auxs1, auxcr);
 					}
 					else if (strcmp(auxcr->type, "Subsumption") == 0) {
-						puts("Subsumption");
-						if (auxcr->SSENT == 1) { // ver qual engloba qual
-							
-						}
-						else {
-							
-						}
-					}
-					else {
-						puts("Others");
-						if (auxs->standardSize < auxs1->standardSize) {
-							puts("auxs->stdSize > auxs1->stdSize");
-							removeAuxs1(prev, auxs, prev1, auxs1, auxcr);
-						}
-						else {
-							puts("auxs->stdSize > auxs1->stdSize");
-							if (prev == NULL) {
+						puts("\tSubsumption");
+						if (auxcr->SSENT == 1) { // remover auxs, indica que auxs1 eh source, portanto engloba auxs
+							puts("remove auxs");
+							puts(auxs->sentenca);
+							puts(auxs1->sentenca);
+							/*if (prev == NULL) {
 								removeAuxs(prev, F->ranking, prev1, auxs1, auxcr);
 							}
 							else {
 								removeAuxs(prev, auxs, prev1, auxs1, auxcr);
+							}*/
+						}
+						else { // indica que auxs1 nao eh source, por isso a removo
+							puts("remove auxs1");
+							puts(auxs->sentenca);
+							puts(auxs1->sentenca);
+							//removeAuxs1(prev, auxs, prev1, auxs1, auxcr);
+						}
+					}
+					else {
+						puts("\tOthers");
+						if (auxs->standardSize < auxs1->standardSize) {
+							//puts("auxs->stdSize > auxs1->stdSize");
+							puts(auxs->sentenca);
+							puts(auxs1->sentenca);
+							removeAuxs1(prev, auxs, prev1, auxs1, auxcr);
+						}
+						else {
+							//puts("auxs->stdSize > auxs1->stdSize");
+							if (prev == NULL) {
+								//removeAuxs(prev, F->ranking, prev1, auxs1, auxcr);
+								puts(auxs->sentenca);
+								puts(auxs1->sentenca);
+							}
+							else {
+								puts(auxs->sentenca);
+								puts(auxs1->sentenca);
+								//removeAuxs(prev, auxs, prev1, auxs1, auxcr);
 							} 
 						}
 					}
-					//puts("exit from equals docName");
 				}
-				if (auxs1 != NULL) {
-					prev1 = auxs1;
-					auxs1 = auxs1->nextSent;
-				}
+				prev1 = auxs1;
+				auxs1 = auxs1->nextSent; // problem is here, not exiting form the auxs1 while
 			}
 			auxcr = auxcr->next;
 		}
