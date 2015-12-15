@@ -780,7 +780,7 @@ void setCST(File *F, int nDocs, char *SDID, char *TDID, int SSENT, int TSENT, ch
 				auxs = auxs->nextSent;
 			}
 			auxs->redundancy++; // setar a lista de relacoes cst aqui
-			setCstRelationList(auxs, TYPE, TSENT - 1, TDID, YES);
+			setCstRelationList(auxs, TYPE, TSENT - 1, TDID, YES); // coloca direto na sentenca a qual pertence a relacao
 			puts(SDID);
 			printf("for0 j %d SSENT %d r %d .\n", j, SSENT, auxs->redundancy);
 		}
