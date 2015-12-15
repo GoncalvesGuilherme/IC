@@ -1225,6 +1225,20 @@ int printCstRelationList(File *F, int nDocs) {
 	return SUCCESS;
 }
 
+int printRank(File *F) {
+	sentence *auxs;
+
+	auxs = F->ranking;
+	puts("final ranking");
+	while (auxs != NULL) {
+		printf("%f %s set %d doc %d\n", auxs->rulePrecision, auxs->sentenca, auxs->nro_sent, auxs->nro_doc);
+		auxs = auxs->nextSent;
+	}
+	puts("");
+
+	return SUCCESS;
+}
+
 int removeAuxs1(sentence *prev, sentence *auxs, sentence *prev1, sentence *auxs1, cstRelation *auxcr) {
 
 	if (prev1 == NULL) { // caso o auxs1 nao tenha sido movimentado ainda
@@ -1331,6 +1345,8 @@ int rmRedundancySimple(File *F, int nDocs) {
 		prev = auxs;
 		auxs = auxs->nextSent;
 	}
+
+	printRank(F);
 
 	return SUCCESS;
 }
